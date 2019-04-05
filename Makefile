@@ -1,10 +1,16 @@
 OPCIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11
 
-program.exe: program.o
-	g++ -o program.exe program.o
+program.exe: program.o arbol.o idioma.o
+	g++ -o program.exe program.o arbol.o idioma.o
 
 program.o: program.cc
 	g++ -c program.cc $(OPCIONS)
+
+arbol.o: arbol.cc arbol.hh
+	g++ -c arbol.cc $(OPCIONS)
+
+idioma.o: idioma.cc idioma.hh
+	g++ -c idioma.cc $(OPCIONS)
 
 clean:
 	rm -f *.o
