@@ -19,9 +19,10 @@ class Idioma
 private:
     string nombre;
     list< pair<char,int> > tabla;
-    Arbol arbol;
+    Arbol treecode;
 
     void rehacer_arbol();
+    void leer_tabla();
 
 public:
     Idioma(string nombre);
@@ -29,8 +30,6 @@ public:
     void modificar_idioma();
 
     string consultar_nombre() const;
-
-    void leer_tabla();
 
     void escribir_tabla() const;
 
