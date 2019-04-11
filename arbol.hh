@@ -38,6 +38,8 @@ public:
     Arbol consultar_izquierda() const;
 
     Arbol consultar_derecha() const;
+
+    bool es_hoja() const;
 };
 
 #endif
