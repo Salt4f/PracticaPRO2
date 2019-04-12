@@ -14,7 +14,7 @@ class Diccionario {
 private:
     map<string, Idioma> diccionario;
     
-    map<string, Idioma>::const_iterator buscar_idioma(string nombre);
+    map<string, Idioma>::iterator buscar_idioma(string nombre);
 
 public:
     Diccionario();
