@@ -5,10 +5,14 @@
 #ifndef IDIOMA_HH
 #define IDIOMA_HH
 
-#include "arbol.hh"
+#include "treecode.hh"
+#include "freqtable.hh"
 
+#ifndef NO_DIAGRAM
 #include <iostream>
 #include <list>
+#endif
+
 using namespace std;
 
 /**
@@ -17,19 +21,16 @@ using namespace std;
 class Idioma
 {
 private:
-    string nombre;
-    list< pair<char,int> > tabla;
-    Arbol treecode;
+    FreqTable tabla;
+    Treecode treecode;
 
     void rehacer_arbol();
     void leer_tabla();
 
 public:
-    Idioma(string nombre);
+    Idioma();
 
     void modificar_idioma();
-
-    string consultar_nombre() const;
 
     void escribir_tabla() const;
 

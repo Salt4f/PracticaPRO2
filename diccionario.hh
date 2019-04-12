@@ -6,7 +6,6 @@
 #define DICCIONARIO_HH
 
 #include "idioma.hh"
-#include "arbol.hh"
 
 #include <map>
 using namespace std;
