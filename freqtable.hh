@@ -12,7 +12,7 @@ using namespace std;
 class FreqTable {
 private:
     
-    map<char, int> table;
+    map<string, int> table;
 
 public:
     FreqTable();
@@ -21,7 +21,7 @@ public:
 
     void escribir_tabla() const;
 
-    int frecuencia(char c) const;
+    int frecuencia(string c) const;
 };
 
 

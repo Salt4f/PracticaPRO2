@@ -25,7 +25,7 @@ private:
 public:
     Codigo();
 
-    Codigo(FreqTable tabla);
+    Codigo(const FreqTable & tabla);
 
     string codifica(string texto) const;
 

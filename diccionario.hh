@@ -19,9 +19,9 @@ private:
 public:
     Diccionario();
 
-    void anadir_idioma(string nombre, Idioma & idioma);
+    void anadir_idioma(string nombre);
 
-    void modificar_idioma(string nombre, Idioma & idioma);
+    void modificar_idioma(string nombre);
 
     bool esta_idioma(string nombre) const;
 
