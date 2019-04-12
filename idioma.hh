@@ -5,12 +5,11 @@
 #ifndef IDIOMA_HH
 #define IDIOMA_HH
 
-#include "treecode.hh"
+#include "codigos.hh"
 #include "freqtable.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
-#include <list>
 #endif
 
 using namespace std;
@@ -22,9 +21,9 @@ class Idioma
 {
 private:
     FreqTable tabla;
-    Treecode treecode;
+    Codigo codigos;
 
-    void rehacer_arbol();
+    void rehacer_codigos();
     void leer_tabla();
 
 public:

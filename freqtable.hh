@@ -18,6 +18,10 @@ public:
     FreqTable();
 
     void leer_tabla();
+
+    void escribir_tabla() const;
+
+    int frecuencia(char c) const;
 };
 
 
