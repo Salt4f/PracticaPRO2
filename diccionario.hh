@@ -12,20 +12,24 @@ using namespace std;
 
 class Diccionario {
 private:
-    map<string, Idioma> dic;
+    map<string, Idioma> diccionario;
     
     map<string, Idioma>::const_iterator buscar_idioma(string nombre);
 
 public:
     Diccionario();
 
-    void anadir_idioma(Idioma & idioma);
+    void anadir_idioma(string nombre, Idioma & idioma);
 
-    void eliminar_idioma(string nombre);
+    void modificar_idioma(string nombre, Idioma & idioma);
 
     bool esta_idioma(string nombre) const;
 
-    Idioma consultar_idioma(string nombre);
+    void escribir_tabla_frecuencias(string nombre) const;
+
+    void escribir_treecode(string nombre) const;
+
+    void escribir_codigos(string nombre) const;
 
     string codifica(string nombre, string texto) const;
 
