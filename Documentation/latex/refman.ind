@@ -1,0 +1,29 @@
+\begin{theindex}
+
+  \item {BinTree$<$ T $>$}, \hyperpage{5}
+  \item {BinTree$<$ T $>$::Node}, \hyperpage{8}
+
+  \indexspace
+
+  \item {codifica\_caracter}
+    \subitem {Codigo}, \hyperpage{6}
+  \item {Codigo}, \hyperpage{6}
+    \subitem {codifica\_caracter}, \hyperpage{6}
+  \item {codigos.hh}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Diccionario}, \hyperpage{7}
+  \item {diccionario.hh}, \hyperpage{11}
+
+  \indexspace
+
+  \item {FreqTable}, \hyperpage{7}
+  \item {freqtable.hh}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Idioma}, \hyperpage{8}
+  \item {idioma.hh}, \hyperpage{12}
+
+\end{theindex}

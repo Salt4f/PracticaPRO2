@@ -18,8 +18,10 @@ private:
 
     map<string, string> codetable;
 
-    ///@brief Codifica el carácter <b>c</b>
-    ///Recorre el <b>treecode</b> 
+    /**@brief Codifica el carácter <b>c</b>
+    * 
+    * Recorre el <b>treecode</b>
+    */
     void codifica_caracter(char c);
 
 public:
