@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['diccionario',['Diccionario',['../class_diccionario.html',1,'']]]
+  ['freqtable',['FreqTable',['../class_freq_table.html',1,'']]]
 ];

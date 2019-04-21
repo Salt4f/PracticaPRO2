@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['codigos_2ehh',['codigos.hh',['../codigos_8hh.html',1,'']]]
+  ['codigo_2ehh',['Codigo.hh',['../_codigo_8hh.html',1,'']]]
 ];

@@ -1,12 +1,12 @@
-/** @file idioma.hh
+/** @file Idioma.hh
  * 
 */
 
 #ifndef IDIOMA_HH
 #define IDIOMA_HH
 
-#include "codigos.hh"
-#include "freqtable.hh"
+#include "Codigo.hh"
+#include "FreqTable.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>

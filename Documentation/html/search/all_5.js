@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['node',['Node',['../struct_bin_tree_1_1_node.html',1,'BinTree']]]
+  ['idioma',['Idioma',['../class_idioma.html',1,'Idioma'],['../class_idioma.html#a6722a621ce03825772493e67e5a17215',1,'Idioma::Idioma()']]],
+  ['idioma_2ehh',['Idioma.hh',['../_idioma_8hh.html',1,'']]]
 ];

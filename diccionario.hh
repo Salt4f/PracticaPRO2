@@ -1,14 +1,16 @@
-/** @file diccionario.hh
+/** @file Diccionario.hh
  * 
 */
 
 #ifndef DICCIONARIO_HH
 #define DICCIONARIO_HH
 
-#include "idioma.hh"
+#include "Idioma.hh"
 
+#ifndef NO_DIAGRAM
 #include <map>
 using namespace std;
+#endif
 
 class Diccionario {
 private:

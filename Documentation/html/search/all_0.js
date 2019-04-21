@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['bintree',['BinTree',['../class_bin_tree.html',1,'']]],
-  ['bintree_3c_20pair_3c_20string_2c_20int_20_3e_20_3e',['BinTree&lt; pair&lt; string, int &gt; &gt;',['../class_bin_tree.html',1,'']]]
+  ['anadir_5fidioma',['anadir_idioma',['../class_diccionario.html#a21d85559506b857b43ed44608ab060c3',1,'Diccionario']]]
 ];

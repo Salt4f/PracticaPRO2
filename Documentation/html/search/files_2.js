@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['freqtable_2ehh',['freqtable.hh',['../freqtable_8hh.html',1,'']]]
+  ['freqtable_2ehh',['FreqTable.hh',['../_freq_table_8hh.html',1,'']]]
 ];

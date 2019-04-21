@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['codigo',['Codigo',['../class_codigo.html',1,'']]]
+  ['diccionario',['Diccionario',['../class_diccionario.html',1,'']]]
 ];

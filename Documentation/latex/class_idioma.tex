@@ -1,46 +1,83 @@
 \hypertarget{class_idioma}{}\doxysection{Referencia de la Clase Idioma}
 \label{class_idioma}\index{Idioma@{Idioma}}
+
+
+{\ttfamily \#include $<$Idioma.\+hh$>$}
+
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_idioma_a91f493edb5d164fb4e0dd274c3146316}\label{class_idioma_a91f493edb5d164fb4e0dd274c3146316}} 
-void {\bfseries modificar\+\_\+idioma} ()
+\mbox{\hyperlink{class_idioma_a6722a621ce03825772493e67e5a17215}{Idioma}} ()
 \item 
-\mbox{\Hypertarget{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}\label{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}} 
-void {\bfseries escribir\+\_\+tabla} () const
+void \mbox{\hyperlink{class_idioma_a91f493edb5d164fb4e0dd274c3146316}{modificar\+\_\+idioma}} ()
 \item 
-\mbox{\Hypertarget{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}\label{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}} 
-void {\bfseries escribir\+\_\+codigos} () const
+void \mbox{\hyperlink{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}{escribir\+\_\+tabla}} () const
 \item 
-\mbox{\Hypertarget{class_idioma_a2c56778032505cfcb240ad982d881b75}\label{class_idioma_a2c56778032505cfcb240ad982d881b75}} 
-bool {\bfseries es\+\_\+del\+\_\+idioma} (char c) const
+void \mbox{\hyperlink{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}{escribir\+\_\+codigos}} () const
 \item 
+bool \mbox{\hyperlink{class_idioma_a2c56778032505cfcb240ad982d881b75}{es\+\_\+del\+\_\+idioma}} (char c) const
+\item 
+string \mbox{\hyperlink{class_idioma_ab67ba69dbad93242bf9b9059748f47e8}{codificar\+\_\+caracter}} (char c) const
+\item 
+string \mbox{\hyperlink{class_idioma_aac671224bea460078a26736a8076a5a3}{descodificar}} (string texto) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea 20 del archivo Idioma.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_idioma_a6722a621ce03825772493e67e5a17215}\label{class_idioma_a6722a621ce03825772493e67e5a17215}} 
+\index{Idioma@{Idioma}!Idioma@{Idioma}}
+\index{Idioma@{Idioma}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{Idioma()}{Idioma()}}
+{\footnotesize\ttfamily Idioma\+::\+Idioma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
 \mbox{\Hypertarget{class_idioma_ab67ba69dbad93242bf9b9059748f47e8}\label{class_idioma_ab67ba69dbad93242bf9b9059748f47e8}} 
-string {\bfseries codificar\+\_\+caracter} (char c) const
-\item 
+\index{Idioma@{Idioma}!codificar\_caracter@{codificar\_caracter}}
+\index{codificar\_caracter@{codificar\_caracter}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{codificar\_caracter()}{codificar\_caracter()}}
+{\footnotesize\ttfamily string Idioma\+::codificar\+\_\+caracter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption}) const}
+
 \mbox{\Hypertarget{class_idioma_aac671224bea460078a26736a8076a5a3}\label{class_idioma_aac671224bea460078a26736a8076a5a3}} 
-string {\bfseries descodificar} (string texto) const
-\end{DoxyCompactItemize}
-\doxysubsection*{Métodos privados}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}\label{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}} 
-void {\bfseries rehacer\+\_\+codigos} ()
-\item 
-\mbox{\Hypertarget{class_idioma_afd4945962a010e4ad932526777556578}\label{class_idioma_afd4945962a010e4ad932526777556578}} 
-void {\bfseries leer\+\_\+tabla} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Atributos privados}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_idioma_a6f8872782ac19259c73e0dce17a63db2}\label{class_idioma_a6f8872782ac19259c73e0dce17a63db2}} 
-\mbox{\hyperlink{class_freq_table}{Freq\+Table}} {\bfseries tabla}
-\item 
-\mbox{\Hypertarget{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}\label{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}} 
-\mbox{\hyperlink{class_codigo}{Codigo}} {\bfseries codigos}
-\end{DoxyCompactItemize}
+\index{Idioma@{Idioma}!descodificar@{descodificar}}
+\index{descodificar@{descodificar}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{descodificar()}{descodificar()}}
+{\footnotesize\ttfamily string Idioma\+::descodificar (\begin{DoxyParamCaption}\item[{string}]{texto }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_idioma_a2c56778032505cfcb240ad982d881b75}\label{class_idioma_a2c56778032505cfcb240ad982d881b75}} 
+\index{Idioma@{Idioma}!es\_del\_idioma@{es\_del\_idioma}}
+\index{es\_del\_idioma@{es\_del\_idioma}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{es\_del\_idioma()}{es\_del\_idioma()}}
+{\footnotesize\ttfamily bool Idioma\+::es\+\_\+del\+\_\+idioma (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}\label{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}} 
+\index{Idioma@{Idioma}!escribir\_codigos@{escribir\_codigos}}
+\index{escribir\_codigos@{escribir\_codigos}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{escribir\_codigos()}{escribir\_codigos()}}
+{\footnotesize\ttfamily void Idioma\+::escribir\+\_\+codigos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}\label{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}} 
+\index{Idioma@{Idioma}!escribir\_tabla@{escribir\_tabla}}
+\index{escribir\_tabla@{escribir\_tabla}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{escribir\_tabla()}{escribir\_tabla()}}
+{\footnotesize\ttfamily void Idioma\+::escribir\+\_\+tabla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_idioma_a91f493edb5d164fb4e0dd274c3146316}\label{class_idioma_a91f493edb5d164fb4e0dd274c3146316}} 
+\index{Idioma@{Idioma}!modificar\_idioma@{modificar\_idioma}}
+\index{modificar\_idioma@{modificar\_idioma}!Idioma@{Idioma}}
+\doxysubsubsection{\texorpdfstring{modificar\_idioma()}{modificar\_idioma()}}
+{\footnotesize\ttfamily void Idioma\+::modificar\+\_\+idioma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{idioma_8hh}{idioma.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{_idioma_8hh}{Idioma.\+hh}}\end{DoxyCompactItemize}

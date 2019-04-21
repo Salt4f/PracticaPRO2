@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['freqtable',['FreqTable',['../class_freq_table.html',1,'']]]
+  ['idioma',['Idioma',['../class_idioma.html',1,'']]]
 ];

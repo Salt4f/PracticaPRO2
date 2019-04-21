@@ -1,52 +1,75 @@
 \hypertarget{class_codigo}{}\doxysection{Referencia de la Clase Codigo}
 \label{class_codigo}\index{Codigo@{Codigo}}
+
+
+{\ttfamily \#include $<$Codigo.\+hh$>$}
+
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_codigo_ab600451a62d146afd95c1c1a0fc041c3}{Codigo}} ()
+\item 
+\mbox{\hyperlink{class_codigo_a51aed61d7d0059dc17f86e7a7c333a47}{Codigo}} (const \mbox{\hyperlink{class_freq_table}{Freq\+Table}} \&tabla)
+\item 
+string \mbox{\hyperlink{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}{codifica}} (string texto) const
+\item 
+string \mbox{\hyperlink{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}{descodifica}} (string texto) const
+\item 
+void \mbox{\hyperlink{class_codigo_ae715e2ad01a25064f484ede923d0fb75}{escribir\+\_\+arbol}} () const
+\item 
+void \mbox{\hyperlink{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}{escribir\+\_\+codigos}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea 17 del archivo Codigo.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_codigo_ab600451a62d146afd95c1c1a0fc041c3}\label{class_codigo_ab600451a62d146afd95c1c1a0fc041c3}} 
+\index{Codigo@{Codigo}!Codigo@{Codigo}}
+\index{Codigo@{Codigo}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{Codigo()}{Codigo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Codigo\+::\+Codigo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_codigo_a51aed61d7d0059dc17f86e7a7c333a47}\label{class_codigo_a51aed61d7d0059dc17f86e7a7c333a47}} 
-{\bfseries Codigo} (const \mbox{\hyperlink{class_freq_table}{Freq\+Table}} \&tabla)
-\item 
-\mbox{\Hypertarget{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}\label{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}} 
-string {\bfseries codifica} (string texto) const
-\item 
-\mbox{\Hypertarget{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}\label{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}} 
-string {\bfseries descodifica} (string texto) const
-\item 
-\mbox{\Hypertarget{class_codigo_ae715e2ad01a25064f484ede923d0fb75}\label{class_codigo_ae715e2ad01a25064f484ede923d0fb75}} 
-void {\bfseries escribir\+\_\+arbol} () const
-\item 
-\mbox{\Hypertarget{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}\label{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}} 
-void {\bfseries escribir\+\_\+codigos} () const
-\end{DoxyCompactItemize}
-\doxysubsection*{Métodos privados}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{class_codigo_a148986d3d219c0d94e8d1c8d220eae30}{codifica\+\_\+caracter}} (char c)
-\begin{DoxyCompactList}\small\item\em Codifica el carácter {\bfseries{c}} \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos privados}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}\label{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}} 
-\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ string, int $>$ $>$ {\bfseries treecode}
-\item 
-\mbox{\Hypertarget{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}\label{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}} 
-map$<$ string, string $>$ {\bfseries codetable}
-\end{DoxyCompactItemize}
+\index{Codigo@{Codigo}!Codigo@{Codigo}}
+\index{Codigo@{Codigo}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{Codigo()}{Codigo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Codigo\+::\+Codigo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_freq_table}{Freq\+Table}} \&}]{tabla }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_codigo_a148986d3d219c0d94e8d1c8d220eae30}\label{class_codigo_a148986d3d219c0d94e8d1c8d220eae30}} 
-\index{Codigo@{Codigo}!codifica\_caracter@{codifica\_caracter}}
-\index{codifica\_caracter@{codifica\_caracter}!Codigo@{Codigo}}
-\doxysubsubsection{\texorpdfstring{codifica\_caracter()}{codifica\_caracter()}}
-{\footnotesize\ttfamily void Codigo\+::codifica\+\_\+caracter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}\label{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}} 
+\index{Codigo@{Codigo}!codifica@{codifica}}
+\index{codifica@{codifica}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{codifica()}{codifica()}}
+{\footnotesize\ttfamily string Codigo\+::codifica (\begin{DoxyParamCaption}\item[{string}]{texto }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}\label{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}} 
+\index{Codigo@{Codigo}!descodifica@{descodifica}}
+\index{descodifica@{descodifica}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{descodifica()}{descodifica()}}
+{\footnotesize\ttfamily string Codigo\+::descodifica (\begin{DoxyParamCaption}\item[{string}]{texto }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_codigo_ae715e2ad01a25064f484ede923d0fb75}\label{class_codigo_ae715e2ad01a25064f484ede923d0fb75}} 
+\index{Codigo@{Codigo}!escribir\_arbol@{escribir\_arbol}}
+\index{escribir\_arbol@{escribir\_arbol}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{escribir\_arbol()}{escribir\_arbol()}}
+{\footnotesize\ttfamily void Codigo\+::escribir\+\_\+arbol (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}\label{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}} 
+\index{Codigo@{Codigo}!escribir\_codigos@{escribir\_codigos}}
+\index{escribir\_codigos@{escribir\_codigos}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{escribir\_codigos()}{escribir\_codigos()}}
+{\footnotesize\ttfamily void Codigo\+::escribir\+\_\+codigos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
-
-Codifica el carácter {\bfseries{c}} 
-
-Recorre el {\bfseries{treecode}} 
 
 La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{codigos_8hh}{codigos.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{_codigo_8hh}{Codigo.\+hh}}\end{DoxyCompactItemize}
