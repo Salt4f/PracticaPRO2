@@ -2,35 +2,40 @@
 \label{class_diccionario}\index{Diccionario@{Diccionario}}
 
 
+Representa un conjunto de \mbox{\hyperlink{class_idioma}{Idioma}}.  
+
+
+
+
 {\ttfamily \#include $<$Diccionario.\+hh$>$}
 
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_diccionario_aa0a2191ec706b256c35b5229cc197b15}{Diccionario}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructora. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_diccionario_a21d85559506b857b43ed44608ab060c3}{anadir\+\_\+idioma}} (string nombre)
-\item 
+\begin{DoxyCompactList}\small\item\em Añade un \mbox{\hyperlink{class_idioma}{Idioma}} al \mbox{\hyperlink{class_diccionario}{Diccionario}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\+\_\+idioma}} (string nombre)
-\item 
-bool \mbox{\hyperlink{class_diccionario_a2e956af6084d670254e5019ec26c0f02}{esta\+\_\+idioma}} (string nombre) const
-\item 
+\begin{DoxyCompactList}\small\item\em Modifica un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_diccionario_a4cb2e9403b93acb282f412294c40d20e}{escribir\+\_\+tabla\+\_\+frecuencias}} (string nombre) const
-\item 
+\begin{DoxyCompactList}\small\item\em Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_diccionario_acf3146430ce548e1840b888cfa59aa1f}{escribir\+\_\+treecode}} (string nombre) const
-\item 
+\begin{DoxyCompactList}\small\item\em Escribe el {\bfseries{Treecode}} de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_diccionario_a4abe1658a4945c22c923ccb299b32054}{escribir\+\_\+codigos}} (string nombre) const
-\item 
+\begin{DoxyCompactList}\small\item\em Escribe la lista de códigos de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_diccionario_ae8077dbe0b5cfc3d763d744d59e45803}{codifica}} (string nombre, string texto) const
-\item 
+\begin{DoxyCompactList}\small\item\em Codifica un texto. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_diccionario_a593b527d3d9c08bd6e4f036aab3cad90}{descodifica}} (string nombre, string texto) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Codifica un texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
+Representa un conjunto de \mbox{\hyperlink{class_idioma}{Idioma}}. 
 
+Contiene distintos \mbox{\hyperlink{class_idioma}{Idioma}} 
 
-Definición en la línea 15 del archivo Diccionario.\+hh.
+Definición en la línea 20 del archivo Diccionario.\+hh.
 
 
 
@@ -43,6 +48,16 @@ Definición en la línea 15 del archivo Diccionario.\+hh.
 
 
 
+Constructora. 
+
+Se ejecuta automáticamente al declarar un \mbox{\hyperlink{class_diccionario}{Diccionario}}. \begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un diccionario vacío 
+\end{DoxyPostcond}
+
+
 \doxysubsection{Documentación de las funciones miembro}
 \mbox{\Hypertarget{class_diccionario_a21d85559506b857b43ed44608ab060c3}\label{class_diccionario_a21d85559506b857b43ed44608ab060c3}} 
 \index{Diccionario@{Diccionario}!anadir\_idioma@{anadir\_idioma}}
@@ -50,48 +65,151 @@ Definición en la línea 15 del archivo Diccionario.\+hh.
 \doxysubsubsection{\texorpdfstring{anadir\_idioma()}{anadir\_idioma()}}
 {\footnotesize\ttfamily void Diccionario\+::anadir\+\_\+idioma (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption})}
 
+
+
+Añade un \mbox{\hyperlink{class_idioma}{Idioma}} al \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a añadir no está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Añade un idioma al \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a añadir \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_diccionario_ae8077dbe0b5cfc3d763d744d59e45803}\label{class_diccionario_ae8077dbe0b5cfc3d763d744d59e45803}} 
 \index{Diccionario@{Diccionario}!codifica@{codifica}}
 \index{codifica@{codifica}!Diccionario@{Diccionario}}
 \doxysubsubsection{\texorpdfstring{codifica()}{codifica()}}
 {\footnotesize\ttfamily string Diccionario\+::codifica (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{string}]{texto }\end{DoxyParamCaption}) const}
 
+
+
+Codifica un texto. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a usar para codificar está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+Texto codificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a usar para codificar \\
+\hline
+{\em texto} & -\/ Texto a codificar \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_diccionario_a593b527d3d9c08bd6e4f036aab3cad90}\label{class_diccionario_a593b527d3d9c08bd6e4f036aab3cad90}} 
 \index{Diccionario@{Diccionario}!descodifica@{descodifica}}
 \index{descodifica@{descodifica}!Diccionario@{Diccionario}}
 \doxysubsubsection{\texorpdfstring{descodifica()}{descodifica()}}
 {\footnotesize\ttfamily string Diccionario\+::descodifica (\begin{DoxyParamCaption}\item[{string}]{nombre,  }\item[{string}]{texto }\end{DoxyParamCaption}) const}
 
+
+
+Codifica un texto. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a usar para descodificar está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+Texto descodificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a usar para descodificar \\
+\hline
+{\em texto} & -\/ Texto a descodificar \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_diccionario_a4abe1658a4945c22c923ccb299b32054}\label{class_diccionario_a4abe1658a4945c22c923ccb299b32054}} 
 \index{Diccionario@{Diccionario}!escribir\_codigos@{escribir\_codigos}}
 \index{escribir\_codigos@{escribir\_codigos}!Diccionario@{Diccionario}}
 \doxysubsubsection{\texorpdfstring{escribir\_codigos()}{escribir\_codigos()}}
 {\footnotesize\ttfamily void Diccionario\+::escribir\+\_\+codigos (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption}) const}
 
+
+
+Escribe la lista de códigos de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su lista de códigos está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe por el canal de salida la lista de códigos 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su lista de códigos \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_diccionario_a4cb2e9403b93acb282f412294c40d20e}\label{class_diccionario_a4cb2e9403b93acb282f412294c40d20e}} 
 \index{Diccionario@{Diccionario}!escribir\_tabla\_frecuencias@{escribir\_tabla\_frecuencias}}
 \index{escribir\_tabla\_frecuencias@{escribir\_tabla\_frecuencias}!Diccionario@{Diccionario}}
 \doxysubsubsection{\texorpdfstring{escribir\_tabla\_frecuencias()}{escribir\_tabla\_frecuencias()}}
 {\footnotesize\ttfamily void Diccionario\+::escribir\+\_\+tabla\+\_\+frecuencias (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption}) const}
 
+
+
+Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su \mbox{\hyperlink{class_freq_table}{Freq\+Table}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe por el canal de salida la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su \mbox{\hyperlink{class_freq_table}{Freq\+Table}} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_diccionario_acf3146430ce548e1840b888cfa59aa1f}\label{class_diccionario_acf3146430ce548e1840b888cfa59aa1f}} 
 \index{Diccionario@{Diccionario}!escribir\_treecode@{escribir\_treecode}}
 \index{escribir\_treecode@{escribir\_treecode}!Diccionario@{Diccionario}}
 \doxysubsubsection{\texorpdfstring{escribir\_treecode()}{escribir\_treecode()}}
 {\footnotesize\ttfamily void Diccionario\+::escribir\+\_\+treecode (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_diccionario_a2e956af6084d670254e5019ec26c0f02}\label{class_diccionario_a2e956af6084d670254e5019ec26c0f02}} 
-\index{Diccionario@{Diccionario}!esta\_idioma@{esta\_idioma}}
-\index{esta\_idioma@{esta\_idioma}!Diccionario@{Diccionario}}
-\doxysubsubsection{\texorpdfstring{esta\_idioma()}{esta\_idioma()}}
-{\footnotesize\ttfamily bool Diccionario\+::esta\+\_\+idioma (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption}) const}
 
+
+Escribe el {\bfseries{Treecode}} de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su {\bfseries{Treecode}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe por el canal de salida el {\bfseries{Treecode}} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su {\bfseries{Treecode}} \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}\label{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}} 
 \index{Diccionario@{Diccionario}!modificar\_idioma@{modificar\_idioma}}
 \index{modificar\_idioma@{modificar\_idioma}!Diccionario@{Diccionario}}
 \doxysubsubsection{\texorpdfstring{modificar\_idioma()}{modificar\_idioma()}}
 {\footnotesize\ttfamily void Diccionario\+::modificar\+\_\+idioma (\begin{DoxyParamCaption}\item[{string}]{nombre }\end{DoxyParamCaption})}
 
+
+
+Modifica un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
+
+\begin{DoxyPrecond}{Precondición}
+El \mbox{\hyperlink{class_idioma}{Idioma}} a modificar está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Modifica el \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parámetros}
+{\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a modificar \\
+\hline
+\end{DoxyParams}
 
 
 La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
