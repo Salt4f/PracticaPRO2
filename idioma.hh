@@ -1,5 +1,5 @@
 /** @file Idioma.hh
- * 
+ *  @brief Especificación de la clase Idioma
 */
 
 #ifndef IDIOMA_HH
@@ -14,8 +14,10 @@
 
 using namespace std;
 
-/**
- * 
+/** @class Idioma
+    @brief Representa un conjunto de Idioma. 
+
+    Contiene distintos Idioma
 */
 class Idioma
 {
