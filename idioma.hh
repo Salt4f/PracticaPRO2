@@ -63,10 +63,16 @@ public:
 
     /** @brief Codifica un carácter
       \pre El parámetro <b>c</b> es del Idioma
-      \return El carácter codificado 
+      \return El carácter codificado
+      \param c - Carácter a descodificar
     */
     string codificar_caracter(string c) const;
 
+    /** @brief Descodifica un texto
+      \pre Todos los carácteres del texto pertenecen al Idioma
+      \return El texto descodificado
+      \param texto - El texto a descodificar
+    */
     string descodificar(string texto) const;
 };
 

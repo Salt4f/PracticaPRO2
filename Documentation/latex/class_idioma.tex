@@ -2,31 +2,38 @@
 \label{class_idioma}\index{Idioma@{Idioma}}
 
 
+Representa un \mbox{\hyperlink{class_idioma}{Idioma}}.  
+
+
+
+
 {\ttfamily \#include $<$Idioma.\+hh$>$}
 
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_idioma_a6722a621ce03825772493e67e5a17215}{Idioma}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructora. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_idioma_a91f493edb5d164fb4e0dd274c3146316}{modificar\+\_\+idioma}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Modifica el \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}{escribir\+\_\+tabla}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Escribe el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}{escribir\+\_\+codigos}} () const
-\item 
-bool \mbox{\hyperlink{class_idioma_a2c56778032505cfcb240ad982d881b75}{es\+\_\+del\+\_\+idioma}} (char c) const
-\item 
-string \mbox{\hyperlink{class_idioma_ab67ba69dbad93242bf9b9059748f47e8}{codificar\+\_\+caracter}} (char c) const
-\item 
+\begin{DoxyCompactList}\small\item\em Escribe la tabla de códigos del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_idioma_a4668bf02f948cc873e7342147172145c}{es\+\_\+del\+\_\+idioma}} (string c) const
+\begin{DoxyCompactList}\small\item\em Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_idioma_a114b134667bd3f6f2cf7a460a4637ee9}{codificar\+\_\+caracter}} (string c) const
+\begin{DoxyCompactList}\small\item\em Codifica un carácter. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_idioma_aac671224bea460078a26736a8076a5a3}{descodificar}} (string texto) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Descodifica un texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
+Representa un \mbox{\hyperlink{class_idioma}{Idioma}}. 
 
+Contiene la tabla de frecuencias (\mbox{\hyperlink{class_freq_table}{Freq\+Table}}) y el {\itshape Treecode} de dicho \mbox{\hyperlink{class_idioma}{Idioma}} 
 
-Definición en la línea 20 del archivo Idioma.\+hh.
+Definición en la línea 21 del archivo Idioma.\+hh.
 
 
 
@@ -39,43 +46,128 @@ Definición en la línea 20 del archivo Idioma.\+hh.
 
 
 
+Constructora. 
+
+Se ejecuta automáticamente al declarar un \mbox{\hyperlink{class_idioma}{Idioma}}. \begin{DoxyPrecond}{Precondición}
+En el canal de entrada se encuentran los datos de la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un \mbox{\hyperlink{class_idioma}{Idioma}} con la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} y el Treecode 
+\end{DoxyPostcond}
+
+
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_idioma_ab67ba69dbad93242bf9b9059748f47e8}\label{class_idioma_ab67ba69dbad93242bf9b9059748f47e8}} 
+\mbox{\Hypertarget{class_idioma_a114b134667bd3f6f2cf7a460a4637ee9}\label{class_idioma_a114b134667bd3f6f2cf7a460a4637ee9}} 
 \index{Idioma@{Idioma}!codificar\_caracter@{codificar\_caracter}}
 \index{codificar\_caracter@{codificar\_caracter}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{codificar\_caracter()}{codificar\_caracter()}}
-{\footnotesize\ttfamily string Idioma\+::codificar\+\_\+caracter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily string Idioma\+::codificar\+\_\+caracter (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption}) const}
 
+
+
+Codifica un carácter. 
+
+\begin{DoxyPrecond}{Precondición}
+El parámetro {\bfseries{c}} es del \mbox{\hyperlink{class_idioma}{Idioma}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+El carácter codificado 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & -\/ Carácter a descodificar \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_idioma_aac671224bea460078a26736a8076a5a3}\label{class_idioma_aac671224bea460078a26736a8076a5a3}} 
 \index{Idioma@{Idioma}!descodificar@{descodificar}}
 \index{descodificar@{descodificar}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{descodificar()}{descodificar()}}
 {\footnotesize\ttfamily string Idioma\+::descodificar (\begin{DoxyParamCaption}\item[{string}]{texto }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_idioma_a2c56778032505cfcb240ad982d881b75}\label{class_idioma_a2c56778032505cfcb240ad982d881b75}} 
+
+
+Descodifica un texto. 
+
+\begin{DoxyPrecond}{Precondición}
+Todos los carácteres del texto pertenecen al \mbox{\hyperlink{class_idioma}{Idioma}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+El texto descodificado 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em texto} & -\/ El texto a descodificar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_idioma_a4668bf02f948cc873e7342147172145c}\label{class_idioma_a4668bf02f948cc873e7342147172145c}} 
 \index{Idioma@{Idioma}!es\_del\_idioma@{es\_del\_idioma}}
 \index{es\_del\_idioma@{es\_del\_idioma}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{es\_del\_idioma()}{es\_del\_idioma()}}
-{\footnotesize\ttfamily bool Idioma\+::es\+\_\+del\+\_\+idioma (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily bool Idioma\+::es\+\_\+del\+\_\+idioma (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption}) const}
 
+
+
+Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+{\bfseries{true}} si el carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}, {\bfseries{false}} si no lo es 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & -\/ Carácter a comprobar \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}\label{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}} 
 \index{Idioma@{Idioma}!escribir\_codigos@{escribir\_codigos}}
 \index{escribir\_codigos@{escribir\_codigos}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{escribir\_codigos()}{escribir\_codigos()}}
 {\footnotesize\ttfamily void Idioma\+::escribir\+\_\+codigos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Escribe la tabla de códigos del \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe por el canal de salida la tabla de códigos 
+\end{DoxyPostcond}
 \mbox{\Hypertarget{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}\label{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}} 
 \index{Idioma@{Idioma}!escribir\_tabla@{escribir\_tabla}}
 \index{escribir\_tabla@{escribir\_tabla}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{escribir\_tabla()}{escribir\_tabla()}}
 {\footnotesize\ttfamily void Idioma\+::escribir\+\_\+tabla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Escribe el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe por el canal de salida el {\bfseries{Treecode}} 
+\end{DoxyPostcond}
 \mbox{\Hypertarget{class_idioma_a91f493edb5d164fb4e0dd274c3146316}\label{class_idioma_a91f493edb5d164fb4e0dd274c3146316}} 
 \index{Idioma@{Idioma}!modificar\_idioma@{modificar\_idioma}}
 \index{modificar\_idioma@{modificar\_idioma}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{modificar\_idioma()}{modificar\_idioma()}}
 {\footnotesize\ttfamily void Idioma\+::modificar\+\_\+idioma (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Modifica el \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+\begin{DoxyPrecond}{Precondición}
+En el canal de entrada se encuentran los datos de la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Cambia la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} y calcula un nuevo {\itshape Treecode} 
+\end{DoxyPostcond}
 
 
 La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}

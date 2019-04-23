@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['es_5fdel_5fidioma',['es_del_idioma',['../class_idioma.html#a2c56778032505cfcb240ad982d881b75',1,'Idioma']]],
+  ['es_5fdel_5fidioma',['es_del_idioma',['../class_idioma.html#a4668bf02f948cc873e7342147172145c',1,'Idioma']]],
   ['escribir_5farbol',['escribir_arbol',['../class_codigo.html#ae715e2ad01a25064f484ede923d0fb75',1,'Codigo']]],
   ['escribir_5fcodigos',['escribir_codigos',['../class_codigo.html#aff1dd5ba7f1ad429d14cae824a464fbb',1,'Codigo::escribir_codigos()'],['../class_diccionario.html#a4abe1658a4945c22c923ccb299b32054',1,'Diccionario::escribir_codigos()'],['../class_idioma.html#ad33ab5a7b9a1567057f9916bf868277e',1,'Idioma::escribir_codigos()']]],
   ['escribir_5ftabla',['escribir_tabla',['../class_freq_table.html#a1739e3f11f08f894e6fe00e48041d263',1,'FreqTable::escribir_tabla()'],['../class_idioma.html#a26effb654be9fa4a6ccc5fc771f4efc0',1,'Idioma::escribir_tabla()']]],
