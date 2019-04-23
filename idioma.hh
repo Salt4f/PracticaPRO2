@@ -10,14 +10,13 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
+using namespace std;
 #endif
 
-using namespace std;
-
 /** @class Idioma
-    @brief Representa un conjunto de Idioma. 
+    @brief Representa un Idioma. 
 
-    Contiene distintos Idioma
+    Contiene la tabla de frecuencias (FreqTable) y el <em>Treecode</em> de dicho Idioma
 */
 class Idioma
 {
@@ -29,17 +28,44 @@ private:
     void leer_tabla();
 
 public:
+    /** @brief Constructora. 
+
+      Se ejecuta automáticamente al declarar un Idioma.
+      \pre En el canal de entrada se encuentran los datos de la FreqTable
+      \post El resultado es un Idioma con la FreqTable y el Treecode
+    */ 
     Idioma();
 
+    /** @brief Modifica el Idioma
+      \pre En el canal de entrada se encuentran los datos de la FreqTable
+      \post Cambia la FreqTable y calcula un nuevo <em>Treecode</em>
+    */
     void modificar_idioma();
 
+    /** @brief Escribe el <b>Treecode</b> del Idioma
+      \pre <b>true</b>
+      \post Escribe por el canal de salida el <b>Treecode</b>
+    */
     void escribir_tabla() const;
 
+    /** @brief Escribe la tabla de códigos del Idioma
+      \pre <b>true</b>
+      \post Escribe por el canal de salida la tabla de códigos
+    */
     void escribir_codigos() const;
 
-    bool es_del_idioma(char c) const;
+    /** @brief Comprueba si un carácter es del Idioma
+      \pre <b>true</b>
+      \return <b>true</b> si el carácter es del Idioma, <b>false</b> si no lo es
+      \param c - Carácter a comprobar
+    */
+    bool es_del_idioma(string c) const;
 
-    string codificar_caracter(char c) const;
+    /** @brief Codifica un carácter
+      \pre El parámetro <b>c</b> es del Idioma
+      \return El carácter codificado 
+    */
+    string codificar_caracter(string c) const;
 
     string descodificar(string texto) const;
 };

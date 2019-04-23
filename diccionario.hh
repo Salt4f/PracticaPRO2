@@ -28,7 +28,7 @@ public:
 
       Se ejecuta automáticamente al declarar un Diccionario.
       \pre <b>true</b>
-      \post El resultado es un diccionario vacío
+      \post El resultado es un Diccionario vacío
     */ 
     Diccionario();
 
