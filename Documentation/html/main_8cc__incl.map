@@ -1,5 +1,5 @@
 <map id="main.cc" name="main.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="51,5,119,31"/>
+<area shape="rect" id="node1" title="Programa principal." alt="" coords="51,5,119,31"/>
 <area shape="rect" id="node2" href="$_diccionario_8hh.html" title="Especificación de la clase Diccionario." alt="" coords="32,79,138,104"/>
 <area shape="rect" id="node3" href="$_idioma_8hh.html" title="Especificación de la clase Idioma." alt="" coords="45,152,125,177"/>
 <area shape="rect" id="node4" href="$_codigo_8hh.html" title="Especificación de la clase FreqTable." alt="" coords="5,225,87,251"/>

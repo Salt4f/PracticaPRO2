@@ -1,3 +1,11 @@
+/** @file main.cc
+ *  @brief Programa principal
+*/
+
+/** @mainpage Codificador/Descodificador
+ * 
+*/
+
 
 #include "Diccionario.hh"
 
