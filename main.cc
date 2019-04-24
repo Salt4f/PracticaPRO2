@@ -30,7 +30,35 @@ int main() {
                 cin >> texto;
                 cout << diccionario.codifica(opt, texto) << endl;
             }
-            else cout << "El idioma para codificar no existe" << endl;
+            else cout << "El idioma " << opt << " no existe" << endl;
+        }
+
+        else if (opt == "descodifica") {
+            cin >> opt;
+            if (diccionario.esta_idioma(opt)) {
+                string texto;
+                cin >> texto;
+                cout << diccionario.descodifica(opt, texto) << endl;
+            }
+            else cout << "El idioma " << opt << " no existe" << endl;
+        }
+
+        else if (opt == "tabla_frec") {
+            cin >> opt;
+            if (diccionario.esta_idioma(opt)) diccionario.escribir_tabla_frecuencias(opt);
+            else cout << "El idioma " << opt << " no existe" << endl;
+        }
+
+        else if (opt == "treecode") {
+            cin >> opt;
+            if (diccionario.esta_idioma(opt)) diccionario.escribir_treecode(opt);
+            else cout << "El idioma " << opt << " no existe" << endl;
+        }
+
+        else if (opt == "codigos") {
+            cin >> opt;
+            if (diccionario.esta_idioma(opt)) diccionario.escribir_codigos(opt);
+            else cout << "El idioma " << opt << " no existe" << endl;
         }
 
         cin >> opt;
