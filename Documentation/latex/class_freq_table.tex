@@ -2,7 +2,7 @@
 \label{class_freq_table}\index{FreqTable@{FreqTable}}
 
 
-Representa una cubeta de ropa.  
+Representa una tabla de frecuencias de un \mbox{\hyperlink{class_idioma}{Idioma}}.  
 
 
 
@@ -13,21 +13,19 @@ Representa una cubeta de ropa.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_freq_table_a7eb07bf5c4d46d835cf2b05cd7a3a25a}{Freq\+Table}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructora. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}{leer\+\_\+tabla}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Modifica el \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}{escribir\+\_\+tabla}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}{frecuencia}} (string c) const
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
-Representa una cubeta de ropa. 
+Representa una tabla de frecuencias de un \mbox{\hyperlink{class_idioma}{Idioma}}. 
 
-Puede contener prendas blancas y de color. Puede usarse para intentar llenar una lavadora; en ese caso, las prendas se sacan de la cubeta en orden inverso al de entrada 
-
-Definición en la línea 19 del archivo Freq\+Table.\+hh.
+Definición en la línea 17 del archivo Freq\+Table.\+hh.
 
 
 
@@ -40,6 +38,16 @@ Definición en la línea 19 del archivo Freq\+Table.\+hh.
 
 
 
+Constructora. 
+
+Se ejecuta automáticamente al declarar una \mbox{\hyperlink{class_freq_table}{Freq\+Table}} \begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una \mbox{\hyperlink{class_freq_table}{Freq\+Table}} vacía 
+\end{DoxyPostcond}
+
+
 \doxysubsection{Documentación de las funciones miembro}
 \mbox{\Hypertarget{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}\label{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}} 
 \index{FreqTable@{FreqTable}!escribir\_tabla@{escribir\_tabla}}
@@ -47,18 +55,49 @@ Definición en la línea 19 del archivo Freq\+Table.\+hh.
 \doxysubsubsection{\texorpdfstring{escribir\_tabla()}{escribir\_tabla()}}
 {\footnotesize\ttfamily void Freq\+Table\+::escribir\+\_\+tabla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Escribe por el canal de salida la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyPostcond}
 \mbox{\Hypertarget{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}\label{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}} 
 \index{FreqTable@{FreqTable}!frecuencia@{frecuencia}}
 \index{frecuencia@{frecuencia}!FreqTable@{FreqTable}}
 \doxysubsubsection{\texorpdfstring{frecuencia()}{frecuencia()}}
 {\footnotesize\ttfamily int Freq\+Table\+::frecuencia (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption}) const}
 
+\begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+La frecuencia de {\itshape c} si está en la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}, {\bfseries{-\/1}} si no está 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & -\/ string a mirar su frecuencia \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}\label{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}} 
 \index{FreqTable@{FreqTable}!leer\_tabla@{leer\_tabla}}
 \index{leer\_tabla@{leer\_tabla}!FreqTable@{FreqTable}}
 \doxysubsubsection{\texorpdfstring{leer\_tabla()}{leer\_tabla()}}
 {\footnotesize\ttfamily void Freq\+Table\+::leer\+\_\+tabla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Modifica el \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+\begin{DoxyPrecond}{Precondición}
+En el canal de entrada se encuentran los datos de la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Cambia la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyPostcond}
 
 
 La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}

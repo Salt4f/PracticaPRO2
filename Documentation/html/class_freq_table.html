@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Representa una cubeta de ropa.  
+<p>Representa una tabla de frecuencias de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  
  <a href="class_freq_table.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>&gt;</code></p>
@@ -78,19 +78,21 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:a7eb07bf5c4d46d835cf2b05cd7a3a25a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#a7eb07bf5c4d46d835cf2b05cd7a3a25a">FreqTable</a> ()</td></tr>
+<tr class="memdesc:a7eb07bf5c4d46d835cf2b05cd7a3a25a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructora.  <a href="#a7eb07bf5c4d46d835cf2b05cd7a3a25a">Más...</a><br /></td></tr>
 <tr class="separator:a7eb07bf5c4d46d835cf2b05cd7a3a25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26c57ffd6d5e4db738743da9cfb0720a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#a26c57ffd6d5e4db738743da9cfb0720a">leer_tabla</a> ()</td></tr>
+<tr class="memdesc:a26c57ffd6d5e4db738743da9cfb0720a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a26c57ffd6d5e4db738743da9cfb0720a">Más...</a><br /></td></tr>
 <tr class="separator:a26c57ffd6d5e4db738743da9cfb0720a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1739e3f11f08f894e6fe00e48041d263"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#a1739e3f11f08f894e6fe00e48041d263">escribir_tabla</a> () const</td></tr>
+<tr class="memdesc:a1739e3f11f08f894e6fe00e48041d263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>.  <a href="#a1739e3f11f08f894e6fe00e48041d263">Más...</a><br /></td></tr>
 <tr class="separator:a1739e3f11f08f894e6fe00e48041d263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5065ac15ee7e4a44094ed0e6335c460"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#ac5065ac15ee7e4a44094ed0e6335c460">frecuencia</a> (string c) const</td></tr>
 <tr class="separator:ac5065ac15ee7e4a44094ed0e6335c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Representa una cubeta de ropa. </p>
-<p>Puede contener prendas blancas y de color. Puede usarse para intentar llenar una lavadora; en ese caso, las prendas se sacan de la cubeta en orden inverso al de entrada </p>
+<div class="textblock"><p>Representa una tabla de frecuencias de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00019">19</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00017">17</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a7eb07bf5c4d46d835cf2b05cd7a3a25a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7eb07bf5c4d46d835cf2b05cd7a3a25a">&#9670;&nbsp;</a></span>FreqTable()</h2>
@@ -106,6 +108,10 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructora. </p>
+<p>Se ejecuta automáticamente al declarar una <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </p><dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El resultado es una <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> vacía </dd></dl>
 
 </div>
 </div>
@@ -125,6 +131,10 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Escribe la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </dd></dl>
+
 </div>
 </div>
 <a id="ac5065ac15ee7e4a44094ed0e6335c460"></a>
@@ -142,6 +152,14 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>La frecuencia de <em>c</em> si está en la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>, <b>-1</b> si no está </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>- string a mirar su frecuencia </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -159,6 +177,10 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Modifica el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>En el canal de entrada se encuentran los datos de la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Cambia la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </dd></dl>
 
 </div>
 </div>

@@ -24,9 +24,9 @@ private:
     map<string, Idioma>::iterator buscar_idioma(string nombre);
 
 public:
-    /** @brief Constructora. 
+    /** @brief Constructora
 
-      Se ejecuta automáticamente al declarar un Diccionario.
+      Se ejecuta automáticamente al declarar un Diccionario
       \pre <b>true</b>
       \post El resultado es un Diccionario vacío
     */ 

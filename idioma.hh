@@ -28,9 +28,9 @@ private:
     void leer_tabla();
 
 public:
-    /** @brief Constructora. 
+    /** @brief Constructora
 
-      Se ejecuta automáticamente al declarar un Idioma.
+      Se ejecuta automáticamente al declarar un Idioma
       \pre En el canal de entrada se encuentran los datos de la FreqTable
       \post El resultado es un Idioma con la FreqTable y el Treecode
     */ 
@@ -64,7 +64,7 @@ public:
     /** @brief Codifica un carácter
       \pre El parámetro <b>c</b> es del Idioma
       \return El carácter codificado
-      \param c - Carácter a descodificar
+      \param c - Carácter a codificar
     */
     string codificar_caracter(string c) const;
 
