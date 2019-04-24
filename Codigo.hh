@@ -14,6 +14,9 @@
 using namespace std;
 #endif
 
+/** @class Codigo
+    @brief Representa el <b>TreeCode</b> y la <b>codeTable</b> de un Idioma
+*/
 class Codigo {
 private:
     BinTree< pair<string, int> > treecode;

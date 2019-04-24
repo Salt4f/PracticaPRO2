@@ -1,8 +1,7 @@
 \hypertarget{main_8cc}{}\doxysection{Referencia del Archivo main.\+cc}
 \label{main_8cc}\index{main.cc@{main.cc}}
 {\ttfamily \#include \char`\"{}Diccionario.\+hh\char`\"{}}\newline
-Dependencia gráfica adjunta para main.\+cc\+:
-\nopagebreak
+Dependencia gráfica adjunta para main.\+cc\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,8 +29,28 @@ Definición en la línea 9 del archivo main.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{9            \{}
-\DoxyCodeLine{10     cout << 0 << endl;}
-\DoxyCodeLine{11     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{12 \}}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{string} opt;}
+\DoxyCodeLine{12     cin >> n;}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_diccionario}{Diccionario}} diccionario;}
+\DoxyCodeLine{14     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{15         cin >> opt;}
+\DoxyCodeLine{16         diccionario.\mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\_idioma}}(opt);}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18     cin >> opt;}
+\DoxyCodeLine{19     \textcolor{keywordflow}{while} (opt != \textcolor{stringliteral}{"fin"}) \{}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"modifica"}) \{}
+\DoxyCodeLine{22             cin >> opt;}
+\DoxyCodeLine{23             diccionario.\mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\_idioma}}(opt);}
+\DoxyCodeLine{24         \}}
+\DoxyCodeLine{25         }
+\DoxyCodeLine{26         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"codifica"}) \{}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         cin >> opt;}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 \}}
 
 \end{DoxyCode}

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['idioma',['Idioma',['../class_idioma.html',1,'Idioma'],['../class_idioma.html#a6722a621ce03825772493e67e5a17215',1,'Idioma::Idioma()']]],
-  ['idioma_2ehh',['Idioma.hh',['../_idioma_8hh.html',1,'']]]
+  ['leer_5ftabla',['leer_tabla',['../class_freq_table.html#a26c57ffd6d5e4db738743da9cfb0720a',1,'FreqTable']]]
 ];

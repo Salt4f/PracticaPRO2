@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['codifica',['codifica',['../class_codigo.html#aecfc0015fa188f7e8daa93ed0f4bfa66',1,'Codigo::codifica()'],['../class_diccionario.html#ae8077dbe0b5cfc3d763d744d59e45803',1,'Diccionario::codifica()']]],
-  ['codificar_5fcaracter',['codificar_caracter',['../class_idioma.html#a114b134667bd3f6f2cf7a460a4637ee9',1,'Idioma']]],
-  ['codigo',['Codigo',['../class_codigo.html#ab600451a62d146afd95c1c1a0fc041c3',1,'Codigo::Codigo()'],['../class_codigo.html#a51aed61d7d0059dc17f86e7a7c333a47',1,'Codigo::Codigo(const FreqTable &amp;tabla)']]]
+  ['descodifica',['descodifica',['../class_codigo.html#adaa54ebe9de694fe3e1c30d0cd8501f5',1,'Codigo::descodifica()'],['../class_diccionario.html#a593b527d3d9c08bd6e4f036aab3cad90',1,'Diccionario::descodifica()']]],
+  ['descodificar',['descodificar',['../class_idioma.html#aac671224bea460078a26736a8076a5a3',1,'Idioma']]],
+  ['diccionario',['Diccionario',['../class_diccionario.html#aa0a2191ec706b256c35b5229cc197b15',1,'Diccionario']]]
 ];

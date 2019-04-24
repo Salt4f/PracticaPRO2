@@ -21,7 +21,7 @@ class Diccionario {
 private:
     map<string, Idioma> diccionario;
     
-    map<string, Idioma>::iterator buscar_idioma(string nombre);
+    map<string, Idioma>::iterator idioma_buscado;
 
 public:
     /** @brief Constructora
@@ -32,19 +32,20 @@ public:
     */ 
     Diccionario();
 
-    /** @brief Añade un Idioma al Diccionario
-      \pre El Idioma a añadir no está en el Diccionario
-      \post Añade un idioma al Diccionario
-      \param nombre - Nombre del Idioma a añadir
-    */
-    void anadir_idioma(string nombre);
-
-    /** @brief Modifica un Idioma del Diccionario
-      \pre El Idioma a modificar está en el Diccionario
-      \post Modifica el Idioma del Diccionario
-      \param nombre - Nombre del Idioma a modificar
+    /** @brief Modifica/Añade un Idioma del Diccionario
+      \pre <b>true</b>
+      \post Modifica/Añade el Idioma del/al Diccionario
+      \param nombre - Nombre del Idioma a modificar/añadir
     */
     void modificar_idioma(string nombre);
+
+    /** @brief Busca un Idioma
+      \pre <b>true</b>
+      \post Si el Idioma está en el Diccionario devuelve <b>true</b> y prepara el iterador <em>idioma_buscado</em>
+            con la posición del Idioma, si no está devuelve <b>false</b>
+      \param nombre - Nombre del Idioma a buscar
+    */
+    bool esta_idioma(string nombre) const;
 
     /** @brief Escribe la FreqTable de un Idioma del Diccionario
       \pre El Idioma a escribir su FreqTable está en el Diccionario

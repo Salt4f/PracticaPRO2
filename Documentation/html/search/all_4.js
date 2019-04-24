@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['frecuencia',['frecuencia',['../class_freq_table.html#ac5065ac15ee7e4a44094ed0e6335c460',1,'FreqTable']]],
-  ['freqtable',['FreqTable',['../class_freq_table.html',1,'FreqTable'],['../class_freq_table.html#a7eb07bf5c4d46d835cf2b05cd7a3a25a',1,'FreqTable::FreqTable()']]],
-  ['freqtable_2ehh',['FreqTable.hh',['../_freq_table_8hh.html',1,'']]]
+  ['idioma',['Idioma',['../class_idioma.html',1,'Idioma'],['../class_idioma.html#a6722a621ce03825772493e67e5a17215',1,'Idioma::Idioma()']]],
+  ['idioma_2ehh',['Idioma.hh',['../_idioma_8hh.html',1,'']]]
 ];
