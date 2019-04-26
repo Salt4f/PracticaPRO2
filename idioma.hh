@@ -42,11 +42,17 @@ public:
     */
     void modificar_idioma();
 
+    /** @brief Escribe la FreqTable del Idioma
+      \pre <b>true</b>
+      \post Escribe por el canal de salida la FreqTable
+    */
+    void escribir_tabla() const;
+
     /** @brief Escribe el <b>Treecode</b> del Idioma
       \pre <b>true</b>
       \post Escribe por el canal de salida el <b>Treecode</b>
     */
-    void escribir_tabla() const;
+    void escribir_treecode() const;
 
     /** @brief Escribe la tabla de códigos del Idioma
       \pre <b>true</b>
@@ -62,11 +68,11 @@ public:
     bool es_del_idioma(string c) const;
 
     /** @brief Codifica un carácter
-      \pre El parámetro <b>c</b> es del Idioma
+      \pre Todos los carácteres del texto pertenecen al Idioma
       \return El carácter codificado
-      \param c - Carácter a codificar
+      \param texto - Texto a codificar
     */
-    string codificar_caracter(string c) const;
+    string codificar(string texto) const;
 
     /** @brief Descodifica un texto
       \pre Todos los carácteres del texto pertenecen al Idioma

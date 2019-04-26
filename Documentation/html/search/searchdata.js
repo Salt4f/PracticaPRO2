@@ -1,10 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "cdefilm",
+  0: "cdefilmrt",
   1: "cdfi",
   2: "cdfim",
-  3: "cdefilm",
-  4: "c"
+  3: "cdefilmr",
+  4: "cdt",
+  5: "cl"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "pages"
+  4: "variables",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "Clases",
   2: "Archivos",
   3: "Funciones",
-  4: "Páginas"
+  4: "Variables",
+  5: "Páginas"
 };
 

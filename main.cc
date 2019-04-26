@@ -4,6 +4,8 @@
 
 /** @mainpage Codificador/Descodificador
  * 
+ * \todo Mirar doxycomments Diccionario.hh
+ * 
 */
 
 
@@ -33,40 +35,31 @@ int main() {
 
         else if (opt == "codifica") {
             cin >> opt;
-            if (diccionario.esta_idioma(opt)) {
-                string texto;
-                cin >> texto;
-                cout << diccionario.codifica(opt, texto) << endl;
-            }
-            else cout << "El idioma " << opt << " no existe" << endl;
+            string texto;
+            cin >> texto;
+            cout << diccionario.codifica(opt, texto) << endl;
         }
 
         else if (opt == "descodifica") {
             cin >> opt;
-            if (diccionario.esta_idioma(opt)) {
-                string texto;
-                cin >> texto;
-                cout << diccionario.descodifica(opt, texto) << endl;
-            }
-            else cout << "El idioma " << opt << " no existe" << endl;
+            string texto;
+            cin >> texto;
+            cout << diccionario.descodifica(opt, texto) << endl;
         }
 
         else if (opt == "tabla_frec") {
             cin >> opt;
-            if (diccionario.esta_idioma(opt)) diccionario.escribir_tabla_frecuencias(opt);
-            else cout << "El idioma " << opt << " no existe" << endl;
+            diccionario.escribir_tabla_frecuencias(opt);
         }
 
         else if (opt == "treecode") {
             cin >> opt;
-            if (diccionario.esta_idioma(opt)) diccionario.escribir_treecode(opt);
-            else cout << "El idioma " << opt << " no existe" << endl;
+            diccionario.escribir_treecode(opt);
         }
 
         else if (opt == "codigos") {
             cin >> opt;
-            if (diccionario.esta_idioma(opt)) diccionario.escribir_codigos(opt);
-            else cout << "El idioma " << opt << " no existe" << endl;
+            diccionario.escribir_codigos(opt);
         }
 
         cin >> opt;

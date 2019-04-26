@@ -64,6 +64,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
 <a href="class_idioma-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia de la Clase Idioma</div>  </div>
@@ -84,20 +86,37 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:a91f493edb5d164fb4e0dd274c3146316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a91f493edb5d164fb4e0dd274c3146316">Más...</a><br /></td></tr>
 <tr class="separator:a91f493edb5d164fb4e0dd274c3146316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26effb654be9fa4a6ccc5fc771f4efc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a26effb654be9fa4a6ccc5fc771f4efc0">escribir_tabla</a> () const</td></tr>
-<tr class="memdesc:a26effb654be9fa4a6ccc5fc771f4efc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a26effb654be9fa4a6ccc5fc771f4efc0">Más...</a><br /></td></tr>
+<tr class="memdesc:a26effb654be9fa4a6ccc5fc771f4efc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a26effb654be9fa4a6ccc5fc771f4efc0">Más...</a><br /></td></tr>
 <tr class="separator:a26effb654be9fa4a6ccc5fc771f4efc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac309e4d7060759099aa5ce3ed7150435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#ac309e4d7060759099aa5ce3ed7150435">escribir_treecode</a> () const</td></tr>
+<tr class="memdesc:ac309e4d7060759099aa5ce3ed7150435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#ac309e4d7060759099aa5ce3ed7150435">Más...</a><br /></td></tr>
+<tr class="separator:ac309e4d7060759099aa5ce3ed7150435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33ab5a7b9a1567057f9916bf868277e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#ad33ab5a7b9a1567057f9916bf868277e">escribir_codigos</a> () const</td></tr>
 <tr class="memdesc:ad33ab5a7b9a1567057f9916bf868277e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la tabla de códigos del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#ad33ab5a7b9a1567057f9916bf868277e">Más...</a><br /></td></tr>
 <tr class="separator:ad33ab5a7b9a1567057f9916bf868277e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4668bf02f948cc873e7342147172145c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a4668bf02f948cc873e7342147172145c">es_del_idioma</a> (string c) const</td></tr>
 <tr class="memdesc:a4668bf02f948cc873e7342147172145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si un carácter es del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a4668bf02f948cc873e7342147172145c">Más...</a><br /></td></tr>
 <tr class="separator:a4668bf02f948cc873e7342147172145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a114b134667bd3f6f2cf7a460a4637ee9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a114b134667bd3f6f2cf7a460a4637ee9">codificar_caracter</a> (string c) const</td></tr>
-<tr class="memdesc:a114b134667bd3f6f2cf7a460a4637ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codifica un carácter.  <a href="#a114b134667bd3f6f2cf7a460a4637ee9">Más...</a><br /></td></tr>
-<tr class="separator:a114b134667bd3f6f2cf7a460a4637ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b6fd6a3453a2d23484143ed0509d6a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#ab7b6fd6a3453a2d23484143ed0509d6a">codificar</a> (string texto) const</td></tr>
+<tr class="memdesc:ab7b6fd6a3453a2d23484143ed0509d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codifica un carácter.  <a href="#ab7b6fd6a3453a2d23484143ed0509d6a">Más...</a><br /></td></tr>
+<tr class="separator:ab7b6fd6a3453a2d23484143ed0509d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac671224bea460078a26736a8076a5a3"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#aac671224bea460078a26736a8076a5a3">descodificar</a> (string texto) const</td></tr>
 <tr class="memdesc:aac671224bea460078a26736a8076a5a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descodifica un texto.  <a href="#aac671224bea460078a26736a8076a5a3">Más...</a><br /></td></tr>
 <tr class="separator:aac671224bea460078a26736a8076a5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a8ad0c4745f1d06385263d4ed2093bf03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a8ad0c4745f1d06385263d4ed2093bf03">rehacer_codigos</a> ()</td></tr>
+<tr class="separator:a8ad0c4745f1d06385263d4ed2093bf03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd4945962a010e4ad932526777556578"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#afd4945962a010e4ad932526777556578">leer_tabla</a> ()</td></tr>
+<tr class="separator:afd4945962a010e4ad932526777556578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a6f8872782ac19259c73e0dce17a63db2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_freq_table.html">FreqTable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a6f8872782ac19259c73e0dce17a63db2">tabla</a></td></tr>
+<tr class="separator:a6f8872782ac19259c73e0dce17a63db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4121fecdb6a8a3f744cd4184be2e42e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_codigo.html">Codigo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">codigos</a></td></tr>
+<tr class="separator:a4121fecdb6a8a3f744cd4184be2e42e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
@@ -127,28 +146,28 @@ Métodos públicos</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones miembro</h2>
-<a id="a114b134667bd3f6f2cf7a460a4637ee9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a114b134667bd3f6f2cf7a460a4637ee9">&#9670;&nbsp;</a></span>codificar_caracter()</h2>
+<a id="ab7b6fd6a3453a2d23484143ed0509d6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b6fd6a3453a2d23484143ed0509d6a">&#9670;&nbsp;</a></span>codificar()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string Idioma::codificar_caracter </td>
+          <td class="memname">string Idioma::codificar </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramname"><em>texto</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Codifica un carácter. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>El parámetro <b>c</b> es del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd>Todos los carácteres del texto pertenecen al <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> </dd></dl>
 <dl class="section return"><dt>Devuelve</dt><dd>El carácter codificado </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c</td><td>- Carácter a codificar </td></tr>
+    <tr><td class="paramname">texto</td><td>- Texto a codificar </td></tr>
   </table>
   </dd>
 </dl>
@@ -247,9 +266,55 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Escribe la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac309e4d7060759099aa5ce3ed7150435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac309e4d7060759099aa5ce3ed7150435">&#9670;&nbsp;</a></span>escribir_treecode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Idioma::escribir_treecode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Escribe el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
 <dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida el <b>Treecode</b> </dd></dl>
+
+</div>
+</div>
+<a id="afd4945962a010e4ad932526777556578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd4945962a010e4ad932526777556578">&#9670;&nbsp;</a></span>leer_tabla()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Idioma::leer_tabla </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -271,6 +336,80 @@ Métodos públicos</h2></td></tr>
 <p>Modifica el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
 <dl class="section pre"><dt>Precondición</dt><dd>En el canal de entrada se encuentran los datos de la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Cambia la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> y calcula un nuevo <em>Treecode</em> </dd></dl>
+
+</div>
+</div>
+<a id="a8ad0c4745f1d06385263d4ed2093bf03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad0c4745f1d06385263d4ed2093bf03">&#9670;&nbsp;</a></span>rehacer_codigos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Idioma::rehacer_codigos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a id="a4121fecdb6a8a3f744cd4184be2e42e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4121fecdb6a8a3f744cd4184be2e42e1">&#9670;&nbsp;</a></span>codigos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_codigo.html">Codigo</a> Idioma::codigos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_idioma_8hh_source.html#l00025">25</a> del archivo <a class="el" href="_idioma_8hh_source.html">Idioma.hh</a>.</p>
+
+</div>
+</div>
+<a id="a6f8872782ac19259c73e0dce17a63db2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8872782ac19259c73e0dce17a63db2">&#9670;&nbsp;</a></span>tabla</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_freq_table.html">FreqTable</a> Idioma::tabla</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_idioma_8hh_source.html#l00024">24</a> del archivo <a class="el" href="_idioma_8hh_source.html">Idioma.hh</a>.</p>
 
 </div>
 </div>

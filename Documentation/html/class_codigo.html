@@ -64,6 +64,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
 <a href="class_codigo-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia de la Clase Codigo</div>  </div>
@@ -95,6 +97,19 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:aff1dd5ba7f1ad429d14cae824a464fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#aff1dd5ba7f1ad429d14cae824a464fbb">escribir_codigos</a> () const</td></tr>
 <tr class="memdesc:aff1dd5ba7f1ad429d14cae824a464fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la <b>codetable</b>  <a href="#aff1dd5ba7f1ad429d14cae824a464fbb">Más...</a><br /></td></tr>
 <tr class="separator:aff1dd5ba7f1ad429d14cae824a464fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a77d0425ed80c54aaff930a55ec93be11"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#a77d0425ed80c54aaff930a55ec93be11">codifica_caracter</a> (string c)</td></tr>
+<tr class="memdesc:a77d0425ed80c54aaff930a55ec93be11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codifica el carácter <b>c</b>  <a href="#a77d0425ed80c54aaff930a55ec93be11">Más...</a><br /></td></tr>
+<tr class="separator:a77d0425ed80c54aaff930a55ec93be11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:ad90dbf1b410a0e7126ad4cbcd4ce7b87"><td class="memItemLeft" align="right" valign="top">BinTree&lt; pair&lt; string, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#ad90dbf1b410a0e7126ad4cbcd4ce7b87">treecode</a></td></tr>
+<tr class="separator:ad90dbf1b410a0e7126ad4cbcd4ce7b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0be11d5a3c76041fbef06c94f1850c"><td class="memItemLeft" align="right" valign="top">map&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_codigo.html#a3a0be11d5a3c76041fbef06c94f1850c">codetable</a></td></tr>
+<tr class="separator:a3a0be11d5a3c76041fbef06c94f1850c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa el <b>TreeCode</b> y la <b>codeTable</b> de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
@@ -173,6 +188,35 @@ Métodos públicos</h2></td></tr>
 
 </div>
 </div>
+<a id="a77d0425ed80c54aaff930a55ec93be11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d0425ed80c54aaff930a55ec93be11">&#9670;&nbsp;</a></span>codifica_caracter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Codigo::codifica_caracter </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Codifica el carácter <b>c</b> </p>
+<p>Recorre el <b>treecode</b> </p>
+
+</div>
+</div>
 <a id="adaa54ebe9de694fe3e1c30d0cd8501f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adaa54ebe9de694fe3e1c30d0cd8501f5">&#9670;&nbsp;</a></span>descodifica()</h2>
 
@@ -240,6 +284,55 @@ Métodos públicos</h2></td></tr>
 <p>Escribe la <b>codetable</b> </p>
 <dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la <b>codetable</b> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a id="a3a0be11d5a3c76041fbef06c94f1850c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0be11d5a3c76041fbef06c94f1850c">&#9670;&nbsp;</a></span>codetable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;string, string&gt; Codigo::codetable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_codigo_8hh_source.html#l00024">24</a> del archivo <a class="el" href="_codigo_8hh_source.html">Codigo.hh</a>.</p>
+
+</div>
+</div>
+<a id="ad90dbf1b410a0e7126ad4cbcd4ce7b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad90dbf1b410a0e7126ad4cbcd4ce7b87">&#9670;&nbsp;</a></span>treecode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BinTree&lt; pair&lt;string, int&gt; &gt; Codigo::treecode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_codigo_8hh_source.html#l00022">22</a> del archivo <a class="el" href="_codigo_8hh_source.html">Codigo.hh</a>.</p>
 
 </div>
 </div>

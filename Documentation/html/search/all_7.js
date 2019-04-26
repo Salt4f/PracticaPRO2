@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cc']]],
-  ['main_2ecc',['main.cc',['../main_8cc.html',1,'']]],
-  ['modificar_5fidioma',['modificar_idioma',['../class_diccionario.html#acebf7336b0d4509c5e8b52eeb0e0255b',1,'Diccionario::modificar_idioma()'],['../class_idioma.html#a91f493edb5d164fb4e0dd274c3146316',1,'Idioma::modificar_idioma()']]]
+  ['rehacer_5fcodigos',['rehacer_codigos',['../class_idioma.html#a8ad0c4745f1d06385263d4ed2093bf03',1,'Idioma']]]
 ];

@@ -24,6 +24,18 @@ void \mbox{\hyperlink{class_codigo_ae715e2ad01a25064f484ede923d0fb75}{escribir\+
 \begin{DoxyCompactList}\small\item\em Escribe el {\bfseries{treecode}} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}{escribir\+\_\+codigos}} () const
 \begin{DoxyCompactList}\small\item\em Escribe la {\bfseries{codetable}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_codigo_a77d0425ed80c54aaff930a55ec93be11}{codifica\+\_\+caracter}} (string c)
+\begin{DoxyCompactList}\small\item\em Codifica el carácter {\bfseries{c}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}}
+\item 
+map$<$ string, string $>$ \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -90,7 +102,17 @@ El texto codificado
 {\em texto} & -\/ Texto a codificar \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}\label{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}} 
+\mbox{\Hypertarget{class_codigo_a77d0425ed80c54aaff930a55ec93be11}\label{class_codigo_a77d0425ed80c54aaff930a55ec93be11}} 
+\index{Codigo@{Codigo}!codifica\_caracter@{codifica\_caracter}}
+\index{codifica\_caracter@{codifica\_caracter}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{codifica\_caracter()}{codifica\_caracter()}}
+{\footnotesize\ttfamily string Codigo\+::codifica\+\_\+caracter (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Codifica el carácter {\bfseries{c}} 
+
+Recorre el {\bfseries{treecode}} \mbox{\Hypertarget{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}\label{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}} 
 \index{Codigo@{Codigo}!descodifica@{descodifica}}
 \index{descodifica@{descodifica}!Codigo@{Codigo}}
 \doxysubsubsection{\texorpdfstring{descodifica()}{descodifica()}}
@@ -143,6 +165,29 @@ Escribe la {\bfseries{codetable}}
 \begin{DoxyPostcond}{Postcondición}
 Escribe por el canal de salida la {\bfseries{codetable}} 
 \end{DoxyPostcond}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}\label{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}} 
+\index{Codigo@{Codigo}!codetable@{codetable}}
+\index{codetable@{codetable}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{codetable}{codetable}}
+{\footnotesize\ttfamily map$<$string, string$>$ Codigo\+::codetable\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 24 del archivo Codigo.\+hh.
+
+\mbox{\Hypertarget{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}\label{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}} 
+\index{Codigo@{Codigo}!treecode@{treecode}}
+\index{treecode@{treecode}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{treecode}{treecode}}
+{\footnotesize\ttfamily Bin\+Tree$<$ pair$<$string, int$>$ $>$ Codigo\+::treecode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 22 del archivo Codigo.\+hh.
+
 
 
 La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}

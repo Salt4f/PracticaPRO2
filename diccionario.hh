@@ -19,9 +19,8 @@ using namespace std;
 */
 class Diccionario {
 private:
+    ///El Diccionario en sí
     map<string, Idioma> diccionario;
-    
-    map<string, Idioma>::iterator idioma_buscado;
 
 public:
     /** @brief Constructora
@@ -38,14 +37,6 @@ public:
       \param nombre - Nombre del Idioma a modificar/añadir
     */
     void modificar_idioma(string nombre);
-
-    /** @brief Busca un Idioma
-      \pre <b>true</b>
-      \post Si el Idioma está en el Diccionario devuelve <b>true</b> y prepara el iterador <em>idioma_buscado</em>
-            con la posición del Idioma, si no está devuelve <b>false</b>
-      \param nombre - Nombre del Idioma a buscar
-    */
-    bool esta_idioma(string nombre) const;
 
     /** @brief Escribe la FreqTable de un Idioma del Diccionario
       \pre El Idioma a escribir su FreqTable está en el Diccionario
