@@ -13,7 +13,7 @@ using namespace std;
 #endif
 
 /** @class Diccionario
-    @brief Representa un conjunto de Idioma. 
+    @brief Representa un conjunto de Idioma
 
     Contiene distintos Idioma
 */

@@ -14,7 +14,7 @@ using namespace std;
 #endif
 
 /** @class Idioma
-    @brief Representa un Idioma. 
+    @brief Representa un Idioma
 
     Contiene la tabla de frecuencias (FreqTable) y el <em>Treecode</em> de dicho Idioma
 */
