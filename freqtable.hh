@@ -28,7 +28,7 @@ public:
     */
     FreqTable();
 
-    /** @brief Modifica el Idioma
+    /** @brief Lee la FreqTable
       \pre En el canal de entrada se encuentran los datos de la FreqTable
       \post Cambia la FreqTable
     */
