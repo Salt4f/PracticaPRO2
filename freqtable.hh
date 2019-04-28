@@ -34,6 +34,13 @@ public:
     */
     void leer_tabla();
 
+    /** @brief Comprueba si el carácter está en la FreqTable
+      \pre <b>true</b>
+      \return <b>true</b> si está, <b>false</b> si no
+      \param c - Carácter a comprobar
+    */
+    bool esta(string c) const;
+
     /** @brief Escribe la FreqTable
       \pre <b>true</b>
       \post Escribe por el canal de salida la FreqTable

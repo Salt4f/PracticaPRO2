@@ -42,7 +42,7 @@ public:
 
       Se ejecuta automáticamente al declarar un Codigo
       \pre La FreqTable <em>tabla</em> no está vacía
-      \post El resultado es un Codigo vacío (<em>treecode</em> y <em>codetable</em> vacío)
+      \post El resultado es un Codigo con <em>treecode</em> y <em>codetable</em>
     */ 
     Codigo(const FreqTable & tabla);
 

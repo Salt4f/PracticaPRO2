@@ -25,7 +25,6 @@ private:
     Codigo codigos;
 
     void rehacer_codigos();
-    void leer_tabla();
 
 public:
     /** @brief Constructora
