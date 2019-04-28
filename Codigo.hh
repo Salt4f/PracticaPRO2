@@ -27,7 +27,7 @@ private:
     * 
     * Recorre el <b>treecode</b>
     */
-    string codifica_caracter(string c);
+    string codifica_caracter(string c, const BinTree< pair<string, int> >& tree) const;
 
 public:
     /** @brief Constructora por defecto
