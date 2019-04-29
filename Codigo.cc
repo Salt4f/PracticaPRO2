@@ -5,10 +5,42 @@
 #include "Codigo.hh"
 using namespace std;
 
+bool comp(pair<string,int>& a, pair<string,int>& b) {
+    return a.second <= b.second;
+}
+
+void insercion(list<pair<string,int> >& lista, pair<string,int>& elemento) {
+    bool completado = false;
+    for (list<pair<string,int> >::iterator it = lista.begin(); !completado; ++it) {
+        if (elemento.second <= it->second) {
+            lista.insert(it, elemento);
+            completado = true;
+        }
+        else if (it == lista.end()) {
+            lista.insert(it, elemento);
+            completado = true;
+        }
+    }
+}
+
 Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
-    tabla.escribir_tabla();
+    list<pair<string, int> > lista = tabla.elementos();
+    sort(lista.begin(), lista.end(), comp);
+    while (lista.size != 1) {
+        list<pair<string,int> >::iterator it = lista.begin();
+        string str = it->first;
+        int f = it->second;
+        BinTree<pair<string,int> > left(*it);
+        it = lista.erase(it);
+        str += it->first;
+        f += it->second;
+        BinTree<pair<string,int> > right(*it);
+        it = lista.erase(it);
+        BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
+        insercion(lista, make_pair(str, f));
+    }
 }
 
 string Codigo::codifica(string texto) const {
