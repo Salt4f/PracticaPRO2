@@ -8,6 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
+#include <vector>
 using namespace std;
 #endif
 
