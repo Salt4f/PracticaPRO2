@@ -28,19 +28,28 @@ Codigo::Codigo() {}
 Codigo::Codigo(const FreqTable & tabla) {
     list<pair<string, int> > lista = tabla.elementos();
     sort(lista.begin(), lista.end(), comp);
-    while (lista.size != 1) {
-        list<pair<string,int> >::iterator it = lista.begin();
-        string str = it->first;
-        int f = it->second;
+    list<BinTree<pair<string, int> > > listaTree;
+    while (!lista.empty()) {
+        BinTree<pair<string,int> > aux(lista.front);
+        lista.pop_front();
+        listaTree.insert(listaTree.end(), aux);
+    }
+    while (listaTree.size > 1) {
+        list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
+        string str = it->value().first;
+        int f = it->value().second;
         BinTree<pair<string,int> > left(*it);
         it = lista.erase(it);
-        str += it->first;
-        f += it->second;
+        str += it->value().first;
+        f += it->value().second;
         BinTree<pair<string,int> > right(*it);
         it = lista.erase(it);
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
         insercion(lista, make_pair(str, f));
+        treecode = aux;
     }
+    listaTree.clear();
+    //Árbol hecho
 }
 
 string Codigo::codifica(string texto) const {
