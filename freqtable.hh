@@ -53,6 +53,11 @@ public:
       \param c - string a mirar su frecuencia
     */
     int frecuencia(string c) const;
+    
+    /**
+    
+    */
+    vector<pair<string,int> > elementos() const;
 };
 
 
