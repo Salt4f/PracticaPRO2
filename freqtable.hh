@@ -8,7 +8,7 @@
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
-#include <vector>
+#include <list>
 using namespace std;
 #endif
 
@@ -58,7 +58,7 @@ public:
     /**
     
     */
-    vector<pair<string,int> > elementos() const;
+    list<pair<string,int> > elementos() const;
 };
 
 
