@@ -34,3 +34,11 @@ int FreqTable::frecuencia(string c) const {
     if (it != table.end()) return it->second;
     return -1;
 }
+
+vector<pair<string,int> > FreqTable::elementos() const {
+    vector<pair<string,int> > lista;
+    for (map<string,int>::const_iterator it = table.begin(); it != table.end(); ++it) {
+        lista.push_back(*it);
+    }
+    return lista;
+}
