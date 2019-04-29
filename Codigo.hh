@@ -11,6 +11,7 @@
 #include "BinTree.hh"
 #include <iostream>
 #include <map>
+#include <algorithm>
 using namespace std;
 #endif
 
