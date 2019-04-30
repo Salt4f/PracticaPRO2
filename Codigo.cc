@@ -45,12 +45,12 @@ Codigo::Codigo(const FreqTable & tabla) {
         string str = it->value().first;
         int f = it->value().second;
         cout << str << " " << f << endl;
-        BinTree<pair<string,int> > left(it->value());
+        BinTree<pair<string,int> > left = *it;
         it = listaTree.erase(it);
         str += it->value().first;
         f += it->value().second;
         cout << str << " " << f << endl;
-        BinTree<pair<string,int> > right(it->value());
+        BinTree<pair<string,int> > right = *it;
         it = listaTree.erase(it);
         cout << "habemus arbol" << endl;
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
@@ -62,6 +62,7 @@ Codigo::Codigo(const FreqTable & tabla) {
     }
     listaTree.clear();
     //Árbol hecho
+    cout << "fuera bucle" << endl;
     while (!caracteres.empty()) {
         string c = caracteres.front();
         caracteres.pop_front();
