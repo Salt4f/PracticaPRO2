@@ -9,17 +9,18 @@ bool comp(const pair<string,int>& a, const pair<string,int>& b) {
     return a.second <= b.second;
 }
 
-void insercion(list<pair<string,int> >& lista, pair<string,int>& elemento) {
+void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int> >& elemento) {
     bool completado = false;
-    for (list<pair<string,int> >::iterator it = lista.begin(); !completado; ++it) {
-        if (elemento.second <= it->second) {
+    for (list<BinTree<pair<string,int> > >::iterator it = lista.begin(); !completado; ++it) {
+        if (it == lista.end()) {
             lista.insert(it, elemento);
             completado = true;
         }
-        else if (it == lista.end()) {
+        else if (elemento.value().second <= it->value().second) {
             lista.insert(it, elemento);
             completado = true;
         }
+        
     }
 }
 
@@ -29,28 +30,43 @@ Codigo::Codigo(const FreqTable & tabla) {
     list<pair<string, int> > lista = tabla.elementos();
     lista.sort(comp);
     list<BinTree<pair<string, int> > > listaTree;
+    list<string> caracteres;
     while (!lista.empty()) {
-        BinTree<pair<string,int> > aux(lista.front());
+        pair<string,int> par = lista.front();
         lista.pop_front();
+        BinTree<pair<string,int> > aux(par);
+        caracteres.insert(caracteres.end(), par.first);
         listaTree.insert(listaTree.end(), aux);
     }
     while (listaTree.size() > 1) {
+        cout << "bienvenido al bucle" << endl;
         list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
+        cout << "intentamos value" << endl;
         string str = it->value().first;
         int f = it->value().second;
-        BinTree<pair<string,int> > left(*it);
+        cout << str << " " << f << endl;
+        BinTree<pair<string,int> > left(it->value());
         it = listaTree.erase(it);
         str += it->value().first;
         f += it->value().second;
-        BinTree<pair<string,int> > right(*it);
+        cout << str << " " << f << endl;
+        BinTree<pair<string,int> > right(it->value());
         it = listaTree.erase(it);
+        cout << "habemus arbol" << endl;
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
-        pair<string,int> par(str,f);
-        insercion(lista, par);
+        cout << "antes de inserción" << endl;
+        insercion(listaTree, aux);
         treecode = aux;
+        cout << "fin bucle, volvemos" << endl;
+        cout << listaTree.size() << endl;
     }
     listaTree.clear();
     //Árbol hecho
+    while (!caracteres.empty()) {
+        string c = caracteres.front();
+        caracteres.pop_front();
+        codetable.insert(make_pair(c, codifica_caracter(c, treecode)));
+    }
 }
 
 string Codigo::codifica(string texto) const {
