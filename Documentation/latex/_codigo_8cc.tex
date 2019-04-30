@@ -1,0 +1,65 @@
+\hypertarget{_codigo_8cc}{}\doxysection{Referencia del Archivo Codigo.\+cc}
+\label{_codigo_8cc}\index{Codigo.cc@{Codigo.cc}}
+{\ttfamily \#include \char`\"{}Codigo.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para Codigo.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{_codigo_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_codigo_8cc_aa2dae46392eccd54b56b878c6add4ef4}{comp}} (const pair$<$ string, int $>$ \&a, const pair$<$ string, int $>$ \&b)
+\item 
+void \mbox{\hyperlink{_codigo_8cc_a24f272155c58c71a11d73d72d591513c}{insercion}} (list$<$ pair$<$ string, int $>$ $>$ \&lista, pair$<$ string, int $>$ \&elemento)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_codigo_8cc_aa2dae46392eccd54b56b878c6add4ef4}\label{_codigo_8cc_aa2dae46392eccd54b56b878c6add4ef4}} 
+\index{Codigo.cc@{Codigo.cc}!comp@{comp}}
+\index{comp@{comp}!Codigo.cc@{Codigo.cc}}
+\doxysubsubsection{\texorpdfstring{comp()}{comp()}}
+{\footnotesize\ttfamily bool comp (\begin{DoxyParamCaption}\item[{const pair$<$ string, int $>$ \&}]{a,  }\item[{const pair$<$ string, int $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 8 del archivo Codigo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8                                                                 \{}
+\DoxyCodeLine{9     \textcolor{keywordflow}{return} a.second <= b.second;}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_codigo_8cc_a24f272155c58c71a11d73d72d591513c}\label{_codigo_8cc_a24f272155c58c71a11d73d72d591513c}} 
+\index{Codigo.cc@{Codigo.cc}!insercion@{insercion}}
+\index{insercion@{insercion}!Codigo.cc@{Codigo.cc}}
+\doxysubsubsection{\texorpdfstring{insercion()}{insercion()}}
+{\footnotesize\ttfamily void insercion (\begin{DoxyParamCaption}\item[{list$<$ pair$<$ string, int $>$ $>$ \&}]{lista,  }\item[{pair$<$ string, int $>$ \&}]{elemento }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 12 del archivo Codigo.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12                                                                            \{}
+\DoxyCodeLine{13     \textcolor{keywordtype}{bool} completado = \textcolor{keyword}{false};}
+\DoxyCodeLine{14     \textcolor{keywordflow}{for} (list<pair<string,int> >::iterator it = lista.begin(); !completado; ++it) \{}
+\DoxyCodeLine{15         \textcolor{keywordflow}{if} (elemento.second <= it-\/>second) \{}
+\DoxyCodeLine{16             lista.insert(it, elemento);}
+\DoxyCodeLine{17             completado = \textcolor{keyword}{true};}
+\DoxyCodeLine{18         \}}
+\DoxyCodeLine{19         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (it == lista.end()) \{}
+\DoxyCodeLine{20             lista.insert(it, elemento);}
+\DoxyCodeLine{21             completado = \textcolor{keyword}{true};}
+\DoxyCodeLine{22         \}}
+\DoxyCodeLine{23     \}}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}

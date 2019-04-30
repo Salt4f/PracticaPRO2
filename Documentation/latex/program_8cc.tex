@@ -1,0 +1,92 @@
+\hypertarget{program_8cc}{}\doxysection{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+Programa principal.  
+
+
+{\ttfamily \#include \char`\"{}Diccionario.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal. 
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 19 del archivo program.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19            \{}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{string} opt;}
+\DoxyCodeLine{22     cin >> n;}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_diccionario}{Diccionario}} diccionario;}
+\DoxyCodeLine{24     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{25         cin >> opt;}
+\DoxyCodeLine{26         diccionario.\mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\_idioma}}(opt);}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28     cin >> opt;}
+\DoxyCodeLine{29     \textcolor{keywordflow}{while} (opt != \textcolor{stringliteral}{"fin"}) \{}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"modifica"}) \{}
+\DoxyCodeLine{32             cin >> opt;}
+\DoxyCodeLine{33             diccionario.\mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\_idioma}}(opt);}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"codifica"}) \{}
+\DoxyCodeLine{37             cin >> opt;}
+\DoxyCodeLine{38             \textcolor{keywordtype}{string} texto;}
+\DoxyCodeLine{39             cin >> texto;}
+\DoxyCodeLine{40             cout << diccionario.\mbox{\hyperlink{class_diccionario_ae8077dbe0b5cfc3d763d744d59e45803}{codifica}}(opt, texto) << endl;}
+\DoxyCodeLine{41         \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"descodifica"}) \{}
+\DoxyCodeLine{44             cin >> opt;}
+\DoxyCodeLine{45             \textcolor{keywordtype}{string} texto;}
+\DoxyCodeLine{46             cin >> texto;}
+\DoxyCodeLine{47             cout << diccionario.\mbox{\hyperlink{class_diccionario_a593b527d3d9c08bd6e4f036aab3cad90}{descodifica}}(opt, texto) << endl;}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"tabla\_frec"}) \{}
+\DoxyCodeLine{51             cin >> opt;}
+\DoxyCodeLine{52             diccionario.\mbox{\hyperlink{class_diccionario_a4cb2e9403b93acb282f412294c40d20e}{escribir\_tabla\_frecuencias}}(opt);}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"treecode"}) \{}
+\DoxyCodeLine{56             cin >> opt;}
+\DoxyCodeLine{57             diccionario.\mbox{\hyperlink{class_diccionario_acf3146430ce548e1840b888cfa59aa1f}{escribir\_treecode}}(opt);}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"codigos"}) \{}
+\DoxyCodeLine{61             cin >> opt;}
+\DoxyCodeLine{62             diccionario.\mbox{\hyperlink{class_diccionario_a4abe1658a4945c22c923ccb299b32054}{escribir\_codigos}}(opt);}
+\DoxyCodeLine{63         \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         cin >> opt;}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 \}}
+
+\end{DoxyCode}

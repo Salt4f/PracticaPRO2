@@ -32,8 +32,6 @@ string \mbox{\hyperlink{class_idioma_aac671224bea460078a26736a8076a5a3}{descodif
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}{rehacer\+\_\+codigos}} ()
-\item 
-void \mbox{\hyperlink{class_idioma_afd4945962a010e4ad932526777556578}{leer\+\_\+tabla}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
@@ -72,6 +70,18 @@ El resultado es un \mbox{\hyperlink{class_idioma}{Idioma}} con la \mbox{\hyperli
 \end{DoxyPostcond}
 
 
+Definición en la línea 8 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8                \{}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}}.\mbox{\hyperlink{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}{leer\_tabla}}();}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}{rehacer\_codigos}}();}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Documentación de las funciones miembro}
 \mbox{\Hypertarget{class_idioma_ab7b6fd6a3453a2d23484143ed0509d6a}\label{class_idioma_ab7b6fd6a3453a2d23484143ed0509d6a}} 
 \index{Idioma@{Idioma}!codificar@{codificar}}
@@ -94,6 +104,17 @@ El carácter codificado
 {\em texto} & -\/ Texto a codificar \\
 \hline
 \end{DoxyParams}
+
+
+Definición en la línea 34 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                            \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}{codifica}}(texto);}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_aac671224bea460078a26736a8076a5a3}\label{class_idioma_aac671224bea460078a26736a8076a5a3}} 
 \index{Idioma@{Idioma}!descodificar@{descodificar}}
 \index{descodificar@{descodificar}!Idioma@{Idioma}}
@@ -115,6 +136,17 @@ El texto descodificado
 {\em texto} & -\/ El texto a descodificar \\
 \hline
 \end{DoxyParams}
+
+
+Definición en la línea 38 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                               \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}{descodifica}}(texto);}
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_a4668bf02f948cc873e7342147172145c}\label{class_idioma_a4668bf02f948cc873e7342147172145c}} 
 \index{Idioma@{Idioma}!es\_del\_idioma@{es\_del\_idioma}}
 \index{es\_del\_idioma@{es\_del\_idioma}!Idioma@{Idioma}}
@@ -136,6 +168,17 @@ Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}.
 {\em c} & -\/ Carácter a comprobar \\
 \hline
 \end{DoxyParams}
+
+
+Definición en la línea 30 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                          \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}}.\mbox{\hyperlink{class_freq_table_af3a0a06274c83e1a5778c2d6fecda3a5}{esta}}(c);}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}\label{class_idioma_ad33ab5a7b9a1567057f9916bf868277e}} 
 \index{Idioma@{Idioma}!escribir\_codigos@{escribir\_codigos}}
 \index{escribir\_codigos@{escribir\_codigos}!Idioma@{Idioma}}
@@ -152,6 +195,17 @@ Escribe la tabla de códigos del \mbox{\hyperlink{class_idioma}{Idioma}}.
 \begin{DoxyPostcond}{Postcondición}
 Escribe por el canal de salida la tabla de códigos 
 \end{DoxyPostcond}
+
+
+Definición en la línea 26 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26                                     \{}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_aff1dd5ba7f1ad429d14cae824a464fbb}{escribir\_codigos}}();}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}\label{class_idioma_a26effb654be9fa4a6ccc5fc771f4efc0}} 
 \index{Idioma@{Idioma}!escribir\_tabla@{escribir\_tabla}}
 \index{escribir\_tabla@{escribir\_tabla}!Idioma@{Idioma}}
@@ -168,6 +222,17 @@ Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} del \mbox{\hyperlink
 \begin{DoxyPostcond}{Postcondición}
 Escribe por el canal de salida la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
 \end{DoxyPostcond}
+
+
+Definición en la línea 18 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                   \{}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}}.\mbox{\hyperlink{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}{escribir\_tabla}}();}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_ac309e4d7060759099aa5ce3ed7150435}\label{class_idioma_ac309e4d7060759099aa5ce3ed7150435}} 
 \index{Idioma@{Idioma}!escribir\_treecode@{escribir\_treecode}}
 \index{escribir\_treecode@{escribir\_treecode}!Idioma@{Idioma}}
@@ -184,12 +249,17 @@ Escribe el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}}.
 \begin{DoxyPostcond}{Postcondición}
 Escribe por el canal de salida el {\bfseries{Treecode}} 
 \end{DoxyPostcond}
-\mbox{\Hypertarget{class_idioma_afd4945962a010e4ad932526777556578}\label{class_idioma_afd4945962a010e4ad932526777556578}} 
-\index{Idioma@{Idioma}!leer\_tabla@{leer\_tabla}}
-\index{leer\_tabla@{leer\_tabla}!Idioma@{Idioma}}
-\doxysubsubsection{\texorpdfstring{leer\_tabla()}{leer\_tabla()}}
-{\footnotesize\ttfamily void Idioma\+::leer\+\_\+tabla (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+Definición en la línea 22 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22                                      \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_ae715e2ad01a25064f484ede923d0fb75}{escribir\_arbol}}();}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_a91f493edb5d164fb4e0dd274c3146316}\label{class_idioma_a91f493edb5d164fb4e0dd274c3146316}} 
 \index{Idioma@{Idioma}!modificar\_idioma@{modificar\_idioma}}
 \index{modificar\_idioma@{modificar\_idioma}!Idioma@{Idioma}}
@@ -206,12 +276,36 @@ En el canal de entrada se encuentran los datos de la \mbox{\hyperlink{class_freq
 \begin{DoxyPostcond}{Postcondición}
 Cambia la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} y calcula un nuevo {\itshape Treecode} 
 \end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                               \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}}.\mbox{\hyperlink{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}{leer\_tabla}}();}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}{rehacer\_codigos}}();}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}\label{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}} 
 \index{Idioma@{Idioma}!rehacer\_codigos@{rehacer\_codigos}}
 \index{rehacer\_codigos@{rehacer\_codigos}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{rehacer\_codigos()}{rehacer\_codigos()}}
 {\footnotesize\ttfamily void Idioma\+::rehacer\+\_\+codigos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definición en la línea 42 del archivo Idioma.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                              \{}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_codigo}{Codigo}} nuevo\_codigo(\mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}});}
+\DoxyCodeLine{44     \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}} = nuevo\_codigo;}
+\DoxyCodeLine{45 \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Documentación de los datos miembro}
@@ -237,6 +331,7 @@ Definición en la línea 24 del archivo Idioma.\+hh.
 
 
 
-La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_idioma_8hh}{Idioma.\+hh}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{_idioma_8hh}{Idioma.\+hh}}\item 
+\mbox{\hyperlink{_idioma_8cc}{Idioma.\+cc}}\end{DoxyCompactItemize}
