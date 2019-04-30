@@ -21,25 +21,31 @@ void Diccionario::modificar_idioma(string nombre) {
 void Diccionario::escribir_tabla_frecuencias(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
+        cout << "Tabla de frecuencias de " << nombre << ":" << endl;
         it->second.escribir_tabla();
     }
     else cout << "El idioma " << nombre << " no existe" << endl;
+    cout << endl;
 }
 
 void Diccionario::escribir_treecode(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
+        cout << "Treecode de " << nombre << ":" << endl;
         it->second.escribir_treecode();
     }
     else cout << "El idioma " << nombre << " no existe" << endl;
+    cout << endl;
 }
 
 void Diccionario::escribir_codigos(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
+        cout << "Codigos de " << nombre << ":" << endl;
         it->second.escribir_codigos();
     }
     else cout << "El idioma " << nombre << " no existe" << endl;
+    cout << endl;
 }
 
 string Diccionario::codifica(string nombre, string texto) const {

@@ -5,7 +5,7 @@
 #include "Codigo.hh"
 using namespace std;
 
-bool comp(pair<string,int>& a, pair<string,int>& b) {
+bool comp(const pair<string,int>& a, const pair<string,int>& b) {
     return a.second <= b.second;
 }
 
@@ -27,25 +27,26 @@ Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
     list<pair<string, int> > lista = tabla.elementos();
-    sort(lista.begin(), lista.end(), comp);
+    lista.sort(comp);
     list<BinTree<pair<string, int> > > listaTree;
     while (!lista.empty()) {
-        BinTree<pair<string,int> > aux(lista.front);
+        BinTree<pair<string,int> > aux(lista.front());
         lista.pop_front();
         listaTree.insert(listaTree.end(), aux);
     }
-    while (listaTree.size > 1) {
+    while (listaTree.size() > 1) {
         list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
         string str = it->value().first;
         int f = it->value().second;
         BinTree<pair<string,int> > left(*it);
-        it = lista.erase(it);
+        it = listaTree.erase(it);
         str += it->value().first;
         f += it->value().second;
         BinTree<pair<string,int> > right(*it);
-        it = lista.erase(it);
+        it = listaTree.erase(it);
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
-        insercion(lista, make_pair(str, f));
+        pair<string,int> par(str,f);
+        insercion(lista, par);
         treecode = aux;
     }
     listaTree.clear();

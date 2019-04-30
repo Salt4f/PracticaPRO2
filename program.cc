@@ -1,4 +1,4 @@
-/** @file main.cc
+/** @file program.cc
  *  @brief Programa principal
 */
 
