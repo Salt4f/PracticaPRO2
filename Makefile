@@ -24,4 +24,4 @@ clean:
 	rm -f *.tar
 
 tar:
-	tar -cf practica.tar BinTree.hh Codigo.cc Codigo.hh Diccionario.cc Diccionario.hh FreqTable.cc FreqTable.hh Idioma.cc Idioma.hh program.cc Makefile
+	tar -cvf practica.tar Codigo.cc Codigo.hh Diccionario.cc Diccionario.hh FreqTable.cc FreqTable.hh Idioma.cc Idioma.hh program.cc Makefile
