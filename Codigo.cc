@@ -48,33 +48,24 @@ Codigo::Codigo(const FreqTable & tabla) {
         listaTree.insert(listaTree.end(), aux);
     }
     while (listaTree.size() > 1) {
-        //cout << "bienvenido al bucle" << endl;
         list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
-        //cout << "intentamos value" << endl;
         string str1 = it->value().first;
         int f = it->value().second;
-        //cout << str << " " << f << endl;
         BinTree<pair<string,int> > left = *it;
         it = listaTree.erase(it);
         string str2 = it->value().first;
         f += it->value().second;
-        //cout << str << " " << f << endl;
         BinTree<pair<string,int> > right = *it;
         it = listaTree.erase(it);
-        //cout << "habemus arbol" << endl;
         string str;
         if (str1 < str2) str = str1 + str2;
         else str = str2 + str1;
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
-        //cout << "antes de inserción" << endl;
         insercion(listaTree, aux);
-        treecode = aux;
-        //cout << "fin bucle, volvemos" << endl;
-        //cout << listaTree.size() << endl;
     }
+    treecode = listaTree.front();
     listaTree.clear();
-    //Árbol hecho
-    //cout << "fuera bucle" << endl;
+
     while (!caracteres.empty()) {
         string c = caracteres.front();
         caracteres.pop_front();
