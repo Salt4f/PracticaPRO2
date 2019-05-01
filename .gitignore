@@ -1,5 +1,6 @@
 *.o
 *.exe
+*.tar
 .DS_Store
 .vscode
 Doxyfile
