@@ -6,6 +6,7 @@
 using namespace std;
 
 bool comp(const pair<string,int>& a, const pair<string,int>& b) {
+    if (a.second == b.second) return a.first < b.first;
     return a.second < b.second;
 }
 
@@ -14,6 +15,14 @@ void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int
     for (list<BinTree<pair<string,int> > >::iterator it = lista.begin(); !completado; ++it) {
         if (it == lista.end()) {
             lista.insert(it, elemento);
+            completado = true;
+        }
+        else if (elemento.value().second == it->value().second) {
+            if (elemento.value().first < it->value().first) lista.insert(it, elemento);
+            else {
+                ++it;
+                lista.insert(it, elemento);
+            }
             completado = true;
         }
         else if (elemento.value().second < it->value().second) {
@@ -42,17 +51,20 @@ Codigo::Codigo(const FreqTable & tabla) {
         //cout << "bienvenido al bucle" << endl;
         list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
         //cout << "intentamos value" << endl;
-        string str = it->value().first;
+        string str1 = it->value().first;
         int f = it->value().second;
         //cout << str << " " << f << endl;
         BinTree<pair<string,int> > left = *it;
         it = listaTree.erase(it);
-        str += it->value().first;
+        string str2 = it->value().first;
         f += it->value().second;
         //cout << str << " " << f << endl;
         BinTree<pair<string,int> > right = *it;
         it = listaTree.erase(it);
         //cout << "habemus arbol" << endl;
+        string str;
+        if (str1 < str2) str = str1 + str2;
+        else str = str2 + str1;
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
         //cout << "antes de inserción" << endl;
         insercion(listaTree, aux);
@@ -88,7 +100,10 @@ string Codigo::descodifica(string texto) const {
 }
 
 void Codigo::escribir_arbol() const {
-
+    cout << "recorrido en preorden:" << endl;
+    escribe_preorden(treecode);
+    cout << "recorrido en inorden:" << endl;
+    escribe_inorden(treecode);
 }
 
 void Codigo::escribir_codigos(string c) const {
@@ -108,4 +123,20 @@ string Codigo::codifica_caracter(string c, const BinTree< pair<string, int> >& t
     if (tree.value().first == c) return "";
     if (!tree.left().empty() and tree.left().value().first.find(c) != string::npos) return "0" + codifica_caracter(c, tree.left());
     return "1" + codifica_caracter(c, tree.right());
+}
+
+void Codigo::escribe_preorden(const BinTree<pair<string,int> >& tree) const {
+    if (!tree.empty()) {
+        cout << tree.value().first << " " << tree.value().second << endl;
+        escribe_preorden(tree.left());
+        escribe_preorden(tree.right());
+    }
+}
+
+void Codigo::escribe_inorden(const BinTree<pair<string,int> >& tree) const {
+    if (!tree.empty()) {
+        escribe_inorden(tree.left());
+        cout << tree.value().first << " " << tree.value().second << endl;
+        escribe_inorden(tree.right());
+    }
 }

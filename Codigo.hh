@@ -30,6 +30,10 @@ private:
     */
     string codifica_caracter(string c, const BinTree< pair<string, int> >& tree) const;
 
+    void escribe_preorden(const BinTree<pair<string,int> >& tree) const;
+
+    void escribe_inorden(const BinTree<pair<string,int> >& tree) const;
+
 public:
     /** @brief Constructora por defecto
 
