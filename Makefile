@@ -21,3 +21,7 @@ FreqTable.o: FreqTable.cc FreqTable.hh
 clean:
 	rm -f *.o
 	rm -f *.exe
+	rm -f *.tar
+
+tar:
+	tar -cf practica.tar BinTree.hh Codigo.cc Codigo.hh Diccionario.cc Diccionario.hh FreqTable.cc FreqTable.hh Idioma.cc Idioma.hh program.cc Makefile

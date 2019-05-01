@@ -71,7 +71,7 @@ public:
       \pre <b>true</b>
       \post Escribe por el canal de salida la <b>codetable</b>
     */
-    void escribir_codigos() const;
+    void escribir_codigos(string c) const;
 };
 
 

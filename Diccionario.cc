@@ -24,7 +24,7 @@ void Diccionario::escribir_tabla_frecuencias(string nombre) const {
         cout << "Tabla de frecuencias de " << nombre << ":" << endl;
         it->second.escribir_tabla();
     }
-    else cout << "El idioma " << nombre << " no existe" << endl;
+    else cout << "El idioma no existe" << endl;
     cout << endl;
 }
 
@@ -34,17 +34,21 @@ void Diccionario::escribir_treecode(string nombre) const {
         cout << "Treecode de " << nombre << ":" << endl;
         it->second.escribir_treecode();
     }
-    else cout << "El idioma " << nombre << " no existe" << endl;
+    else cout << "El idioma no existe" << endl;
     cout << endl;
 }
 
 void Diccionario::escribir_codigos(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
+    string c;
+    cin >> c;
     if (it != diccionario.end()) {
-        cout << "Codigos de " << nombre << ":" << endl;
-        it->second.escribir_codigos();
+        if (c == "todos") cout << "Codigos de " << nombre << ":" << endl;
+        else cout << "Codigo de " << c << " en " << nombre << ":" << endl;
+        it->second.escribir_codigos(c);
     }
-    else cout << "El idioma " << nombre << " no existe" << endl;
+    else if (c == "todos") cout << "El idioma no existe" << endl;
+    else cout << "El idioma no existe o el caracter no está en el idioma" << endl;
     cout << endl;
 }
 
@@ -53,7 +57,7 @@ string Diccionario::codifica(string nombre, string texto) const {
     if (it != diccionario.end()) {
         return it->second.codificar(texto);
     }
-    return "El idioma " + nombre + " no existe";
+    return "El idioma no existe";
 }
 
 string Diccionario::descodifica(string nombre, string texto) const {
@@ -61,5 +65,5 @@ string Diccionario::descodifica(string nombre, string texto) const {
     if (it != diccionario.end()) {
         return it->second.descodificar(texto);
     }
-    return "El idioma " + nombre + " no existe";
+    return "El idioma no existe";
 }

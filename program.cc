@@ -37,14 +37,14 @@ int main() {
             cin >> opt;
             string texto;
             cin >> texto;
-            cout << diccionario.codifica(opt, texto) << endl;
+            cout << diccionario.codifica(opt, texto) << endl << endl;
         }
 
         else if (opt == "descodifica") {
             cin >> opt;
             string texto;
             cin >> texto;
-            cout << diccionario.descodifica(opt, texto) << endl;
+            cout << diccionario.descodifica(opt, texto) << endl << endl;
         }
 
         else if (opt == "tabla_frec") {

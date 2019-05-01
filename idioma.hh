@@ -57,7 +57,7 @@ public:
       \pre <b>true</b>
       \post Escribe por el canal de salida la tabla de códigos
     */
-    void escribir_codigos() const;
+    void escribir_codigos(string c) const;
 
     /** @brief Comprueba si un carácter es del Idioma
       \pre <b>true</b>

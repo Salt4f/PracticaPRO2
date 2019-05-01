@@ -6,7 +6,7 @@
 using namespace std;
 
 bool comp(const pair<string,int>& a, const pair<string,int>& b) {
-    return a.second <= b.second;
+    return a.second < b.second;
 }
 
 void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int> >& elemento) {
@@ -16,7 +16,7 @@ void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int
             lista.insert(it, elemento);
             completado = true;
         }
-        else if (elemento.value().second <= it->value().second) {
+        else if (elemento.value().second < it->value().second) {
             lista.insert(it, elemento);
             completado = true;
         }
@@ -39,30 +39,30 @@ Codigo::Codigo(const FreqTable & tabla) {
         listaTree.insert(listaTree.end(), aux);
     }
     while (listaTree.size() > 1) {
-        cout << "bienvenido al bucle" << endl;
+        //cout << "bienvenido al bucle" << endl;
         list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
-        cout << "intentamos value" << endl;
+        //cout << "intentamos value" << endl;
         string str = it->value().first;
         int f = it->value().second;
-        cout << str << " " << f << endl;
+        //cout << str << " " << f << endl;
         BinTree<pair<string,int> > left = *it;
         it = listaTree.erase(it);
         str += it->value().first;
         f += it->value().second;
-        cout << str << " " << f << endl;
+        //cout << str << " " << f << endl;
         BinTree<pair<string,int> > right = *it;
         it = listaTree.erase(it);
-        cout << "habemus arbol" << endl;
+        //cout << "habemus arbol" << endl;
         BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
-        cout << "antes de inserción" << endl;
+        //cout << "antes de inserción" << endl;
         insercion(listaTree, aux);
         treecode = aux;
-        cout << "fin bucle, volvemos" << endl;
-        cout << listaTree.size() << endl;
+        //cout << "fin bucle, volvemos" << endl;
+        //cout << listaTree.size() << endl;
     }
     listaTree.clear();
     //Árbol hecho
-    cout << "fuera bucle" << endl;
+    //cout << "fuera bucle" << endl;
     while (!caracteres.empty()) {
         string c = caracteres.front();
         caracteres.pop_front();
@@ -91,9 +91,16 @@ void Codigo::escribir_arbol() const {
 
 }
 
-void Codigo::escribir_codigos() const {
-    for (map<string,string>::const_iterator it = codetable.begin(); it != codetable.end(); ++it) {
-        cout << it->first << " " << it->second << endl;
+void Codigo::escribir_codigos(string c) const {
+    if (c == "todos") {
+        for (map<string,string>::const_iterator it = codetable.begin(); it != codetable.end(); ++it) {
+            cout << it->first << " " << it->second << endl;
+        }
+    }
+    else {
+        map<string,string>::const_iterator it = codetable.find(c);
+        if (it != codetable.end()) cout << it->first << " " << it->second << endl;
+        else cout << "El idioma no existe o el caracter no está en el idioma" << endl;
     }
 }
 

@@ -23,8 +23,8 @@ void Idioma::escribir_treecode() const {
     codigos.escribir_arbol();
 }
 
-void Idioma::escribir_codigos() const {
-    codigos.escribir_codigos();
+void Idioma::escribir_codigos(string c) const {
+    codigos.escribir_codigos(c);
 }
 
 bool Idioma::es_del_idioma(string c) const {
