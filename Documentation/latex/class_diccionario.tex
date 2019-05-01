@@ -96,17 +96,17 @@ Texto codificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idio
 \end{DoxyParams}
 
 
-Definición en la línea 51 del archivo Diccionario.\+cc.
+Definición en la línea 55 del archivo Diccionario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{51                                                               \{}
-\DoxyCodeLine{52     map<string,Idioma>::const\_iterator it = \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.find(nombre);}
-\DoxyCodeLine{53     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.end()) \{}
-\DoxyCodeLine{54         \textcolor{keywordflow}{return} it-\/>second.codificar(texto);}
-\DoxyCodeLine{55     \}}
-\DoxyCodeLine{56     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"El idioma "} + nombre + \textcolor{stringliteral}{" no existe"};}
-\DoxyCodeLine{57 \}}
+\DoxyCodeLine{55                                                               \{}
+\DoxyCodeLine{56     map<string,Idioma>::const\_iterator it = \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.find(nombre);}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.end()) \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} it-\/>second.codificar(texto);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"El idioma no existe"};}
+\DoxyCodeLine{61 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_diccionario_a593b527d3d9c08bd6e4f036aab3cad90}\label{class_diccionario_a593b527d3d9c08bd6e4f036aab3cad90}} 
@@ -134,17 +134,17 @@ Texto descodificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_i
 \end{DoxyParams}
 
 
-Definición en la línea 59 del archivo Diccionario.\+cc.
+Definición en la línea 63 del archivo Diccionario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{59                                                                  \{}
-\DoxyCodeLine{60     map<string,Idioma>::const\_iterator it = \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.find(nombre);}
-\DoxyCodeLine{61     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.end()) \{}
-\DoxyCodeLine{62         \textcolor{keywordflow}{return} it-\/>second.descodificar(texto);}
-\DoxyCodeLine{63     \}}
-\DoxyCodeLine{64     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"El idioma "} + nombre + \textcolor{stringliteral}{" no existe"};}
-\DoxyCodeLine{65 \}}
+\DoxyCodeLine{63                                                                  \{}
+\DoxyCodeLine{64     map<string,Idioma>::const\_iterator it = \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.find(nombre);}
+\DoxyCodeLine{65     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.end()) \{}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} it-\/>second.descodificar(texto);}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"El idioma no existe"};}
+\DoxyCodeLine{69 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_diccionario_a4abe1658a4945c22c923ccb299b32054}\label{class_diccionario_a4abe1658a4945c22c923ccb299b32054}} 
@@ -176,13 +176,17 @@ Definición en la línea 41 del archivo Diccionario.\+cc.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{41                                                       \{}
 \DoxyCodeLine{42     map<string,Idioma>::const\_iterator it = \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.find(nombre);}
-\DoxyCodeLine{43     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.end()) \{}
-\DoxyCodeLine{44         cout << \textcolor{stringliteral}{"Codigos de "} << nombre << \textcolor{stringliteral}{":"} << endl;}
-\DoxyCodeLine{45         it-\/>second.escribir\_codigos();}
-\DoxyCodeLine{46     \}}
-\DoxyCodeLine{47     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma "} << nombre << \textcolor{stringliteral}{" no existe"} << endl;}
-\DoxyCodeLine{48     cout << endl;}
-\DoxyCodeLine{49 \}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{string} c;}
+\DoxyCodeLine{44     cin >> c;}
+\DoxyCodeLine{45     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_diccionario_ab8283e3082522385615a71fe58e293c6}{diccionario}}.end()) \{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{if} (c == \textcolor{stringliteral}{"todos"}) cout << \textcolor{stringliteral}{"Codigos de "} << nombre << \textcolor{stringliteral}{":"} << endl;}
+\DoxyCodeLine{47         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"Codigo de "} << c << \textcolor{stringliteral}{" en "} << nombre << \textcolor{stringliteral}{":"} << endl;}
+\DoxyCodeLine{48         it-\/>second.escribir\_codigos(c);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c == \textcolor{stringliteral}{"todos"}) cout << \textcolor{stringliteral}{"El idioma no existe"} << endl;}
+\DoxyCodeLine{51     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma no existe o el caracter no está en el idioma"} << endl;}
+\DoxyCodeLine{52     cout << endl;}
+\DoxyCodeLine{53 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_diccionario_a4cb2e9403b93acb282f412294c40d20e}\label{class_diccionario_a4cb2e9403b93acb282f412294c40d20e}} 
@@ -218,7 +222,7 @@ Definición en la línea 21 del archivo Diccionario.\+cc.
 \DoxyCodeLine{24         cout << \textcolor{stringliteral}{"Tabla de frecuencias de "} << nombre << \textcolor{stringliteral}{":"} << endl;}
 \DoxyCodeLine{25         it-\/>second.escribir\_tabla();}
 \DoxyCodeLine{26     \}}
-\DoxyCodeLine{27     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma "} << nombre << \textcolor{stringliteral}{" no existe"} << endl;}
+\DoxyCodeLine{27     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma no existe"} << endl;}
 \DoxyCodeLine{28     cout << endl;}
 \DoxyCodeLine{29 \}}
 
@@ -256,7 +260,7 @@ Definición en la línea 31 del archivo Diccionario.\+cc.
 \DoxyCodeLine{34         cout << \textcolor{stringliteral}{"Treecode de "} << nombre << \textcolor{stringliteral}{":"} << endl;}
 \DoxyCodeLine{35         it-\/>second.escribir\_treecode();}
 \DoxyCodeLine{36     \}}
-\DoxyCodeLine{37     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma "} << nombre << \textcolor{stringliteral}{" no existe"} << endl;}
+\DoxyCodeLine{37     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma no existe"} << endl;}
 \DoxyCodeLine{38     cout << endl;}
 \DoxyCodeLine{39 \}}
 

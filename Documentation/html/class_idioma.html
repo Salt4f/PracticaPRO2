@@ -91,9 +91,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:ac309e4d7060759099aa5ce3ed7150435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#ac309e4d7060759099aa5ce3ed7150435">escribir_treecode</a> () const</td></tr>
 <tr class="memdesc:ac309e4d7060759099aa5ce3ed7150435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#ac309e4d7060759099aa5ce3ed7150435">Más...</a><br /></td></tr>
 <tr class="separator:ac309e4d7060759099aa5ce3ed7150435"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad33ab5a7b9a1567057f9916bf868277e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#ad33ab5a7b9a1567057f9916bf868277e">escribir_codigos</a> () const</td></tr>
-<tr class="memdesc:ad33ab5a7b9a1567057f9916bf868277e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la tabla de códigos del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#ad33ab5a7b9a1567057f9916bf868277e">Más...</a><br /></td></tr>
-<tr class="separator:ad33ab5a7b9a1567057f9916bf868277e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a768902d7b18678f04d89d18b7336eb96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a768902d7b18678f04d89d18b7336eb96">escribir_codigos</a> (string c) const</td></tr>
+<tr class="memdesc:a768902d7b18678f04d89d18b7336eb96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe la tabla de códigos del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a768902d7b18678f04d89d18b7336eb96">Más...</a><br /></td></tr>
+<tr class="separator:a768902d7b18678f04d89d18b7336eb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4668bf02f948cc873e7342147172145c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a4668bf02f948cc873e7342147172145c">es_del_idioma</a> (string c) const</td></tr>
 <tr class="memdesc:a4668bf02f948cc873e7342147172145c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si un carácter es del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="#a4668bf02f948cc873e7342147172145c">Más...</a><br /></td></tr>
 <tr class="separator:a4668bf02f948cc873e7342147172145c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,8 +236,8 @@ Atributos privados</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                                         {</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_idioma.html#a6f8872782ac19259c73e0dce17a63db2">tabla</a>.<a class="code" href="class_freq_table.html#af3a0a06274c83e1a5778c2d6fecda3a5">esta</a>(c);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
-<a id="ad33ab5a7b9a1567057f9916bf868277e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad33ab5a7b9a1567057f9916bf868277e">&#9670;&nbsp;</a></span>escribir_codigos()</h2>
+<a id="a768902d7b18678f04d89d18b7336eb96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a768902d7b18678f04d89d18b7336eb96">&#9670;&nbsp;</a></span>escribir_codigos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +245,8 @@ Atributos privados</h2></td></tr>
         <tr>
           <td class="memname">void Idioma::escribir_codigos </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -256,7 +257,7 @@ Atributos privados</h2></td></tr>
 <dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la tabla de códigos </dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_idioma_8cc_source.html#l00026">26</a> del archivo <a class="el" href="_idioma_8cc_source.html">Idioma.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                    {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">codigos</a>.<a class="code" href="class_codigo.html#aff1dd5ba7f1ad429d14cae824a464fbb">escribir_codigos</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                            {</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">codigos</a>.<a class="code" href="class_codigo.html#a2b5d3a02fad8dcecfa0c4ee55e02a989">escribir_codigos</a>(c);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a26effb654be9fa4a6ccc5fc771f4efc0"></a>
@@ -410,15 +411,15 @@ Atributos privados</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclass_freq_table_html_af3a0a06274c83e1a5778c2d6fecda3a5"><div class="ttname"><a href="class_freq_table.html#af3a0a06274c83e1a5778c2d6fecda3a5">FreqTable::esta</a></div><div class="ttdeci">bool esta(string c) const</div><div class="ttdoc">Comprueba si el carácter está en la FreqTable.</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8cc_source.html#l00022">FreqTable.cc:22</a></div></div>
-<div class="ttc" id="aclass_codigo_html_aecfc0015fa188f7e8daa93ed0f4bfa66"><div class="ttname"><a href="class_codigo.html#aecfc0015fa188f7e8daa93ed0f4bfa66">Codigo::codifica</a></div><div class="ttdeci">string codifica(string texto) const</div><div class="ttdoc">Codifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00056">Codigo.cc:56</a></div></div>
+<div class="ttc" id="aclass_codigo_html_aecfc0015fa188f7e8daa93ed0f4bfa66"><div class="ttname"><a href="class_codigo.html#aecfc0015fa188f7e8daa93ed0f4bfa66">Codigo::codifica</a></div><div class="ttdeci">string codifica(string texto) const</div><div class="ttdoc">Codifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00073">Codigo.cc:73</a></div></div>
 <div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Representa el TreeCode y la codeTable de un Idioma.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8hh_source.html#l00021">Codigo.hh:21</a></div></div>
 <div class="ttc" id="aclass_idioma_html_a8ad0c4745f1d06385263d4ed2093bf03"><div class="ttname"><a href="class_idioma.html#a8ad0c4745f1d06385263d4ed2093bf03">Idioma::rehacer_codigos</a></div><div class="ttdeci">void rehacer_codigos()</div><div class="ttdef"><b>Definition:</b> <a href="_idioma_8cc_source.html#l00042">Idioma.cc:42</a></div></div>
 <div class="ttc" id="aclass_freq_table_html_a1739e3f11f08f894e6fe00e48041d263"><div class="ttname"><a href="class_freq_table.html#a1739e3f11f08f894e6fe00e48041d263">FreqTable::escribir_tabla</a></div><div class="ttdeci">void escribir_tabla() const</div><div class="ttdoc">Escribe la FreqTable.</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8cc_source.html#l00026">FreqTable.cc:26</a></div></div>
 <div class="ttc" id="aclass_idioma_html_a4121fecdb6a8a3f744cd4184be2e42e1"><div class="ttname"><a href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">Idioma::codigos</a></div><div class="ttdeci">Codigo codigos</div><div class="ttdef"><b>Definition:</b> <a href="_idioma_8hh_source.html#l00025">Idioma.hh:25</a></div></div>
-<div class="ttc" id="aclass_codigo_html_ae715e2ad01a25064f484ede923d0fb75"><div class="ttname"><a href="class_codigo.html#ae715e2ad01a25064f484ede923d0fb75">Codigo::escribir_arbol</a></div><div class="ttdeci">void escribir_arbol() const</div><div class="ttdoc">Escribe el treecode</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00073">Codigo.cc:73</a></div></div>
-<div class="ttc" id="aclass_codigo_html_aff1dd5ba7f1ad429d14cae824a464fbb"><div class="ttname"><a href="class_codigo.html#aff1dd5ba7f1ad429d14cae824a464fbb">Codigo::escribir_codigos</a></div><div class="ttdeci">void escribir_codigos() const</div><div class="ttdoc">Escribe la codetable</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00077">Codigo.cc:77</a></div></div>
+<div class="ttc" id="aclass_codigo_html_ae715e2ad01a25064f484ede923d0fb75"><div class="ttname"><a href="class_codigo.html#ae715e2ad01a25064f484ede923d0fb75">Codigo::escribir_arbol</a></div><div class="ttdeci">void escribir_arbol() const</div><div class="ttdoc">Escribe el treecode</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00090">Codigo.cc:90</a></div></div>
+<div class="ttc" id="aclass_codigo_html_a2b5d3a02fad8dcecfa0c4ee55e02a989"><div class="ttname"><a href="class_codigo.html#a2b5d3a02fad8dcecfa0c4ee55e02a989">Codigo::escribir_codigos</a></div><div class="ttdeci">void escribir_codigos(string c) const</div><div class="ttdoc">Escribe la codetable</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00094">Codigo.cc:94</a></div></div>
 <div class="ttc" id="aclass_idioma_html_a6f8872782ac19259c73e0dce17a63db2"><div class="ttname"><a href="class_idioma.html#a6f8872782ac19259c73e0dce17a63db2">Idioma::tabla</a></div><div class="ttdeci">FreqTable tabla</div><div class="ttdef"><b>Definition:</b> <a href="_idioma_8hh_source.html#l00024">Idioma.hh:24</a></div></div>
-<div class="ttc" id="aclass_codigo_html_adaa54ebe9de694fe3e1c30d0cd8501f5"><div class="ttname"><a href="class_codigo.html#adaa54ebe9de694fe3e1c30d0cd8501f5">Codigo::descodifica</a></div><div class="ttdeci">string descodifica(string texto) const</div><div class="ttdoc">Descodifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00068">Codigo.cc:68</a></div></div>
+<div class="ttc" id="aclass_codigo_html_adaa54ebe9de694fe3e1c30d0cd8501f5"><div class="ttname"><a href="class_codigo.html#adaa54ebe9de694fe3e1c30d0cd8501f5">Codigo::descodifica</a></div><div class="ttdeci">string descodifica(string texto) const</div><div class="ttdoc">Descodifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00085">Codigo.cc:85</a></div></div>
 <div class="ttc" id="aclass_freq_table_html_a26c57ffd6d5e4db738743da9cfb0720a"><div class="ttname"><a href="class_freq_table.html#a26c57ffd6d5e4db738743da9cfb0720a">FreqTable::leer_tabla</a></div><div class="ttdeci">void leer_tabla()</div><div class="ttdoc">Lee la FreqTable.</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8cc_source.html#l00010">FreqTable.cc:10</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

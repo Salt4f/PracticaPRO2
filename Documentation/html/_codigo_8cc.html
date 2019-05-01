@@ -75,8 +75,8 @@ Dependencia gráfica adjunta para Codigo.cc:</div>
 <div class="center"><img src="_codigo_8cc__incl.png" border="0" usemap="#_codigo_8cc" alt=""/></div>
 <map name="_codigo_8cc" id="_codigo_8cc">
 <area shape="rect" title=" " alt="" coords="15,5,95,31"/>
-<area shape="rect" href="_codigo_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="14,79,96,104"/>
-<area shape="rect" href="_freq_table_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="5,152,104,177"/>
+<area shape="rect" href="$_codigo_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="14,79,96,104"/>
+<area shape="rect" href="$_freq_table_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="5,152,104,177"/>
 </map>
 </div>
 </div>
@@ -86,8 +86,8 @@ Dependencia gráfica adjunta para Codigo.cc:</div>
 Funciones</h2></td></tr>
 <tr class="memitem:aa2dae46392eccd54b56b878c6add4ef4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo_8cc.html#aa2dae46392eccd54b56b878c6add4ef4">comp</a> (const pair&lt; string, int &gt; &amp;a, const pair&lt; string, int &gt; &amp;b)</td></tr>
 <tr class="separator:aa2dae46392eccd54b56b878c6add4ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24f272155c58c71a11d73d72d591513c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo_8cc.html#a24f272155c58c71a11d73d72d591513c">insercion</a> (list&lt; pair&lt; string, int &gt; &gt; &amp;lista, pair&lt; string, int &gt; &amp;elemento)</td></tr>
-<tr class="separator:a24f272155c58c71a11d73d72d591513c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d46ed9a92f1c1dc9344cc04fe7b3a9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo_8cc.html#a1d46ed9a92f1c1dc9344cc04fe7b3a9e">insercion</a> (list&lt; BinTree&lt; pair&lt; string, int &gt; &gt; &gt; &amp;lista, BinTree&lt; pair&lt; string, int &gt; &gt; &amp;elemento)</td></tr>
+<tr class="separator:a1d46ed9a92f1c1dc9344cc04fe7b3a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentación de las funciones</h2>
 <a id="aa2dae46392eccd54b56b878c6add4ef4"></a>
@@ -117,11 +117,11 @@ Funciones</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definición en la línea <a class="el" href="_codigo_8cc_source.html#l00008">8</a> del archivo <a class="el" href="_codigo_8cc_source.html">Codigo.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                                {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> a.second &lt;= b.second;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                                                {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> a.second &lt; b.second;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a24f272155c58c71a11d73d72d591513c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24f272155c58c71a11d73d72d591513c">&#9670;&nbsp;</a></span>insercion()</h2>
+<a id="a1d46ed9a92f1c1dc9344cc04fe7b3a9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d46ed9a92f1c1dc9344cc04fe7b3a9e">&#9670;&nbsp;</a></span>insercion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,13 +129,13 @@ Funciones</h2></td></tr>
         <tr>
           <td class="memname">void insercion </td>
           <td>(</td>
-          <td class="paramtype">list&lt; pair&lt; string, int &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">list&lt; BinTree&lt; pair&lt; string, int &gt; &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>lista</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pair&lt; string, int &gt; &amp;&#160;</td>
+          <td class="paramtype">BinTree&lt; pair&lt; string, int &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>elemento</em>&#160;</td>
         </tr>
         <tr>
@@ -147,7 +147,7 @@ Funciones</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definición en la línea <a class="el" href="_codigo_8cc_source.html#l00012">12</a> del archivo <a class="el" href="_codigo_8cc_source.html">Codigo.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                           {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> completado = <span class="keyword">false</span>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span> (list&lt;pair&lt;string,int&gt; &gt;::iterator it = lista.begin(); !completado; ++it) {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span> (elemento.second &lt;= it-&gt;second) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            lista.insert(it, elemento);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            completado = <span class="keyword">true</span>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (it == lista.end()) {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            lista.insert(it, elemento);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            completado = <span class="keyword">true</span>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                                                                                               {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> completado = <span class="keyword">false</span>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span> (list&lt;BinTree&lt;pair&lt;string,int&gt; &gt; &gt;::iterator it = lista.begin(); !completado; ++it) {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span> (it == lista.end()) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            lista.insert(it, elemento);</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            completado = <span class="keyword">true</span>;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (elemento.value().second &lt; it-&gt;value().second) {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            lista.insert(it, elemento);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            completado = <span class="keyword">true</span>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
