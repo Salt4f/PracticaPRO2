@@ -35,10 +35,11 @@ int FreqTable::frecuencia(string c) const {
     return -1;
 }
 
-list<pair<string,int> > FreqTable::elementos() const {
+list<BinTree<pair<string,int> > > FreqTable::elementos() const {
     list<pair<string,int> > lista;
     for (map<string,int>::const_iterator it = table.begin(); it != table.end(); ++it) {
-        lista.insert(lista.end(), *it);
+        BinTree<pair<string,int> > aux(*it);
+        lista.insert(lista.end(), aux);
     }
     return lista;
 }
