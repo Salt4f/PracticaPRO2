@@ -5,9 +5,9 @@
 #include "Codigo.hh"
 using namespace std;
 
-bool comp(const pair<string,int>& a, const pair<string,int>& b) {
-    if (a.second == b.second) return a.first < b.first;
-    return a.second < b.second;
+bool comp(const BinTree<pair<string,int> >& a, const BinTree<pair<string,int> >& b) {
+    if (a.second == b.second) return a.value().first < b.value().first;
+    return a.value().second < b.value().second;
 }
 
 void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int> >& elemento) {
@@ -36,16 +36,11 @@ void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int
 Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
-    list<pair<string, int> > lista = tabla.elementos();
-    lista.sort(comp);
-    list<BinTree<pair<string, int> > > listaTree;
+    list<BinTree<pair<string, int> > > listaTree = tabla.elementos;
+    listaTree.sort(comp);
     list<string> caracteres;
-    while (!lista.empty()) {
-        pair<string,int> par = lista.front();
-        lista.pop_front();
-        BinTree<pair<string,int> > aux(par);
-        caracteres.insert(caracteres.end(), par.first);
-        listaTree.insert(listaTree.end(), aux);
+    for (BinTree<pair<string,int> >::const_iterator it = llistaTree.begin(); it != llistaTree.end(); ++it) {
+        caracteres.insert(caracteres.end(), it->value().first);
     }
     while (listaTree.size() > 1) {
         list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
