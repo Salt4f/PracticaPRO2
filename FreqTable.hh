@@ -58,7 +58,7 @@ public:
     /**
     
     */
-    list<pair<string,int> > elementos() const;
+    list<BinTree<pair<string,int> > > elementos() const;
 };
 
 
