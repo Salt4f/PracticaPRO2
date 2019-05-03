@@ -9,6 +9,7 @@
 #include <iostream>
 #include <map>
 #include <list>
+#include "BinTree.hh"
 using namespace std;
 #endif
 
