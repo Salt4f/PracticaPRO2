@@ -20,8 +20,8 @@ void Diccionario::modificar_idioma(string nombre) {
 
 void Diccionario::escribir_tabla_frecuencias(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
+    cout << "Tabla de frecuencias de " << nombre << ":" << endl;
     if (it != diccionario.end()) {
-        cout << "Tabla de frecuencias de " << nombre << ":" << endl;
         it->second.escribir_tabla();
     }
     else cout << "El idioma no existe" << endl;
@@ -30,8 +30,8 @@ void Diccionario::escribir_tabla_frecuencias(string nombre) const {
 
 void Diccionario::escribir_treecode(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
+    cout << "Treecode de " << nombre << ":" << endl;
     if (it != diccionario.end()) {
-        cout << "Treecode de " << nombre << ":" << endl;
         it->second.escribir_treecode();
     }
     else cout << "El idioma no existe" << endl;
@@ -42,9 +42,9 @@ void Diccionario::escribir_codigos(string nombre) const {
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     string c;
     cin >> c;
+    if (c == "todos") cout << "Codigos de " << nombre << ":" << endl;
+    else cout << "Codigo de " << c << " en " << nombre << ":" << endl;
     if (it != diccionario.end()) {
-        if (c == "todos") cout << "Codigos de " << nombre << ":" << endl;
-        else cout << "Codigo de " << c << " en " << nombre << ":" << endl;
         it->second.escribir_codigos(c);
     }
     else if (c == "todos") cout << "El idioma no existe" << endl;
