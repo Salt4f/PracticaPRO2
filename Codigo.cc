@@ -6,7 +6,7 @@
 using namespace std;
 
 bool comp(const BinTree<pair<string,int> >& a, const BinTree<pair<string,int> >& b) {
-    if (a.second == b.second) return a.value().first < b.value().first;
+    if (a.value().second == b.value().second) return a.value().first < b.value().first;
     return a.value().second < b.value().second;
 }
 
@@ -36,10 +36,10 @@ void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int
 Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
-    list<BinTree<pair<string, int> > > listaTree = tabla.elementos;
+    list<BinTree<pair<string, int> > > listaTree = tabla.elementos();
     listaTree.sort(comp);
     list<string> caracteres;
-    for (BinTree<pair<string,int> >::const_iterator it = llistaTree.begin(); it != llistaTree.end(); ++it) {
+    for (list<BinTree<pair<string,int> > >::const_iterator it = listaTree.begin(); it != listaTree.end(); ++it) {
         caracteres.insert(caracteres.end(), it->value().first);
     }
     while (listaTree.size() > 1) {
