@@ -56,14 +56,14 @@ public:
       \return El texto codificado
       \param texto - Texto a codificar
     */
-    string codifica(string texto) const;
+    string codifica(const string& texto) const;
 
     /** @brief Descodifica un texto
       \pre El Codigo no está vacío
       \return El texto descodificado
       \param texto - Texto a descodificar
     */
-    string descodifica(string texto) const;
+    string descodifica(const string& texto) const;
 
     /** @brief Escribe el <b>treecode</b>
       \pre <b>true</b>

@@ -71,14 +71,14 @@ public:
       \return El carácter codificado
       \param texto - Texto a codificar
     */
-    string codificar(string texto) const;
+    string codificar(const string& texto) const;
 
     /** @brief Descodifica un texto
       \pre Todos los carácteres del texto pertenecen al Idioma
       \return El texto descodificado
       \param texto - El texto a descodificar
     */
-    string descodificar(string texto) const;
+    string descodificar(const string& texto) const;
 };
 
 

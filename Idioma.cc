@@ -31,11 +31,11 @@ bool Idioma::es_del_idioma(string c) const {
     return tabla.esta(c);
 }
 
-string Idioma::codificar(string texto) const {
+string Idioma::codificar(const string& texto) const {
     return codigos.codifica(texto);
 }
 
-string Idioma::descodificar(string texto) const {
+string Idioma::descodificar(const string& texto) const {
     return codigos.descodifica(texto);
 }
 

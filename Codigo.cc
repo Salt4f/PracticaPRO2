@@ -5,6 +5,15 @@
 #include "Codigo.hh"
 using namespace std;
 
+string next_symbol(const string& s, int& i) {
+    if (s[i] >= 0) {
+        ++i;
+        return string(1, s[i]);
+    }
+    i += 2;
+    return string(s, i, 2);
+}
+
 bool comp(const BinTree<pair<string,int> >& a, const BinTree<pair<string,int> >& b) {
     if (a.value().second == b.value().second) return a.value().first < b.value().first;
     return a.value().second < b.value().second;
@@ -67,11 +76,12 @@ Codigo::Codigo(const FreqTable & tabla) {
     }
 }
 
-string Codigo::codifica(string texto) const {
+string Codigo::codifica(const string& texto) const {
     string codificado;
     bool invalid = false;
-    for (int i = 0; i != texto.length() and !invalid; ++i) {
-        map<string,string>::const_iterator it = codetable.find(texto.substr(i,1));
+    int i = 0;
+    while (i < texto.length() and !invalid) {
+        map<string,string>::const_iterator it = codetable.find(next_symbol(texto, i));
         if (it != codetable.end()) codificado += it->second;
         else invalid = true;
     }
@@ -79,7 +89,7 @@ string Codigo::codifica(string texto) const {
     return codificado;
 }
 
-string Codigo::descodifica(string texto) const {
+string Codigo::descodifica(const string& texto) const {
     string descodificado;
     return texto;
 }
