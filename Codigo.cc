@@ -40,7 +40,6 @@ void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int
             completado = true;
         }
         else ++it;
-        //cout << completado << endl;
     }
 }
 
@@ -93,7 +92,7 @@ string Codigo::codifica(const string& texto) const {
 
 string Codigo::descodifica(const string& texto) const {
     string descodificado;
-    return texto;
+    return descodificado;
 }
 
 void Codigo::escribir_arbol() const {
