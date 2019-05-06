@@ -40,18 +40,17 @@ Codigo::Codigo(const FreqTable & tabla) {
     listaTree.sort(comp);
     list<string> caracteres;
     for (list<BinTree<pair<string,int> > >::const_iterator it = listaTree.begin(); it != listaTree.end(); ++it) {
-        caracteres.insert(caracteres.end(), it->value().first);
+        caracteres.push_back(it->value().first);
     }
     while (listaTree.size() > 1) {
-        list<BinTree<pair<string,int> > >::iterator it = listaTree.begin();
-        string str1 = it->value().first;
-        int f = it->value().second;
-        BinTree<pair<string,int> > left = *it;
-        it = listaTree.erase(it);
-        string str2 = it->value().first;
-        f += it->value().second;
-        BinTree<pair<string,int> > right = *it;
-        it = listaTree.erase(it);
+        BinTree<pair<string,int> > left = listaTree.front();
+        string str1 = left.value().first;
+        int f = left.value().second;
+        listaTree.pop_front();
+        BinTree<pair<string,int> > right = listaTree.front();
+        string str2 = right.value().first;
+        f += right.value().second;
+        listaTree.pop_front();
         string str;
         if (str1 < str2) str = str1 + str2;
         else str = str2 + str1;
