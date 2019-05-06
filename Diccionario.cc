@@ -48,7 +48,7 @@ void Diccionario::escribir_codigos(string nombre) const {
         it->second.escribir_codigos(c);
     }
     else if (c == "todos") cout << "El idioma no existe" << endl;
-    else cout << "El idioma no existe o el caracter no está en el idioma" << endl;
+    else cout << "El idioma no existe o el caracter no esta en el idioma" << endl;
     cout << endl;
 }
 
