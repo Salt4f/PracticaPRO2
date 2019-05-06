@@ -21,7 +21,8 @@ bool comp(const BinTree<pair<string,int> >& a, const BinTree<pair<string,int> >&
 
 void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int> >& elemento) {
     bool completado = false;
-    for (list<BinTree<pair<string,int> > >::iterator it = lista.begin(); !completado; ++it) {
+    list<BinTree<pair<string,int> > >::iterator it = lista.begin();
+    while (!completado) {
         if (it == lista.end()) {
             lista.insert(it, elemento);
             completado = true;
@@ -38,7 +39,8 @@ void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int
             lista.insert(it, elemento);
             completado = true;
         }
-        
+        else ++it;
+        //cout << completado << endl;
     }
 }
 
@@ -110,7 +112,7 @@ void Codigo::escribir_codigos(string c) const {
     else {
         map<string,string>::const_iterator it = codetable.find(c);
         if (it != codetable.end()) cout << it->first << " " << it->second << endl;
-        else cout << "El idioma no existe o el caracter no está en el idioma" << endl;
+        else cout << "El idioma no existe o el caracter no esta en el idioma" << endl;
     }
 }
 
