@@ -92,7 +92,7 @@ string Codigo::codifica(const string& texto) const {
 
 string Codigo::descodifica(const string& texto) const {
     string descodificado;
-    return descodificado;
+    return texto;
 }
 
 void Codigo::escribir_arbol() const {
