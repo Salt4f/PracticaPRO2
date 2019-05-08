@@ -8,10 +8,19 @@
 #ifndef NO_DIAGRAM
 #include <iostream>
 #include <map>
-#include <list>
+#include <set>
 #include "BinTree.hh"
 using namespace std;
 #endif
+
+typedef BinTree<pair<string,int> > Arbol;
+
+struct Comp {
+	bool operator()(const Arbol& a, const Arbol& b) const {
+        if (a.value().second == b.value().second) return a.value().first < b.value().first;
+        return a.value().second < b.value().second;
+    }
+};
 
 /** @class FreqTable
     @brief Representa una tabla de frecuencias de un Idioma
@@ -59,7 +68,7 @@ public:
     /**
     
     */
-    list<BinTree<pair<string,int> > > elementos() const;
+    set<Arbol, Comp> elementos() const;
 };
 
 

@@ -14,65 +14,36 @@ string next_symbol(const string& s, int& i) {
     return string(s, i, 2);
 }
 
-bool comp(const BinTree<pair<string,int> >& a, const BinTree<pair<string,int> >& b) {
-    if (a.value().second == b.value().second) return a.value().first < b.value().first;
-    return a.value().second < b.value().second;
-}
-
-void insercion(list<BinTree<pair<string,int> > >& lista, BinTree<pair<string,int> >& elemento) {
-    bool completado = false;
-    list<BinTree<pair<string,int> > >::iterator it = lista.begin();
-    while (!completado) {
-        if (it == lista.end()) {
-            lista.insert(it, elemento);
-            completado = true;
-        }
-        else if (elemento.value().second == it->value().second) {
-            if (elemento.value().first < it->value().first) lista.insert(it, elemento);
-            else {
-                ++it;
-                lista.insert(it, elemento);
-            }
-            completado = true;
-        }
-        else if (elemento.value().second < it->value().second) {
-            lista.insert(it, elemento);
-            completado = true;
-        }
-        else ++it;
-    }
-}
-
 Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
-    list<BinTree<pair<string, int> > > listaTree = tabla.elementos();
-    listaTree.sort(comp);
-    list<string> caracteres;
-    for (list<BinTree<pair<string,int> > >::const_iterator it = listaTree.begin(); it != listaTree.end(); ++it) {
-        caracteres.push_back(it->value().first);
+    set<Arbol, Comp> listaTree = tabla.elementos();
+    set<string> caracteres;
+    for (set<Arbol,Comp>::const_iterator it = listaTree.begin(); it != listaTree.end(); ++it) {
+        caracteres.insert(it->value().first);
     }
     while (listaTree.size() > 1) {
-        BinTree<pair<string,int> > left = listaTree.front();
+        set<Arbol,Comp>::iterator it = listaTree.begin();
+        Arbol left = *it;
+        it = listaTree.erase(it);
         string str1 = left.value().first;
         int f = left.value().second;
-        listaTree.pop_front();
-        BinTree<pair<string,int> > right = listaTree.front();
+        Arbol right = *it;
         string str2 = right.value().first;
         f += right.value().second;
-        listaTree.pop_front();
+        it = listaTree.erase(it);
         string str;
         if (str1 < str2) str = str1 + str2;
         else str = str2 + str1;
-        BinTree<pair<string,int> > aux(make_pair(str, f), left, right);
-        insercion(listaTree, aux);
+        Arbol aux(make_pair(str, f), left, right);
+        listaTree.insert(aux);
     }
-    treecode = listaTree.front();
+    treecode = *listaTree.begin();
     listaTree.clear();
 
     while (!caracteres.empty()) {
-        string c = caracteres.front();
-        caracteres.pop_front();
+        string c = *caracteres.begin();
+        caracteres.erase(caracteres.begin());
         codetable.insert(make_pair(c, codifica_caracter(c, treecode)));
     }
 }
