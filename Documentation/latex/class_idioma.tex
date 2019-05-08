@@ -24,9 +24,9 @@ void \mbox{\hyperlink{class_idioma_a768902d7b18678f04d89d18b7336eb96}{escribir\+
 \begin{DoxyCompactList}\small\item\em Escribe la tabla de códigos del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_idioma_a4668bf02f948cc873e7342147172145c}{es\+\_\+del\+\_\+idioma}} (string c) const
 \begin{DoxyCompactList}\small\item\em Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{class_idioma_ab7b6fd6a3453a2d23484143ed0509d6a}{codificar}} (string texto) const
+string \mbox{\hyperlink{class_idioma_ad9f01b440e109acaa093694f0fc4cfad}{codificar}} (const string \&texto) const
 \begin{DoxyCompactList}\small\item\em Codifica un carácter. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{class_idioma_aac671224bea460078a26736a8076a5a3}{descodificar}} (string texto) const
+string \mbox{\hyperlink{class_idioma_a85bb1650363888d7c2c201c4d7b6b220}{descodificar}} (const string \&texto) const
 \begin{DoxyCompactList}\small\item\em Descodifica un texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos privados}
 \begin{DoxyCompactItemize}
@@ -83,11 +83,11 @@ Definición en la línea 8 del archivo Idioma.\+cc.
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_idioma_ab7b6fd6a3453a2d23484143ed0509d6a}\label{class_idioma_ab7b6fd6a3453a2d23484143ed0509d6a}} 
+\mbox{\Hypertarget{class_idioma_ad9f01b440e109acaa093694f0fc4cfad}\label{class_idioma_ad9f01b440e109acaa093694f0fc4cfad}} 
 \index{Idioma@{Idioma}!codificar@{codificar}}
 \index{codificar@{codificar}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{codificar()}{codificar()}}
-{\footnotesize\ttfamily string Idioma\+::codificar (\begin{DoxyParamCaption}\item[{string}]{texto }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily string Idioma\+::codificar (\begin{DoxyParamCaption}\item[{const string \&}]{texto }\end{DoxyParamCaption}) const}
 
 
 
@@ -110,16 +110,16 @@ Definición en la línea 34 del archivo Idioma.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{34                                            \{}
-\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_aecfc0015fa188f7e8daa93ed0f4bfa66}{codifica}}(texto);}
+\DoxyCodeLine{34                                                   \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_aada50c7be0415071090ac04a77d0f71b}{codifica}}(texto);}
 \DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_idioma_aac671224bea460078a26736a8076a5a3}\label{class_idioma_aac671224bea460078a26736a8076a5a3}} 
+\mbox{\Hypertarget{class_idioma_a85bb1650363888d7c2c201c4d7b6b220}\label{class_idioma_a85bb1650363888d7c2c201c4d7b6b220}} 
 \index{Idioma@{Idioma}!descodificar@{descodificar}}
 \index{descodificar@{descodificar}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{descodificar()}{descodificar()}}
-{\footnotesize\ttfamily string Idioma\+::descodificar (\begin{DoxyParamCaption}\item[{string}]{texto }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily string Idioma\+::descodificar (\begin{DoxyParamCaption}\item[{const string \&}]{texto }\end{DoxyParamCaption}) const}
 
 
 
@@ -142,8 +142,8 @@ Definición en la línea 38 del archivo Idioma.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38                                               \{}
-\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_adaa54ebe9de694fe3e1c30d0cd8501f5}{descodifica}}(texto);}
+\DoxyCodeLine{38                                                      \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_a0bfd655a31c233b33cb06ec443bf9a59}{descodifica}}(texto);}
 \DoxyCodeLine{40 \}}
 
 \end{DoxyCode}

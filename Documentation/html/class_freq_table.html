@@ -92,8 +92,8 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:a1739e3f11f08f894e6fe00e48041d263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5065ac15ee7e4a44094ed0e6335c460"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#ac5065ac15ee7e4a44094ed0e6335c460">frecuencia</a> (string c) const</td></tr>
 <tr class="separator:ac5065ac15ee7e4a44094ed0e6335c460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb857aca3fae2f37b14a93407cdf1551"><td class="memItemLeft" align="right" valign="top">list&lt; pair&lt; string, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#afb857aca3fae2f37b14a93407cdf1551">elementos</a> () const</td></tr>
-<tr class="separator:afb857aca3fae2f37b14a93407cdf1551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7aca77da82fa7d4fd77ae67918c534e"><td class="memItemLeft" align="right" valign="top">set&lt; <a class="el" href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a>, <a class="el" href="struct_comp.html">Comp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html#af7aca77da82fa7d4fd77ae67918c534e">elementos</a> () const</td></tr>
+<tr class="separator:af7aca77da82fa7d4fd77ae67918c534e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atributos privados</h2></td></tr>
@@ -103,7 +103,7 @@ Atributos privados</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa una tabla de frecuencias de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00018">18</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00028">28</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a7eb07bf5c4d46d835cf2b05cd7a3a25a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7eb07bf5c4d46d835cf2b05cd7a3a25a">&#9670;&nbsp;</a></span>FreqTable()</h2>
@@ -129,14 +129,14 @@ Atributos privados</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones miembro</h2>
-<a id="afb857aca3fae2f37b14a93407cdf1551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb857aca3fae2f37b14a93407cdf1551">&#9670;&nbsp;</a></span>elementos()</h2>
+<a id="af7aca77da82fa7d4fd77ae67918c534e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7aca77da82fa7d4fd77ae67918c534e">&#9670;&nbsp;</a></span>elementos()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list&lt; pair&lt; string, int &gt; &gt; FreqTable::elementos </td>
+          <td class="memname">set&lt; <a class="el" href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a>, <a class="el" href="struct_comp.html">Comp</a> &gt; FreqTable::elementos </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -145,7 +145,7 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definición en la línea <a class="el" href="_freq_table_8cc_source.html#l00038">38</a> del archivo <a class="el" href="_freq_table_8cc_source.html">FreqTable.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                   {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    list&lt;pair&lt;string,int&gt; &gt; lista;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (map&lt;string,int&gt;::const_iterator it = <a class="code" href="class_freq_table.html#ab5879a29257c9e6de7a6c99b1498c0ab">table</a>.begin(); it != <a class="code" href="class_freq_table.html#ab5879a29257c9e6de7a6c99b1498c0ab">table</a>.end(); ++it) {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        lista.insert(lista.end(), *it);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> lista;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                            {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    set&lt;Arbol, Comp&gt; lista;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (map&lt;string,int&gt;::const_iterator it = <a class="code" href="class_freq_table.html#ab5879a29257c9e6de7a6c99b1498c0ab">table</a>.begin(); it != <a class="code" href="class_freq_table.html#ab5879a29257c9e6de7a6c99b1498c0ab">table</a>.end(); ++it) {</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        lista.insert(<a class="code" href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a>(*it));</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> lista;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a1739e3f11f08f894e6fe00e48041d263"></a>
@@ -273,7 +273,7 @@ Atributos privados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00021">21</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00031">31</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,8 @@ Atributos privados</h2></td></tr>
 <li><a class="el" href="_freq_table_8cc_source.html">FreqTable.cc</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_freq_table_html_ab5879a29257c9e6de7a6c99b1498c0ab"><div class="ttname"><a href="class_freq_table.html#ab5879a29257c9e6de7a6c99b1498c0ab">FreqTable::table</a></div><div class="ttdeci">map&lt; string, int &gt; table</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8hh_source.html#l00021">FreqTable.hh:21</a></div></div>
+<div class="ttc" id="aclass_freq_table_html_ab5879a29257c9e6de7a6c99b1498c0ab"><div class="ttname"><a href="class_freq_table.html#ab5879a29257c9e6de7a6c99b1498c0ab">FreqTable::table</a></div><div class="ttdeci">map&lt; string, int &gt; table</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8hh_source.html#l00031">FreqTable.hh:31</a></div></div>
+<div class="ttc" id="a_freq_table_8hh_html_a676f8f4198d4b93cc01c6d8c848933ba"><div class="ttname"><a href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a></div><div class="ttdeci">BinTree&lt; pair&lt; string, int &gt; &gt; Arbol</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8hh_source.html#l00016">FreqTable.hh:16</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por &#160;<a href="http://www.doxygen.org/index.html">

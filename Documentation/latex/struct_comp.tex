@@ -1,0 +1,44 @@
+\hypertarget{struct_comp}{}\doxysection{Referencia de la Estructura Comp}
+\label{struct_comp}\index{Comp@{Comp}}
+
+
+{\ttfamily \#include $<$Freq\+Table.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_comp_a7f45478099abbdc673d3f1ca6629956d}{operator()}} (const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&a, const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&b) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+
+
+Definición en la línea 18 del archivo Freq\+Table.\+hh.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{struct_comp_a7f45478099abbdc673d3f1ca6629956d}\label{struct_comp_a7f45478099abbdc673d3f1ca6629956d}} 
+\index{Comp@{Comp}!operator()@{operator()}}
+\index{operator()@{operator()}!Comp@{Comp}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily bool Comp\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&}]{a,  }\item[{const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea 19 del archivo Freq\+Table.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                           \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{if} (a.value().second == b.value().second) \textcolor{keywordflow}{return} a.value().first < b.value().first;}
+\DoxyCodeLine{21         \textcolor{keywordflow}{return} a.value().second < b.value().second;}
+\DoxyCodeLine{22     \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta estructura fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_freq_table_8hh}{Freq\+Table.\+hh}}\end{DoxyCompactItemize}

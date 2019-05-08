@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['descodifica',['descodifica',['../class_codigo.html#adaa54ebe9de694fe3e1c30d0cd8501f5',1,'Codigo::descodifica()'],['../class_diccionario.html#a593b527d3d9c08bd6e4f036aab3cad90',1,'Diccionario::descodifica()']]],
-  ['descodificar',['descodificar',['../class_idioma.html#aac671224bea460078a26736a8076a5a3',1,'Idioma']]],
-  ['diccionario',['Diccionario',['../class_diccionario.html',1,'Diccionario'],['../class_diccionario.html#ab8283e3082522385615a71fe58e293c6',1,'Diccionario::diccionario()'],['../class_diccionario.html#aa0a2191ec706b256c35b5229cc197b15',1,'Diccionario::Diccionario()']]],
-  ['diccionario_2ecc',['Diccionario.cc',['../_diccionario_8cc.html',1,'']]],
-  ['diccionario_2ehh',['Diccionario.hh',['../_diccionario_8hh.html',1,'']]]
+  ['codetable',['codetable',['../class_codigo.html#a3a0be11d5a3c76041fbef06c94f1850c',1,'Codigo']]],
+  ['codifica',['codifica',['../class_codigo.html#aada50c7be0415071090ac04a77d0f71b',1,'Codigo::codifica()'],['../class_diccionario.html#ae8077dbe0b5cfc3d763d744d59e45803',1,'Diccionario::codifica()']]],
+  ['codifica_5fcaracter',['codifica_caracter',['../class_codigo.html#ae68786460f3c6e06b3a034dc18e53a52',1,'Codigo']]],
+  ['codificar',['codificar',['../class_idioma.html#ad9f01b440e109acaa093694f0fc4cfad',1,'Idioma']]],
+  ['codigo',['Codigo',['../class_codigo.html',1,'Codigo'],['../class_codigo.html#ab600451a62d146afd95c1c1a0fc041c3',1,'Codigo::Codigo()'],['../class_codigo.html#a51aed61d7d0059dc17f86e7a7c333a47',1,'Codigo::Codigo(const FreqTable &amp;tabla)']]],
+  ['codigo_2ecc',['Codigo.cc',['../_codigo_8cc.html',1,'']]],
+  ['codigo_2ehh',['Codigo.hh',['../_codigo_8hh.html',1,'']]],
+  ['codigos',['codigos',['../class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1',1,'Idioma']]],
+  ['comp',['Comp',['../struct_comp.html',1,'']]],
+  ['codificador_2fdescodificador',['Codificador/Descodificador',['../index.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'program.cc']]],
-  ['modificar_5fidioma',['modificar_idioma',['../class_diccionario.html#acebf7336b0d4509c5e8b52eeb0e0255b',1,'Diccionario::modificar_idioma()'],['../class_idioma.html#a91f493edb5d164fb4e0dd274c3146316',1,'Idioma::modificar_idioma()']]]
+  ['leer_5ftabla',['leer_tabla',['../class_freq_table.html#a26c57ffd6d5e4db738743da9cfb0720a',1,'FreqTable']]],
+  ['lista_20de_20tareas_20pendientes',['Lista de tareas pendientes',['../todo.html',1,'']]]
 ];

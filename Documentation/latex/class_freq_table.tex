@@ -22,7 +22,7 @@ void \mbox{\hyperlink{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}{escrib
 \begin{DoxyCompactList}\small\item\em Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}{frecuencia}} (string c) const
 \item 
-list$<$ pair$<$ string, int $>$ $>$ \mbox{\hyperlink{class_freq_table_afb857aca3fae2f37b14a93407cdf1551}{elementos}} () const
+set$<$ \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}, \mbox{\hyperlink{struct_comp}{Comp}} $>$ \mbox{\hyperlink{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}{elementos}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
@@ -34,7 +34,7 @@ map$<$ string, int $>$ \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c9
 \doxysubsection{Descripción detallada}
 Representa una tabla de frecuencias de un \mbox{\hyperlink{class_idioma}{Idioma}}. 
 
-Definición en la línea 18 del archivo Freq\+Table.\+hh.
+Definición en la línea 28 del archivo Freq\+Table.\+hh.
 
 
 
@@ -67,11 +67,11 @@ Definición en la línea 8 del archivo Freq\+Table.\+cc.
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_freq_table_afb857aca3fae2f37b14a93407cdf1551}\label{class_freq_table_afb857aca3fae2f37b14a93407cdf1551}} 
+\mbox{\Hypertarget{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}\label{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}} 
 \index{FreqTable@{FreqTable}!elementos@{elementos}}
 \index{elementos@{elementos}!FreqTable@{FreqTable}}
 \doxysubsubsection{\texorpdfstring{elementos()}{elementos()}}
-{\footnotesize\ttfamily list$<$ pair$<$ string, int $>$ $>$ Freq\+Table\+::elementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}, \mbox{\hyperlink{struct_comp}{Comp}} $>$ Freq\+Table\+::elementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
@@ -79,10 +79,10 @@ Definición en la línea 38 del archivo Freq\+Table.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38                                                    \{}
-\DoxyCodeLine{39     list<pair<string,int> > lista;}
+\DoxyCodeLine{38                                             \{}
+\DoxyCodeLine{39     set<Arbol, Comp> lista;}
 \DoxyCodeLine{40     \textcolor{keywordflow}{for} (map<string,int>::const\_iterator it = \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.begin(); it != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end(); ++it) \{}
-\DoxyCodeLine{41         lista.insert(lista.end(), *it);}
+\DoxyCodeLine{41         lista.insert(\mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}(*it));}
 \DoxyCodeLine{42     \}}
 \DoxyCodeLine{43     \textcolor{keywordflow}{return} lista;}
 \DoxyCodeLine{44 \}}
@@ -225,7 +225,7 @@ Definición en la línea 10 del archivo Freq\+Table.\+cc.
 
 
 
-Definición en la línea 21 del archivo Freq\+Table.\+hh.
+Definición en la línea 31 del archivo Freq\+Table.\+hh.
 
 
 

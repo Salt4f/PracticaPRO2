@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['rehacer_5fcodigos',['rehacer_codigos',['../class_idioma.html#a8ad0c4745f1d06385263d4ed2093bf03',1,'Idioma']]]
+  ['next_5fsymbol',['next_symbol',['../_codigo_8cc.html#ac805b2222ec2485f56d9a034df32a3ca',1,'Codigo.cc']]]
 ];

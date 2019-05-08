@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "cdefilmprt",
+  0: "acdefilmnoprt",
   1: "cdfi",
   2: "cdfipr",
-  3: "cdefilmr",
+  3: "cdefilmnor",
   4: "cdt",
-  5: "clp"
+  5: "a",
+  6: "clp"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "pages"
+  5: "typedefs",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Archivos",
   3: "Funciones",
   4: "Variables",
-  5: "Páginas"
+  5: "typedefs",
+  6: "Páginas"
 };
 

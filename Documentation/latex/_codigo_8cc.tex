@@ -11,18 +11,16 @@ Dependencia gráfica adjunta para Codigo.\+cc\+:\nopagebreak
 \doxysubsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{_codigo_8cc_aa2dae46392eccd54b56b878c6add4ef4}{comp}} (const pair$<$ string, int $>$ \&a, const pair$<$ string, int $>$ \&b)
-\item 
-void \mbox{\hyperlink{_codigo_8cc_a1d46ed9a92f1c1dc9344cc04fe7b3a9e}{insercion}} (list$<$ Bin\+Tree$<$ pair$<$ string, int $>$ $>$ $>$ \&lista, Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&elemento)
+string \mbox{\hyperlink{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}{next\+\_\+symbol}} (const string \&s, int \&i)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Documentación de las funciones}
-\mbox{\Hypertarget{_codigo_8cc_aa2dae46392eccd54b56b878c6add4ef4}\label{_codigo_8cc_aa2dae46392eccd54b56b878c6add4ef4}} 
-\index{Codigo.cc@{Codigo.cc}!comp@{comp}}
-\index{comp@{comp}!Codigo.cc@{Codigo.cc}}
-\doxysubsubsection{\texorpdfstring{comp()}{comp()}}
-{\footnotesize\ttfamily bool comp (\begin{DoxyParamCaption}\item[{const pair$<$ string, int $>$ \&}]{a,  }\item[{const pair$<$ string, int $>$ \&}]{b }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}\label{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}} 
+\index{Codigo.cc@{Codigo.cc}!next\_symbol@{next\_symbol}}
+\index{next\_symbol@{next\_symbol}!Codigo.cc@{Codigo.cc}}
+\doxysubsubsection{\texorpdfstring{next\_symbol()}{next\_symbol()}}
+{\footnotesize\ttfamily string next\+\_\+symbol (\begin{DoxyParamCaption}\item[{const string \&}]{s,  }\item[{int \&}]{i }\end{DoxyParamCaption})}
 
 
 
@@ -30,36 +28,13 @@ Definición en la línea 8 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{8                                                                 \{}
-\DoxyCodeLine{9     \textcolor{keywordflow}{return} a.second < b.second;}
-\DoxyCodeLine{10 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{_codigo_8cc_a1d46ed9a92f1c1dc9344cc04fe7b3a9e}\label{_codigo_8cc_a1d46ed9a92f1c1dc9344cc04fe7b3a9e}} 
-\index{Codigo.cc@{Codigo.cc}!insercion@{insercion}}
-\index{insercion@{insercion}!Codigo.cc@{Codigo.cc}}
-\doxysubsubsection{\texorpdfstring{insercion()}{insercion()}}
-{\footnotesize\ttfamily void insercion (\begin{DoxyParamCaption}\item[{list$<$ Bin\+Tree$<$ pair$<$ string, int $>$ $>$ $>$ \&}]{lista,  }\item[{Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&}]{elemento }\end{DoxyParamCaption})}
-
-
-
-Definición en la línea 12 del archivo Codigo.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{12                                                                                                \{}
-\DoxyCodeLine{13     \textcolor{keywordtype}{bool} completado = \textcolor{keyword}{false};}
-\DoxyCodeLine{14     \textcolor{keywordflow}{for} (list<BinTree<pair<string,int> > >::iterator it = lista.begin(); !completado; ++it) \{}
-\DoxyCodeLine{15         \textcolor{keywordflow}{if} (it == lista.end()) \{}
-\DoxyCodeLine{16             lista.insert(it, elemento);}
-\DoxyCodeLine{17             completado = \textcolor{keyword}{true};}
-\DoxyCodeLine{18         \}}
-\DoxyCodeLine{19         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (elemento.value().second < it-\/>value().second) \{}
-\DoxyCodeLine{20             lista.insert(it, elemento);}
-\DoxyCodeLine{21             completado = \textcolor{keyword}{true};}
-\DoxyCodeLine{22         \}}
-\DoxyCodeLine{23         }
-\DoxyCodeLine{24     \}}
-\DoxyCodeLine{25 \}}
+\DoxyCodeLine{8                                             \{}
+\DoxyCodeLine{9     \textcolor{keywordflow}{if} (s[i] >= 0) \{}
+\DoxyCodeLine{10         ++i;}
+\DoxyCodeLine{11         \textcolor{keywordflow}{return} string(1, s[i]);}
+\DoxyCodeLine{12     \}}
+\DoxyCodeLine{13     i += 2;}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} string(s, i, 2);}
+\DoxyCodeLine{15 \}}
 
 \end{DoxyCode}
