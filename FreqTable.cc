@@ -8,14 +8,21 @@ using namespace std;
 FreqTable::FreqTable() {}
 
 void FreqTable::leer_tabla() {
-    if (!table.empty()) table.clear();
     int n;
     cin >> n;
     string c;
     int freq;
-    for (int i = 0; i < n; ++i) {
-        cin >> c >> freq;
-        table.insert(make_pair(c, freq));
+    if (!table.empty()) {
+        for (int i = 0; i < n; ++i) {
+            cin >> c >> freq;
+            table[c] += freq;
+        }
+    }
+    else {
+        for (int i = 0; i < n; ++i) {
+            cin >> c >> freq;
+            table.insert(make_pair(c, freq));
+        }
     }
 }
 

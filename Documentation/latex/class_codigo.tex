@@ -27,11 +27,11 @@ void \mbox{\hyperlink{class_codigo_a2b5d3a02fad8dcecfa0c4ee55e02a989}{escribir\+
 \doxysubsection*{Métodos privados}
 \begin{DoxyCompactItemize}
 \item 
-string \mbox{\hyperlink{class_codigo_ae68786460f3c6e06b3a034dc18e53a52}{codifica\+\_\+caracter}} (string c, const Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&tree) const
+void \mbox{\hyperlink{class_codigo_aa4a3a531a2185c867e2babe28f956f69}{codifica\+\_\+caracteres}} (string \&path, const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&tree)
 \begin{DoxyCompactList}\small\item\em Codifica el carácter {\bfseries{c}} \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_codigo_a27e9b12b3181fe8c6b77336781bc0ae7}{escribe\+\_\+preorden}} (const Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&tree) const
+void \mbox{\hyperlink{class_codigo_a3188749159c00631618bc71a6aba40a0}{escribe\+\_\+preorden}} (const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&tree) const
 \item 
-void \mbox{\hyperlink{class_codigo_a1bb85f5c603dbdfdcac410941fa9668c}{escribe\+\_\+inorden}} (const Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&tree) const
+void \mbox{\hyperlink{class_codigo_a04189c063d12920f327815a927e89e01}{escribe\+\_\+inorden}} (const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&tree) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
@@ -99,35 +99,28 @@ Definición en la línea 19 del archivo Codigo.\+cc.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{19                                       \{}
 \DoxyCodeLine{20     set<Arbol, Comp> listaTree = tabla.\mbox{\hyperlink{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}{elementos}}();}
-\DoxyCodeLine{21     set<string> caracteres;}
-\DoxyCodeLine{22     \textcolor{keywordflow}{for} (set<Arbol,Comp>::const\_iterator it = listaTree.begin(); it != listaTree.end(); ++it) \{}
-\DoxyCodeLine{23         caracteres.insert(it-\/>value().first);}
-\DoxyCodeLine{24     \}}
-\DoxyCodeLine{25     \textcolor{keywordflow}{while} (listaTree.size() > 1) \{}
-\DoxyCodeLine{26         set<Arbol,Comp>::iterator it = listaTree.begin();}
-\DoxyCodeLine{27         \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} left = *it;}
-\DoxyCodeLine{28         it = listaTree.erase(it);}
-\DoxyCodeLine{29         \textcolor{keywordtype}{string} str1 = left.value().first;}
-\DoxyCodeLine{30         \textcolor{keywordtype}{int} f = left.value().second;}
-\DoxyCodeLine{31         \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} right = *it;}
-\DoxyCodeLine{32         \textcolor{keywordtype}{string} str2 = right.value().first;}
-\DoxyCodeLine{33         f += right.value().second;}
-\DoxyCodeLine{34         it = listaTree.erase(it);}
-\DoxyCodeLine{35         \textcolor{keywordtype}{string} str;}
-\DoxyCodeLine{36         \textcolor{keywordflow}{if} (str1 < str2) str = str1 + str2;}
-\DoxyCodeLine{37         \textcolor{keywordflow}{else} str = str2 + str1;}
-\DoxyCodeLine{38         \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} aux(make\_pair(str, f), left, right);}
-\DoxyCodeLine{39         listaTree.insert(aux);}
-\DoxyCodeLine{40     \}}
-\DoxyCodeLine{41     \mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}} = *listaTree.begin();}
-\DoxyCodeLine{42     listaTree.clear();}
-\DoxyCodeLine{43 }
-\DoxyCodeLine{44     \textcolor{keywordflow}{while} (!caracteres.empty()) \{}
-\DoxyCodeLine{45         \textcolor{keywordtype}{string} c = *caracteres.begin();}
-\DoxyCodeLine{46         caracteres.erase(caracteres.begin());}
-\DoxyCodeLine{47         \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.insert(make\_pair(c, \mbox{\hyperlink{class_codigo_ae68786460f3c6e06b3a034dc18e53a52}{codifica\_caracter}}(c, \mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}})));}
-\DoxyCodeLine{48     \}}
-\DoxyCodeLine{49 \}}
+\DoxyCodeLine{21     \textcolor{keywordflow}{while} (listaTree.size() > 1) \{}
+\DoxyCodeLine{22         set<Arbol,Comp>::iterator it = listaTree.begin();}
+\DoxyCodeLine{23         \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} left = *it;}
+\DoxyCodeLine{24         it = listaTree.erase(it);}
+\DoxyCodeLine{25         \textcolor{keywordtype}{string} str1 = left.value().first;}
+\DoxyCodeLine{26         \textcolor{keywordtype}{int} f = left.value().second;}
+\DoxyCodeLine{27         \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} right = *it;}
+\DoxyCodeLine{28         \textcolor{keywordtype}{string} str2 = right.value().first;}
+\DoxyCodeLine{29         f += right.value().second;}
+\DoxyCodeLine{30         it = listaTree.erase(it);}
+\DoxyCodeLine{31         \textcolor{keywordtype}{string} str;}
+\DoxyCodeLine{32         \textcolor{keywordflow}{if} (str1 < str2) str = str1 + str2;}
+\DoxyCodeLine{33         \textcolor{keywordflow}{else} str = str2 + str1;}
+\DoxyCodeLine{34         \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} aux(make\_pair(str, f), left, right);}
+\DoxyCodeLine{35         listaTree.insert(aux);}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}} = *listaTree.begin();}
+\DoxyCodeLine{38     listaTree.clear();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{string} str = \textcolor{stringliteral}{""};}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_codigo_aa4a3a531a2185c867e2babe28f956f69}{codifica\_caracteres}}(str,\mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}});}
+\DoxyCodeLine{42 \}}
 
 \end{DoxyCode}
 
@@ -156,29 +149,31 @@ El texto codificado
 \end{DoxyParams}
 
 
-Definición en la línea 51 del archivo Codigo.\+cc.
+Definición en la línea 44 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{51                                                  \{}
-\DoxyCodeLine{52     \textcolor{keywordtype}{string} codificado;}
-\DoxyCodeLine{53     \textcolor{keywordtype}{bool} invalid = \textcolor{keyword}{false};}
-\DoxyCodeLine{54     \textcolor{keywordtype}{int} i = 0;}
-\DoxyCodeLine{55     \textcolor{keywordflow}{while} (i < texto.length() and !invalid) \{}
-\DoxyCodeLine{56         map<string,string>::const\_iterator it = \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.find(\mbox{\hyperlink{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}{next\_symbol}}(texto, i));}
-\DoxyCodeLine{57         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.end()) codificado += it-\/>second;}
-\DoxyCodeLine{58         \textcolor{keywordflow}{else} invalid = \textcolor{keyword}{true};}
-\DoxyCodeLine{59     \}}
-\DoxyCodeLine{60     \textcolor{keywordflow}{if} (invalid) \textcolor{keywordflow}{return} texto + \textcolor{stringliteral}{" no es del idioma"};}
-\DoxyCodeLine{61     \textcolor{keywordflow}{return} codificado;}
-\DoxyCodeLine{62 \}}
+\DoxyCodeLine{44                                                  \{}
+\DoxyCodeLine{45     \textcolor{keywordtype}{string} codificado;}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} invalid = \textcolor{keyword}{false};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{48     \textcolor{keywordtype}{string} \_char;}
+\DoxyCodeLine{49     \textcolor{keywordflow}{while} (i < texto.length() and !invalid) \{}
+\DoxyCodeLine{50         \_char = \mbox{\hyperlink{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}{next\_symbol}}(texto, i);}
+\DoxyCodeLine{51         map<string,string>::const\_iterator it = \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.find(\_char);}
+\DoxyCodeLine{52         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.end()) codificado += it-\/>second;}
+\DoxyCodeLine{53         \textcolor{keywordflow}{else} invalid = \textcolor{keyword}{true};}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55     \textcolor{keywordflow}{if} (invalid) \textcolor{keywordflow}{return} \textcolor{stringliteral}{"El texto no pertenece al idioma; primer caracter que falla: "} + \_char;}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} codificado;}
+\DoxyCodeLine{57 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_codigo_ae68786460f3c6e06b3a034dc18e53a52}\label{class_codigo_ae68786460f3c6e06b3a034dc18e53a52}} 
-\index{Codigo@{Codigo}!codifica\_caracter@{codifica\_caracter}}
-\index{codifica\_caracter@{codifica\_caracter}!Codigo@{Codigo}}
-\doxysubsubsection{\texorpdfstring{codifica\_caracter()}{codifica\_caracter()}}
-{\footnotesize\ttfamily string Codigo\+::codifica\+\_\+caracter (\begin{DoxyParamCaption}\item[{string}]{c,  }\item[{const Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&}]{tree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_codigo_aa4a3a531a2185c867e2babe28f956f69}\label{class_codigo_aa4a3a531a2185c867e2babe28f956f69}} 
+\index{Codigo@{Codigo}!codifica\_caracteres@{codifica\_caracteres}}
+\index{codifica\_caracteres@{codifica\_caracteres}!Codigo@{Codigo}}
+\doxysubsubsection{\texorpdfstring{codifica\_caracteres()}{codifica\_caracteres()}}
+{\footnotesize\ttfamily void Codigo\+::codifica\+\_\+caracteres (\begin{DoxyParamCaption}\item[{string \&}]{path,  }\item[{const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -186,15 +181,22 @@ Codifica el carácter {\bfseries{c}}
 
 Recorre el {\bfseries{treecode}} 
 
-Definición en la línea 89 del archivo Codigo.\+cc.
+Definición en la línea 84 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{89                                                                                          \{}
-\DoxyCodeLine{90     \textcolor{keywordflow}{if} (tree.value().first == c) \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};}
-\DoxyCodeLine{91     \textcolor{keywordflow}{if} (!tree.left().empty() and tree.left().value().first.find(c) != string::npos) \textcolor{keywordflow}{return} \textcolor{stringliteral}{"0"} + \mbox{\hyperlink{class_codigo_ae68786460f3c6e06b3a034dc18e53a52}{codifica\_caracter}}(c, tree.left());}
-\DoxyCodeLine{92     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"1"} + \mbox{\hyperlink{class_codigo_ae68786460f3c6e06b3a034dc18e53a52}{codifica\_caracter}}(c, tree.right());}
-\DoxyCodeLine{93 \}}
+\DoxyCodeLine{84                                                                 \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{if} (tree.left().empty() and tree.right().empty()) \{}
+\DoxyCodeLine{86         \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.insert(make\_pair(tree.value().first, path));}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!tree.left().empty()) \{}
+\DoxyCodeLine{90         \textcolor{keywordtype}{string} new\_path = path + \textcolor{stringliteral}{"0"};}
+\DoxyCodeLine{91         \mbox{\hyperlink{class_codigo_aa4a3a531a2185c867e2babe28f956f69}{codifica\_caracteres}}(new\_path, tree.left());}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93     \textcolor{keywordtype}{string} new\_path = path + \textcolor{stringliteral}{"1"};}
+\DoxyCodeLine{94     \mbox{\hyperlink{class_codigo_aa4a3a531a2185c867e2babe28f956f69}{codifica\_caracteres}}(new\_path, tree.right());}
+\DoxyCodeLine{95 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_codigo_a0bfd655a31c233b33cb06ec443bf9a59}\label{class_codigo_a0bfd655a31c233b33cb06ec443bf9a59}} 
@@ -220,56 +222,56 @@ El texto descodificado
 \end{DoxyParams}
 
 
-Definición en la línea 64 del archivo Codigo.\+cc.
+Definición en la línea 59 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64                                                     \{}
-\DoxyCodeLine{65     \textcolor{keywordtype}{string} descodificado;}
-\DoxyCodeLine{66     \textcolor{keywordflow}{return} texto;}
-\DoxyCodeLine{67 \}}
+\DoxyCodeLine{59                                                     \{}
+\DoxyCodeLine{60     \textcolor{keywordtype}{string} descodificado;}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} texto;}
+\DoxyCodeLine{62 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_codigo_a1bb85f5c603dbdfdcac410941fa9668c}\label{class_codigo_a1bb85f5c603dbdfdcac410941fa9668c}} 
+\mbox{\Hypertarget{class_codigo_a04189c063d12920f327815a927e89e01}\label{class_codigo_a04189c063d12920f327815a927e89e01}} 
 \index{Codigo@{Codigo}!escribe\_inorden@{escribe\_inorden}}
 \index{escribe\_inorden@{escribe\_inorden}!Codigo@{Codigo}}
 \doxysubsubsection{\texorpdfstring{escribe\_inorden()}{escribe\_inorden()}}
-{\footnotesize\ttfamily void Codigo\+::escribe\+\_\+inorden (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&}]{tree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Codigo\+::escribe\+\_\+inorden (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&}]{tree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definición en la línea 103 del archivo Codigo.\+cc.
+Definición en la línea 105 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{103                                                                          \{}
-\DoxyCodeLine{104     \textcolor{keywordflow}{if} (!tree.empty()) \{}
-\DoxyCodeLine{105         \mbox{\hyperlink{class_codigo_a1bb85f5c603dbdfdcac410941fa9668c}{escribe\_inorden}}(tree.left());}
-\DoxyCodeLine{106         cout << tree.value().first << \textcolor{stringliteral}{" "} << tree.value().second << endl;}
-\DoxyCodeLine{107         \mbox{\hyperlink{class_codigo_a1bb85f5c603dbdfdcac410941fa9668c}{escribe\_inorden}}(tree.right());}
-\DoxyCodeLine{108     \}}
-\DoxyCodeLine{109 \}}
+\DoxyCodeLine{105                                                     \{}
+\DoxyCodeLine{106     \textcolor{keywordflow}{if} (!tree.empty()) \{}
+\DoxyCodeLine{107         \mbox{\hyperlink{class_codigo_a04189c063d12920f327815a927e89e01}{escribe\_inorden}}(tree.left());}
+\DoxyCodeLine{108         cout << tree.value().first << \textcolor{stringliteral}{" "} << tree.value().second << endl;}
+\DoxyCodeLine{109         \mbox{\hyperlink{class_codigo_a04189c063d12920f327815a927e89e01}{escribe\_inorden}}(tree.right());}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_codigo_a27e9b12b3181fe8c6b77336781bc0ae7}\label{class_codigo_a27e9b12b3181fe8c6b77336781bc0ae7}} 
+\mbox{\Hypertarget{class_codigo_a3188749159c00631618bc71a6aba40a0}\label{class_codigo_a3188749159c00631618bc71a6aba40a0}} 
 \index{Codigo@{Codigo}!escribe\_preorden@{escribe\_preorden}}
 \index{escribe\_preorden@{escribe\_preorden}!Codigo@{Codigo}}
 \doxysubsubsection{\texorpdfstring{escribe\_preorden()}{escribe\_preorden()}}
-{\footnotesize\ttfamily void Codigo\+::escribe\+\_\+preorden (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \&}]{tree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Codigo\+::escribe\+\_\+preorden (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}} \&}]{tree }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definición en la línea 95 del archivo Codigo.\+cc.
+Definición en la línea 97 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{95                                                                           \{}
-\DoxyCodeLine{96     \textcolor{keywordflow}{if} (!tree.empty()) \{}
-\DoxyCodeLine{97         cout << tree.value().first << \textcolor{stringliteral}{" "} << tree.value().second << endl;}
-\DoxyCodeLine{98         \mbox{\hyperlink{class_codigo_a27e9b12b3181fe8c6b77336781bc0ae7}{escribe\_preorden}}(tree.left());}
-\DoxyCodeLine{99         \mbox{\hyperlink{class_codigo_a27e9b12b3181fe8c6b77336781bc0ae7}{escribe\_preorden}}(tree.right());}
-\DoxyCodeLine{100     \}}
-\DoxyCodeLine{101 \}}
+\DoxyCodeLine{97                                                      \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if} (!tree.empty()) \{}
+\DoxyCodeLine{99         cout << tree.value().first << \textcolor{stringliteral}{" "} << tree.value().second << endl;}
+\DoxyCodeLine{100         \mbox{\hyperlink{class_codigo_a3188749159c00631618bc71a6aba40a0}{escribe\_preorden}}(tree.left());}
+\DoxyCodeLine{101         \mbox{\hyperlink{class_codigo_a3188749159c00631618bc71a6aba40a0}{escribe\_preorden}}(tree.right());}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_codigo_ae715e2ad01a25064f484ede923d0fb75}\label{class_codigo_ae715e2ad01a25064f484ede923d0fb75}} 
@@ -290,16 +292,16 @@ Escribe por el canal de salida el {\bfseries{treecode}}
 \end{DoxyPostcond}
 
 
-Definición en la línea 69 del archivo Codigo.\+cc.
+Definición en la línea 64 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{69                                   \{}
-\DoxyCodeLine{70     cout << \textcolor{stringliteral}{"recorrido en preorden:"} << endl;}
-\DoxyCodeLine{71     \mbox{\hyperlink{class_codigo_a27e9b12b3181fe8c6b77336781bc0ae7}{escribe\_preorden}}(\mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}});}
-\DoxyCodeLine{72     cout << \textcolor{stringliteral}{"recorrido en inorden:"} << endl;}
-\DoxyCodeLine{73     \mbox{\hyperlink{class_codigo_a1bb85f5c603dbdfdcac410941fa9668c}{escribe\_inorden}}(\mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}});}
-\DoxyCodeLine{74 \}}
+\DoxyCodeLine{64                                   \{}
+\DoxyCodeLine{65     cout << \textcolor{stringliteral}{"recorrido en preorden:"} << endl;}
+\DoxyCodeLine{66     \mbox{\hyperlink{class_codigo_a3188749159c00631618bc71a6aba40a0}{escribe\_preorden}}(\mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}});}
+\DoxyCodeLine{67     cout << \textcolor{stringliteral}{"recorrido en inorden:"} << endl;}
+\DoxyCodeLine{68     \mbox{\hyperlink{class_codigo_a04189c063d12920f327815a927e89e01}{escribe\_inorden}}(\mbox{\hyperlink{class_codigo_ad90dbf1b410a0e7126ad4cbcd4ce7b87}{treecode}});}
+\DoxyCodeLine{69 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_codigo_a2b5d3a02fad8dcecfa0c4ee55e02a989}\label{class_codigo_a2b5d3a02fad8dcecfa0c4ee55e02a989}} 
@@ -320,22 +322,22 @@ Escribe por el canal de salida la {\bfseries{codetable}}
 \end{DoxyPostcond}
 
 
-Definición en la línea 76 del archivo Codigo.\+cc.
+Definición en la línea 71 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{76                                             \{}
-\DoxyCodeLine{77     \textcolor{keywordflow}{if} (c == \textcolor{stringliteral}{"todos"}) \{}
-\DoxyCodeLine{78         \textcolor{keywordflow}{for} (map<string,string>::const\_iterator it = \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.begin(); it != \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.end(); ++it) \{}
-\DoxyCodeLine{79             cout << it-\/>first << \textcolor{stringliteral}{" "} << it-\/>second << endl;}
-\DoxyCodeLine{80         \}}
+\DoxyCodeLine{71                                             \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (c == \textcolor{stringliteral}{"todos"}) \{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{for} (map<string,string>::const\_iterator it = \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.begin(); it != \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.end(); ++it) \{}
+\DoxyCodeLine{74             cout << it-\/>first << \textcolor{stringliteral}{" "} << it-\/>second << endl;}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{78         map<string,string>::const\_iterator it = \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.find(c);}
+\DoxyCodeLine{79         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.end()) cout << it-\/>first << \textcolor{stringliteral}{" "} << it-\/>second << endl;}
+\DoxyCodeLine{80         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma no existe o el caracter no esta en el idioma"} << endl;}
 \DoxyCodeLine{81     \}}
-\DoxyCodeLine{82     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{83         map<string,string>::const\_iterator it = \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.find(c);}
-\DoxyCodeLine{84         \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_codigo_a3a0be11d5a3c76041fbef06c94f1850c}{codetable}}.end()) cout << it-\/>first << \textcolor{stringliteral}{" "} << it-\/>second << endl;}
-\DoxyCodeLine{85         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"El idioma no existe o el caracter no esta en el idioma"} << endl;}
-\DoxyCodeLine{86     \}}
-\DoxyCodeLine{87 \}}
+\DoxyCodeLine{82 \}}
 
 \end{DoxyCode}
 

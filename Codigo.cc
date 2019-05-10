@@ -8,10 +8,10 @@ using namespace std;
 string next_symbol(const string& s, int& i) {
     if (s[i] >= 0) {
         ++i;
-        return string(1, s[i]);
+        return string(1, s[i-1]);
     }
     i += 2;
-    return string(s, i, 2);
+    return string(s, i-2, 2);
 }
 
 Codigo::Codigo() {}
@@ -45,12 +45,14 @@ string Codigo::codifica(const string& texto) const {
     string codificado;
     bool invalid = false;
     int i = 0;
+    string _char;
     while (i < texto.length() and !invalid) {
-        map<string,string>::const_iterator it = codetable.find(next_symbol(texto, i));
+        _char = next_symbol(texto, i);
+        map<string,string>::const_iterator it = codetable.find(_char);
         if (it != codetable.end()) codificado += it->second;
         else invalid = true;
     }
-    if (invalid) return texto + " no es del idioma";
+    if (invalid) return "El texto no pertenece al idioma; primer caracter que falla: " + _char;
     return codificado;
 }
 

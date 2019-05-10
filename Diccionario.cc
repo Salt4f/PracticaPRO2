@@ -11,6 +11,7 @@ void Diccionario::modificar_idioma(string nombre) {
     map<string,Idioma>::iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
         it->second.modificar_idioma();
+        cout << "Modificado " << nombre << endl;
     }
     else {
         Idioma idioma_nuevo;
@@ -53,6 +54,7 @@ void Diccionario::escribir_codigos(string nombre) const {
 }
 
 string Diccionario::codifica(string nombre, string texto) const {
+    cout << "Codifica en " << nombre << " el texto:" << endl << texto << endl;
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
         return it->second.codificar(texto);
@@ -61,6 +63,7 @@ string Diccionario::codifica(string nombre, string texto) const {
 }
 
 string Diccionario::descodifica(string nombre, string texto) const {
+    cout << "Decodifica en " << nombre << " el texto:" << endl << texto << endl;
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
         return it->second.descodificar(texto);

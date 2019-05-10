@@ -31,10 +31,10 @@ Definición en la línea 8 del archivo Codigo.\+cc.
 \DoxyCodeLine{8                                             \{}
 \DoxyCodeLine{9     \textcolor{keywordflow}{if} (s[i] >= 0) \{}
 \DoxyCodeLine{10         ++i;}
-\DoxyCodeLine{11         \textcolor{keywordflow}{return} string(1, s[i]);}
+\DoxyCodeLine{11         \textcolor{keywordflow}{return} string(1, s[i-\/1]);}
 \DoxyCodeLine{12     \}}
 \DoxyCodeLine{13     i += 2;}
-\DoxyCodeLine{14     \textcolor{keywordflow}{return} string(s, i, 2);}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} string(s, i-\/2, 2);}
 \DoxyCodeLine{15 \}}
 
 \end{DoxyCode}
