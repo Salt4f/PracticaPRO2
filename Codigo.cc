@@ -18,10 +18,6 @@ Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
     set<Arbol, Comp> listaTree = tabla.elementos();
-    set<string> caracteres;
-    for (set<Arbol,Comp>::const_iterator it = listaTree.begin(); it != listaTree.end(); ++it) {
-        caracteres.insert(it->value().first);
-    }
     while (listaTree.size() > 1) {
         set<Arbol,Comp>::iterator it = listaTree.begin();
         Arbol left = *it;
@@ -41,11 +37,8 @@ Codigo::Codigo(const FreqTable & tabla) {
     treecode = *listaTree.begin();
     listaTree.clear();
 
-    while (!caracteres.empty()) {
-        string c = *caracteres.begin();
-        caracteres.erase(caracteres.begin());
-        codetable.insert(make_pair(c, codifica_caracter(c, treecode)));
-    }
+    string str = "";
+    codifica_caracteres(str,treecode);
 }
 
 string Codigo::codifica(const string& texto) const {
@@ -86,13 +79,20 @@ void Codigo::escribir_codigos(string c) const {
     }
 }
 
-string Codigo::codifica_caracter(string c, const BinTree< pair<string, int> >& tree) const {
-    if (tree.value().first == c) return "";
-    if (!tree.left().empty() and tree.left().value().first.find(c) != string::npos) return "0" + codifica_caracter(c, tree.left());
-    return "1" + codifica_caracter(c, tree.right());
+void Codigo::codifica_caracteres(string& path, const Arbol& tree) {
+    if (tree.left().empty() and tree.right().empty()) {
+        codetable.insert(make_pair(tree.value().first, path));
+        return;
+    }
+    else if (!tree.left().empty()) {
+        string new_path = path + "0";
+        codifica_caracteres(new_path, tree.left());
+    }
+    string new_path = path + "1";
+    codifica_caracteres(new_path, tree.right());
 }
 
-void Codigo::escribe_preorden(const BinTree<pair<string,int> >& tree) const {
+void Codigo::escribe_preorden(const Arbol& tree) const {
     if (!tree.empty()) {
         cout << tree.value().first << " " << tree.value().second << endl;
         escribe_preorden(tree.left());
@@ -100,7 +100,7 @@ void Codigo::escribe_preorden(const BinTree<pair<string,int> >& tree) const {
     }
 }
 
-void Codigo::escribe_inorden(const BinTree<pair<string,int> >& tree) const {
+void Codigo::escribe_inorden(const Arbol& tree) const {
     if (!tree.empty()) {
         escribe_inorden(tree.left());
         cout << tree.value().first << " " << tree.value().second << endl;

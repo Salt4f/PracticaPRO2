@@ -28,7 +28,7 @@ int main() {
     cin >> opt;
     while (opt != "fin") {
 
-        if (opt == "modifica") {
+        if (opt == "anadir/modificar") {
             cin >> opt;
             diccionario.modificar_idioma(opt);
         }

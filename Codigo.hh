@@ -28,11 +28,11 @@ private:
     * 
     * Recorre el <b>treecode</b>
     */
-    string codifica_caracter(string c, const BinTree< pair<string, int> >& tree) const;
+    void codifica_caracteres(string& path, const Arbol& tree);
 
-    void escribe_preorden(const BinTree<pair<string,int> >& tree) const;
+    void escribe_preorden(const Arbol& tree) const;
 
-    void escribe_inorden(const BinTree<pair<string,int> >& tree) const;
+    void escribe_inorden(const Arbol& tree) const;
 
 public:
     /** @brief Constructora por defecto
