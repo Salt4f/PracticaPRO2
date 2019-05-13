@@ -36,7 +36,7 @@ public:
       \post Modifica/Añade el Idioma del/al Diccionario
       \param nombre - Nombre del Idioma a modificar/añadir
     */
-    void modificar_idioma(string nombre);
+    void modificar_idioma(string nombre, bool inicio);
 
     /** @brief Escribe la FreqTable de un Idioma del Diccionario
       \pre El Idioma a escribir su FreqTable está en el Diccionario

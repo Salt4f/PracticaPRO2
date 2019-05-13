@@ -7,15 +7,16 @@ using namespace std;
 
 Diccionario::Diccionario() {}
 
-void Diccionario::modificar_idioma(string nombre) {
+void Diccionario::modificar_idioma(string nombre, bool inicio) {
     map<string,Idioma>::iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
         it->second.modificar_idioma();
-        cout << "Modificado " << nombre << endl;
+        cout << "Modificado " << nombre << endl << endl;
     }
     else {
         Idioma idioma_nuevo;
         diccionario.insert(make_pair(nombre, idioma_nuevo));
+        if (!inicio) cout << "Anadido " << nombre << endl << endl;
     }
 }
 
@@ -66,7 +67,9 @@ string Diccionario::descodifica(string nombre, string texto) const {
     cout << "Decodifica en " << nombre << " el texto:" << endl << texto << endl;
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
-        return it->second.descodificar(texto);
+        string descodificado = it->second.descodificar(texto);
+        if (descodificado.substr(0, 2) == "-1") return "El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: " + descodificado.substr(2);
+        else return descodificado;
     }
     return "El idioma no existe";
 }

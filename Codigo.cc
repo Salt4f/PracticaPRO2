@@ -58,7 +58,22 @@ string Codigo::codifica(const string& texto) const {
 
 string Codigo::descodifica(const string& texto) const {
     string descodificado;
-    return texto;
+    Arbol aux = treecode;
+    int pos = 0;
+    for (int i = 0; i < texto.length(); ++i) {
+        if (aux.left().empty() and aux.right().empty()) {
+            descodificado += aux.value().first;
+            aux = treecode;
+            pos = i;
+        }
+        else if (!aux.left().empty() and texto[i] == '0') aux = aux.left();
+        else if (!aux.right().empty() and texto[i] == '1') aux = aux.right();
+    }
+    if (aux.left().empty() and aux.right().empty()) {
+            descodificado += aux.value().first;
+    }
+    else descodificado = "-1" + to_string(pos);
+    return descodificado;
 }
 
 void Codigo::escribir_arbol() const {

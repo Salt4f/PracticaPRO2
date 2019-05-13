@@ -23,14 +23,14 @@ int main() {
     Diccionario diccionario;
     for (int i = 0; i < n; ++i) {
         cin >> opt;
-        diccionario.modificar_idioma(opt);
+        diccionario.modificar_idioma(opt, true);
     }
     cin >> opt;
     while (opt != "fin") {
 
         if (opt == "anadir/modificar") {
             cin >> opt;
-            diccionario.modificar_idioma(opt);
+            diccionario.modificar_idioma(opt, false);
         }
 
         else if (opt == "codifica") {
@@ -40,7 +40,7 @@ int main() {
             cout << diccionario.codifica(opt, texto) << endl << endl;
         }
 
-        else if (opt == "descodifica") {
+        else if (opt == "decodifica") {
             cin >> opt;
             string texto;
             cin >> texto;
