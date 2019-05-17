@@ -60,14 +60,15 @@ string Codigo::descodifica(const string& texto) const {
     string descodificado;
     Arbol aux = treecode;
     int pos = 0;
-    for (int i = 0; i < texto.length(); ++i) {
+    int i = 0;
+    while (i < texto.length()) {
         if (aux.left().empty() and aux.right().empty()) {
             descodificado += aux.value().first;
             aux = treecode;
             pos = i;
         }
-        else if (!aux.left().empty() and texto[i] == '0') aux = aux.left();
-        else if (!aux.right().empty() and texto[i] == '1') aux = aux.right();
+        else if (!aux.left().empty() and texto[i] == '0') {aux = aux.left(); ++i;}
+        else if (!aux.right().empty() and texto[i] == '1') {aux = aux.right(); ++i;}
     }
     if (aux.left().empty() and aux.right().empty()) {
             descodificado += aux.value().first;

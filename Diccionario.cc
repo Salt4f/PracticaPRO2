@@ -69,7 +69,7 @@ string Diccionario::descodifica(string nombre, string texto) const {
     if (it != diccionario.end()) {
         string descodificado = it->second.descodificar(texto);
         if (descodificado.substr(0, 2) == "-1") return "El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: " + descodificado.substr(2);
-        else return descodificado;
+        return descodificado;
     }
     return "El idioma no existe";
 }
