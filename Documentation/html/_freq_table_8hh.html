@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Práctica PRO2: Codificador/Descodificador
-   &#160;<span id="projectnumber">0.0 ABR/2019</span>
+   &#160;<span id="projectnumber">1.0 MAY/2019</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Implementación de la clase <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>.  
+<p>Especificación de la clase <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>.  
 <a href="#details">Más...</a></p>
 
 <p><a href="_freq_table_8hh_source.html">Ir al código fuente de este archivo.</a></p>
@@ -78,6 +78,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Clases</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_comp.html">Comp</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Necesaria para ordenar la Lista.  <a href="struct_comp.html#details">Más...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_freq_table.html">FreqTable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa una tabla de frecuencias de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a>.  <a href="class_freq_table.html#details">Más...</a><br /></td></tr>
@@ -86,11 +87,14 @@ Clases</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 typedefs</h2></td></tr>
 <tr class="memitem:a676f8f4198d4b93cc01c6d8c848933ba"><td class="memItemLeft" align="right" valign="top">typedef BinTree&lt; pair&lt; string, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a></td></tr>
+<tr class="memdesc:a676f8f4198d4b93cc01c6d8c848933ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Árbol.  <a href="#a676f8f4198d4b93cc01c6d8c848933ba">Más...</a><br /></td></tr>
 <tr class="separator:a676f8f4198d4b93cc01c6d8c848933ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4e751574a8c98ce7f303174394ccb6"><td class="memItemLeft" align="right" valign="top">typedef set&lt; <a class="el" href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a>, <a class="el" href="struct_comp.html">Comp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_freq_table_8hh.html#a4e4e751574a8c98ce7f303174394ccb6">Lista</a></td></tr>
+<tr class="memdesc:a4e4e751574a8c98ce7f303174394ccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista de Árboles ordenada según las condiciones para hacer el <b>TreeCode</b>  <a href="#a4e4e751574a8c98ce7f303174394ccb6">Más...</a><br /></td></tr>
+<tr class="separator:a4e4e751574a8c98ce7f303174394ccb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Implementación de la clase <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>. </p>
-<p>Especificación de la clase <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>.</p>
+<div class="textblock"><p>Especificación de la clase <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a>. </p>
 
 <p class="definition">Definición en el archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
 </div><h2 class="groupheader">Documentación de los 'typedefs'</h2>
@@ -106,7 +110,27 @@ typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00016">16</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
+<p>Árbol. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00017">17</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
+
+</div>
+</div>
+<a id="a4e4e751574a8c98ce7f303174394ccb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4e751574a8c98ce7f303174394ccb6">&#9670;&nbsp;</a></span>Lista</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef set&lt;<a class="el" href="_freq_table_8hh.html#a676f8f4198d4b93cc01c6d8c848933ba">Arbol</a>,<a class="el" href="struct_comp.html">Comp</a>&gt; <a class="el" href="_freq_table_8hh.html#a4e4e751574a8c98ce7f303174394ccb6">Lista</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista de Árboles ordenada según las condiciones para hacer el <b>TreeCode</b> </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_freq_table_8hh_source.html#l00028">28</a> del archivo <a class="el" href="_freq_table_8hh_source.html">FreqTable.hh</a>.</p>
 
 </div>
 </div>

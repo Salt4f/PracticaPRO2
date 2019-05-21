@@ -21,9 +21,13 @@ using namespace std;
 class Idioma
 {
 private:
+    ///La FreqTable del Idioma
     FreqTable tabla;
+
+    ///Los Codigo del Idioma
     Codigo codigos;
 
+    ///Rehace los Codigo
     void rehacer_codigos();
 
 public:
@@ -59,23 +63,16 @@ public:
     */
     void escribir_codigos(string c) const;
 
-    /** @brief Comprueba si un carácter es del Idioma
+    /** @brief Codifica un texto
       \pre <b>true</b>
-      \return <b>true</b> si el carácter es del Idioma, <b>false</b> si no lo es
-      \param c - Carácter a comprobar
-    */
-    bool es_del_idioma(string c) const;
-
-    /** @brief Codifica un carácter
-      \pre Todos los carácteres del texto pertenecen al Idioma
-      \return El carácter codificado
+      \return El texto codificado o un mensaje de error
       \param texto - Texto a codificar
     */
     string codificar(const string& texto) const;
 
     /** @brief Descodifica un texto
-      \pre Todos los carácteres del texto pertenecen al Idioma
-      \return El texto descodificado
+      \pre <b>true</b>
+      \return El texto descodificado o un mensaje de error
       \param texto - El texto a descodificar
     */
     pair<bool,string> descodificar(const string& texto) const;

@@ -2,27 +2,29 @@
 \label{_freq_table_8hh}\index{FreqTable.hh@{FreqTable.hh}}
 
 
-Implementación de la clase \mbox{\hyperlink{class_freq_table}{Freq\+Table}}.  
+Especificación de la clase \mbox{\hyperlink{class_freq_table}{Freq\+Table}}.  
 
 
 \doxysubsection*{Clases}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_comp}{Comp}}
-\item 
+\begin{DoxyCompactList}\small\item\em Necesaria para ordenar la Lista. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_freq_table}{Freq\+Table}}
 \begin{DoxyCompactList}\small\item\em Representa una tabla de frecuencias de un \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{typedefs}
 \begin{DoxyCompactItemize}
 \item 
 typedef Bin\+Tree$<$ pair$<$ string, int $>$ $>$ \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Árbol. \end{DoxyCompactList}\item 
+typedef set$<$ \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}, \mbox{\hyperlink{struct_comp}{Comp}} $>$ \mbox{\hyperlink{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}{Lista}}
+\begin{DoxyCompactList}\small\item\em Lista de Árboles ordenada según las condiciones para hacer el {\bfseries{Tree\+Code}} \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
-Implementación de la clase \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. 
+Especificación de la clase \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. 
 
-Especificación de la clase \mbox{\hyperlink{class_freq_table}{Freq\+Table}}.
+
 
 \doxysubsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
 \mbox{\Hypertarget{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}\label{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}} 
@@ -33,5 +35,23 @@ Especificación de la clase \mbox{\hyperlink{class_freq_table}{Freq\+Table}}.
 
 
 
-Definición en la línea 16 del archivo Freq\+Table.\+hh.
+Árbol. 
+
+
+
+Definición en la línea 17 del archivo Freq\+Table.\+hh.
+
+\mbox{\Hypertarget{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}\label{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}} 
+\index{FreqTable.hh@{FreqTable.hh}!Lista@{Lista}}
+\index{Lista@{Lista}!FreqTable.hh@{FreqTable.hh}}
+\doxysubsubsection{\texorpdfstring{Lista}{Lista}}
+{\footnotesize\ttfamily typedef set$<$\mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}},\mbox{\hyperlink{struct_comp}{Comp}}$>$ \mbox{\hyperlink{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}{Lista}}}
+
+
+
+Lista de Árboles ordenada según las condiciones para hacer el {\bfseries{Tree\+Code}} 
+
+
+
+Definición en la línea 28 del archivo Freq\+Table.\+hh.
 

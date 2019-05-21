@@ -27,10 +27,6 @@ void Idioma::escribir_codigos(string c) const {
     codigos.escribir_codigos(c);
 }
 
-bool Idioma::es_del_idioma(string c) const {
-    return tabla.esta(c);
-}
-
 string Idioma::codificar(const string& texto) const {
     return codigos.codifica(texto);
 }

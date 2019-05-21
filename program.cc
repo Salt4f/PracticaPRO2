@@ -4,7 +4,7 @@
 
 /** @mainpage Codificador/Descodificador
  * 
- * \todo Mirar <em>doxycomments</em> Diccionario.hh
+ * 
  * 
 */
 

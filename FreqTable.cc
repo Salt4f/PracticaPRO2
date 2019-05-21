@@ -1,4 +1,4 @@
-/** @file FreqTable.hh
+/** @file FreqTable.cc
  *  @brief Implementación de la clase FreqTable
 */
 
@@ -26,24 +26,14 @@ void FreqTable::leer_tabla() {
     }
 }
 
-bool FreqTable::esta(string c) const {
-    return (table.find(c) != table.end());
-}
-
 void FreqTable::escribir_tabla() const {
     for (map<string, int>::const_iterator it = table.begin(); it != table.end(); ++it) {
         cout << it->first << " " << it->second << endl;
     }
 }
 
-int FreqTable::frecuencia(string c) const {
-    map<string,int>::const_iterator it = table.find(c);
-    if (it != table.end()) return it->second;
-    return -1;
-}
-
-set<Arbol, Comp> FreqTable::elementos() const {
-    set<Arbol, Comp> lista;
+Lista FreqTable::elementos() const {
+    Lista lista;
     for (map<string,int>::const_iterator it = table.begin(); it != table.end(); ++it) {
         lista.insert(Arbol(*it));
     }

@@ -22,24 +22,22 @@ void \mbox{\hyperlink{class_idioma_ac309e4d7060759099aa5ce3ed7150435}{escribir\+
 \begin{DoxyCompactList}\small\item\em Escribe el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_idioma_a768902d7b18678f04d89d18b7336eb96}{escribir\+\_\+codigos}} (string c) const
 \begin{DoxyCompactList}\small\item\em Escribe la tabla de códigos del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_idioma_a4668bf02f948cc873e7342147172145c}{es\+\_\+del\+\_\+idioma}} (string c) const
-\begin{DoxyCompactList}\small\item\em Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_idioma_ad9f01b440e109acaa093694f0fc4cfad}{codificar}} (const string \&texto) const
-\begin{DoxyCompactList}\small\item\em Codifica un carácter. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Codifica un texto. \end{DoxyCompactList}\item 
 pair$<$ bool, string $>$ \mbox{\hyperlink{class_idioma_abe09dc7f1265396bc1793f3f96f0b002}{descodificar}} (const string \&texto) const
 \begin{DoxyCompactList}\small\item\em Descodifica un texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos privados}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_idioma_a8ad0c4745f1d06385263d4ed2093bf03}{rehacer\+\_\+codigos}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rehace los \mbox{\hyperlink{class_codigo}{Codigo}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_freq_table}{Freq\+Table}} \mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}}
-\item 
+\begin{DoxyCompactList}\small\item\em La \mbox{\hyperlink{class_freq_table}{Freq\+Table}} del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_codigo}{Codigo}} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Los \mbox{\hyperlink{class_codigo}{Codigo}} del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -91,13 +89,13 @@ Definición en la línea 8 del archivo Idioma.\+cc.
 
 
 
-Codifica un carácter. 
+Codifica un texto. 
 
 \begin{DoxyPrecond}{Precondición}
-Todos los carácteres del texto pertenecen al \mbox{\hyperlink{class_idioma}{Idioma}} 
+{\bfseries{true}} 
 \end{DoxyPrecond}
 \begin{DoxyReturn}{Devuelve}
-El carácter codificado 
+El texto codificado o un mensaje de error 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parámetros}
@@ -106,13 +104,13 @@ El carácter codificado
 \end{DoxyParams}
 
 
-Definición en la línea 34 del archivo Idioma.\+cc.
+Definición en la línea 30 del archivo Idioma.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{34                                                   \{}
-\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_aada50c7be0415071090ac04a77d0f71b}{codifica}}(texto);}
-\DoxyCodeLine{36 \}}
+\DoxyCodeLine{30                                                   \{}
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_aada50c7be0415071090ac04a77d0f71b}{codifica}}(texto);}
+\DoxyCodeLine{32 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_abe09dc7f1265396bc1793f3f96f0b002}\label{class_idioma_abe09dc7f1265396bc1793f3f96f0b002}} 
@@ -126,10 +124,10 @@ Definición en la línea 34 del archivo Idioma.\+cc.
 Descodifica un texto. 
 
 \begin{DoxyPrecond}{Precondición}
-Todos los carácteres del texto pertenecen al \mbox{\hyperlink{class_idioma}{Idioma}} 
+{\bfseries{true}} 
 \end{DoxyPrecond}
 \begin{DoxyReturn}{Devuelve}
-El texto descodificado 
+El texto descodificado o un mensaje de error 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parámetros}
@@ -138,45 +136,13 @@ El texto descodificado
 \end{DoxyParams}
 
 
-Definición en la línea 38 del archivo Idioma.\+cc.
+Definición en la línea 34 del archivo Idioma.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38                                                                 \{}
-\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_a83fe53136cc5c146ed3a23b823d33260}{descodifica}}(texto);}
-\DoxyCodeLine{40 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_idioma_a4668bf02f948cc873e7342147172145c}\label{class_idioma_a4668bf02f948cc873e7342147172145c}} 
-\index{Idioma@{Idioma}!es\_del\_idioma@{es\_del\_idioma}}
-\index{es\_del\_idioma@{es\_del\_idioma}!Idioma@{Idioma}}
-\doxysubsubsection{\texorpdfstring{es\_del\_idioma()}{es\_del\_idioma()}}
-{\footnotesize\ttfamily bool Idioma\+::es\+\_\+del\+\_\+idioma (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption}) const}
-
-
-
-Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}. 
-
-\begin{DoxyPrecond}{Precondición}
-{\bfseries{true}} 
-\end{DoxyPrecond}
-\begin{DoxyReturn}{Devuelve}
-{\bfseries{true}} si el carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}, {\bfseries{false}} si no lo es 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parámetros}
-{\em c} & -\/ Carácter a comprobar \\
-\hline
-\end{DoxyParams}
-
-
-Definición en la línea 30 del archivo Idioma.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{30                                          \{}
-\DoxyCodeLine{31     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}}.\mbox{\hyperlink{class_freq_table_af3a0a06274c83e1a5778c2d6fecda3a5}{esta}}(c);}
-\DoxyCodeLine{32 \}}
+\DoxyCodeLine{34                                                                 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_a83fe53136cc5c146ed3a23b823d33260}{descodifica}}(texto);}
+\DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_idioma_a768902d7b18678f04d89d18b7336eb96}\label{class_idioma_a768902d7b18678f04d89d18b7336eb96}} 
@@ -296,14 +262,18 @@ Definición en la línea 13 del archivo Idioma.\+cc.
 
 
 
-Definición en la línea 42 del archivo Idioma.\+cc.
+Rehace los \mbox{\hyperlink{class_codigo}{Codigo}}. 
+
+
+
+Definición en la línea 38 del archivo Idioma.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{42                              \{}
-\DoxyCodeLine{43     \mbox{\hyperlink{class_codigo}{Codigo}} nuevo\_codigo(\mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}});}
-\DoxyCodeLine{44     \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}} = nuevo\_codigo;}
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{38                              \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_codigo}{Codigo}} nuevo\_codigo(\mbox{\hyperlink{class_idioma_a6f8872782ac19259c73e0dce17a63db2}{tabla}});}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}} = nuevo\_codigo;}
+\DoxyCodeLine{41 \}}
 
 \end{DoxyCode}
 
@@ -317,7 +287,11 @@ Definición en la línea 42 del archivo Idioma.\+cc.
 
 
 
-Definición en la línea 25 del archivo Idioma.\+hh.
+Los \mbox{\hyperlink{class_codigo}{Codigo}} del \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+
+
+Definición en la línea 28 del archivo Idioma.\+hh.
 
 \mbox{\Hypertarget{class_idioma_a6f8872782ac19259c73e0dce17a63db2}\label{class_idioma_a6f8872782ac19259c73e0dce17a63db2}} 
 \index{Idioma@{Idioma}!tabla@{tabla}}
@@ -327,7 +301,11 @@ Definición en la línea 25 del archivo Idioma.\+hh.
 
 
 
-Definición en la línea 24 del archivo Idioma.\+hh.
+La \mbox{\hyperlink{class_freq_table}{Freq\+Table}} del \mbox{\hyperlink{class_idioma}{Idioma}}. 
+
+
+
+Definición en la línea 25 del archivo Idioma.\+hh.
 
 
 

@@ -13,8 +13,10 @@
 using namespace std;
 #endif
 
+///Árbol
 typedef BinTree<pair<string,int> > Arbol;
 
+///@brief Necesaria para ordenar la Lista
 struct Comp {
 	bool operator()(const Arbol& a, const Arbol& b) const {
         if (a.value().second == b.value().second) return a.value().first < b.value().first;
@@ -22,12 +24,16 @@ struct Comp {
     }
 };
 
+///Lista de Árboles ordenada según las condiciones para hacer el <b>TreeCode</b>
+typedef set<Arbol,Comp> Lista;
+
 /** @class FreqTable
     @brief Representa una tabla de frecuencias de un Idioma
 */
 class FreqTable {
 private:
     
+    ///La FreqTable en sí
     map<string, int> table;
 
 public:
@@ -45,30 +51,17 @@ public:
     */
     void leer_tabla();
 
-    /** @brief Comprueba si el carácter está en la FreqTable
-      \pre <b>true</b>
-      \return <b>true</b> si está, <b>false</b> si no
-      \param c - Carácter a comprobar
-    */
-    bool esta(string c) const;
-
     /** @brief Escribe la FreqTable
       \pre <b>true</b>
       \post Escribe por el canal de salida la FreqTable
     */
     void escribir_tabla() const;
-
-    /**
-      \pre <b>true</b>
-      \return La frecuencia de <em>c</em> si está en la FreqTable, <b>-1</b> si no está
-      \param c - string a mirar su frecuencia
-    */
-    int frecuencia(string c) const;
     
-    /**
-    
+    /** @brief Devuelve los elementos de la tabla en una lista ordenada (set)
+     * \pre <b>true</b>
+     * \return Lista ordenada con los elementos de la FreqTable
     */
-    set<Arbol, Comp> elementos() const;
+    Lista elementos() const;
 };
 
 

@@ -1,5 +1,5 @@
 <map id="Codigo.cc" name="Codigo.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="15,5,95,31"/>
-<area shape="rect" id="node2" href="$_codigo_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="14,79,96,104"/>
-<area shape="rect" id="node3" href="$_freq_table_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="5,152,104,177"/>
+<area shape="rect" id="node1" title="Implementación de la clase Codigo." alt="" coords="15,5,95,31"/>
+<area shape="rect" id="node2" href="$_codigo_8hh.html" title="Especificación de la clase FreqTable." alt="" coords="14,79,96,104"/>
+<area shape="rect" id="node3" href="$_freq_table_8hh.html" title="Especificación de la clase FreqTable." alt="" coords="5,152,104,177"/>
 </map>

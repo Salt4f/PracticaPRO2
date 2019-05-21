@@ -82,10 +82,10 @@ Definición en la línea 8 del archivo Diccionario.\+cc.
 Codifica un texto. 
 
 \begin{DoxyPrecond}{Precondición}
-El \mbox{\hyperlink{class_idioma}{Idioma}} a usar para codificar está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+{\bfseries{true}} 
 \end{DoxyPrecond}
 \begin{DoxyReturn}{Devuelve}
-Texto codificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}} 
+Texto codificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}} o mensaje de error 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parámetros}
@@ -121,10 +121,10 @@ Definición en la línea 57 del archivo Diccionario.\+cc.
 Codifica un texto. 
 
 \begin{DoxyPrecond}{Precondición}
-El \mbox{\hyperlink{class_idioma}{Idioma}} a usar para descodificar está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+{\bfseries{true}} 
 \end{DoxyPrecond}
 \begin{DoxyReturn}{Devuelve}
-Texto descodificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}} 
+Texto descodificado según el {\bfseries{Treecode}} del \mbox{\hyperlink{class_idioma}{Idioma}} o mensaje de error 
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parámetros}
@@ -162,10 +162,10 @@ Definición en la línea 66 del archivo Diccionario.\+cc.
 Escribe la lista de códigos de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
 
 \begin{DoxyPrecond}{Precondición}
-El \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su lista de códigos está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+En el canal de entrada se encuentra el código a escribir o la palabra {\itshape todos} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Escribe por el canal de salida la lista de códigos 
+Escribe por el canal de salida la lista de códigos si el \mbox{\hyperlink{class_idioma}{Idioma}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}}, si no escribe un mensaje de error 
 \end{DoxyPostcond}
 
 \begin{DoxyParams}{Parámetros}
@@ -204,10 +204,10 @@ Definición en la línea 43 del archivo Diccionario.\+cc.
 Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
 
 \begin{DoxyPrecond}{Precondición}
-El \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su \mbox{\hyperlink{class_freq_table}{Freq\+Table}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+{\bfseries{true}} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Escribe por el canal de salida la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+Escribe por el canal de salida la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} si el \mbox{\hyperlink{class_idioma}{Idioma}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}}, si no escribe un mensaje de error 
 \end{DoxyPostcond}
 
 \begin{DoxyParams}{Parámetros}
@@ -242,10 +242,10 @@ Definición en la línea 23 del archivo Diccionario.\+cc.
 Escribe el {\bfseries{Treecode}} de un \mbox{\hyperlink{class_idioma}{Idioma}} del \mbox{\hyperlink{class_diccionario}{Diccionario}}. 
 
 \begin{DoxyPrecond}{Precondición}
-El \mbox{\hyperlink{class_idioma}{Idioma}} a escribir su {\bfseries{Treecode}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}} 
+{\bfseries{true}} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Escribe por el canal de salida el {\bfseries{Treecode}} 
+Escribe por el canal de salida el {\bfseries{Treecode}} si el \mbox{\hyperlink{class_idioma}{Idioma}} está en el \mbox{\hyperlink{class_diccionario}{Diccionario}}, si no escribe un mensaje de error 
 \end{DoxyPostcond}
 
 \begin{DoxyParams}{Parámetros}
@@ -288,6 +288,8 @@ Modifica/\+Añade el \mbox{\hyperlink{class_idioma}{Idioma}} del/al \mbox{\hyper
 
 \begin{DoxyParams}{Parámetros}
 {\em nombre} & -\/ Nombre del \mbox{\hyperlink{class_idioma}{Idioma}} a modificar/añadir \\
+\hline
+{\em inicio} & -\/ Necesario para evitar un output al inicio del programa \\
 \hline
 \end{DoxyParams}
 

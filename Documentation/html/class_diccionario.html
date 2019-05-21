@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Práctica PRO2: Codificador/Descodificador
-   &#160;<span id="projectnumber">0.0 ABR/2019</span>
+   &#160;<span id="projectnumber">1.0 MAY/2019</span>
    </div>
   </td>
  </tr>
@@ -163,8 +163,8 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Codifica un texto. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>El <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a usar para codificar está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a> </dd></dl>
-<dl class="section return"><dt>Devuelve</dt><dd>Texto codificado según el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Texto codificado según el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> o mensaje de error </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nombre</td><td>- Nombre del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a usar para codificar </td></tr>
@@ -204,8 +204,8 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Codifica un texto. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>El <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a usar para descodificar está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a> </dd></dl>
-<dl class="section return"><dt>Devuelve</dt><dd>Texto descodificado según el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Texto descodificado según el <b>Treecode</b> del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> o mensaje de error </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nombre</td><td>- Nombre del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a usar para descodificar </td></tr>
@@ -235,8 +235,8 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Escribe la lista de códigos de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> del <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a>. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>El <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a escribir su lista de códigos está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la lista de códigos </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd>En el canal de entrada se encuentra el código a escribir o la palabra <em>todos</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la lista de códigos si el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a>, si no escribe un mensaje de error </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nombre</td><td>- Nombre del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a escribir su lista de códigos </td></tr>
@@ -265,8 +265,8 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Escribe la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> del <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a>. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>El <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a escribir su <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida la <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> si el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a>, si no escribe un mensaje de error </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nombre</td><td>- Nombre del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a escribir su <a class="el" href="class_freq_table.html" title="Representa una tabla de frecuencias de un Idioma.">FreqTable</a> </td></tr>
@@ -295,8 +295,8 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Escribe el <b>Treecode</b> de un <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> del <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a>. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>El <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a escribir su <b>Treecode</b> está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida el <b>Treecode</b> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd><b>true</b> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Escribe por el canal de salida el <b>Treecode</b> si el <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> está en el <a class="el" href="class_diccionario.html" title="Representa un conjunto de Idioma.">Diccionario</a>, si no escribe un mensaje de error </dd></dl>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nombre</td><td>- Nombre del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a escribir su <b>Treecode</b> </td></tr>
@@ -340,6 +340,7 @@ Atributos privados</h2></td></tr>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">nombre</td><td>- Nombre del <a class="el" href="class_idioma.html" title="Representa un Idioma.">Idioma</a> a modificar/añadir </td></tr>
+    <tr><td class="paramname">inicio</td><td>- Necesario para evitar un output al inicio del programa </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,10 +1,11 @@
-/** @file Codigo.hh
- *  @brief Implementación de la clase FreqTable
+/** @file Codigo.cc
+ *  @brief Implementación de la clase Codigo
 */
 
 #include "Codigo.hh"
 using namespace std;
 
+///Devuelve el siguiente carácter de un string
 string next_symbol(const string& s, int& i) {
     if (s[i] >= 0) {
         ++i;
@@ -17,9 +18,9 @@ string next_symbol(const string& s, int& i) {
 Codigo::Codigo() {}
 
 Codigo::Codigo(const FreqTable & tabla) {
-    set<Arbol, Comp> listaTree = tabla.elementos();
+    Lista listaTree = tabla.elementos();
     while (listaTree.size() > 1) {
-        set<Arbol,Comp>::iterator it = listaTree.begin();
+        Lista::iterator it = listaTree.begin();
         Arbol left = *it;
         it = listaTree.erase(it);
         string str1 = left.value().first;

@@ -16,25 +16,21 @@ Representa una tabla de frecuencias de un \mbox{\hyperlink{class_idioma}{Idioma}
 \begin{DoxyCompactList}\small\item\em Constructora. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}{leer\+\_\+tabla}} ()
 \begin{DoxyCompactList}\small\item\em Lee la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_freq_table_af3a0a06274c83e1a5778c2d6fecda3a5}{esta}} (string c) const
-\begin{DoxyCompactList}\small\item\em Comprueba si el carácter está en la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}{escribir\+\_\+tabla}} () const
 \begin{DoxyCompactList}\small\item\em Escribe la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}{frecuencia}} (string c) const
-\item 
-set$<$ \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}, \mbox{\hyperlink{struct_comp}{Comp}} $>$ \mbox{\hyperlink{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}{elementos}} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}{Lista}} \mbox{\hyperlink{class_freq_table_ac7a6bf475c6165f838fc4ca804f87100}{elementos}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve los elementos de la tabla en una lista ordenada (set) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
 map$<$ string, int $>$ \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em La \mbox{\hyperlink{class_freq_table}{Freq\+Table}} en sí \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
 Representa una tabla de frecuencias de un \mbox{\hyperlink{class_idioma}{Idioma}}. 
 
-Definición en la línea 28 del archivo Freq\+Table.\+hh.
+Definición en la línea 33 del archivo Freq\+Table.\+hh.
 
 
 
@@ -67,25 +63,35 @@ Definición en la línea 8 del archivo Freq\+Table.\+cc.
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}\label{class_freq_table_af7aca77da82fa7d4fd77ae67918c534e}} 
+\mbox{\Hypertarget{class_freq_table_ac7a6bf475c6165f838fc4ca804f87100}\label{class_freq_table_ac7a6bf475c6165f838fc4ca804f87100}} 
 \index{FreqTable@{FreqTable}!elementos@{elementos}}
 \index{elementos@{elementos}!FreqTable@{FreqTable}}
 \doxysubsubsection{\texorpdfstring{elementos()}{elementos()}}
-{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}, \mbox{\hyperlink{struct_comp}{Comp}} $>$ Freq\+Table\+::elementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}{Lista}} Freq\+Table\+::elementos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Definición en la línea 45 del archivo Freq\+Table.\+cc.
+Devuelve los elementos de la tabla en una lista ordenada (set) 
+
+\begin{DoxyPrecond}{Precondición}
+{\bfseries{true}} 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Devuelve}
+Lista ordenada con los elementos de la \mbox{\hyperlink{class_freq_table}{Freq\+Table}} 
+\end{DoxyReturn}
+
+
+Definición en la línea 35 del archivo Freq\+Table.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{45                                             \{}
-\DoxyCodeLine{46     set<Arbol, Comp> lista;}
-\DoxyCodeLine{47     \textcolor{keywordflow}{for} (map<string,int>::const\_iterator it = \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.begin(); it != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end(); ++it) \{}
-\DoxyCodeLine{48         lista.insert(\mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}(*it));}
-\DoxyCodeLine{49     \}}
-\DoxyCodeLine{50     \textcolor{keywordflow}{return} lista;}
-\DoxyCodeLine{51 \}}
+\DoxyCodeLine{35                                  \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{_freq_table_8hh_a4e4e751574a8c98ce7f303174394ccb6}{Lista}} lista;}
+\DoxyCodeLine{37     \textcolor{keywordflow}{for} (map<string,int>::const\_iterator it = \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.begin(); it != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end(); ++it) \{}
+\DoxyCodeLine{38         lista.insert(\mbox{\hyperlink{_freq_table_8hh_a676f8f4198d4b93cc01c6d8c848933ba}{Arbol}}(*it));}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} lista;}
+\DoxyCodeLine{41 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}\label{class_freq_table_a1739e3f11f08f894e6fe00e48041d263}} 
@@ -106,77 +112,15 @@ Escribe por el canal de salida la \mbox{\hyperlink{class_freq_table}{Freq\+Table
 \end{DoxyPostcond}
 
 
-Definición en la línea 33 del archivo Freq\+Table.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{33                                      \{}
-\DoxyCodeLine{34     \textcolor{keywordflow}{for} (map<string, int>::const\_iterator it = \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.begin(); it != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end(); ++it) \{}
-\DoxyCodeLine{35         cout << it-\/>first << \textcolor{stringliteral}{" "} << it-\/>second << endl;}
-\DoxyCodeLine{36     \}}
-\DoxyCodeLine{37 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_freq_table_af3a0a06274c83e1a5778c2d6fecda3a5}\label{class_freq_table_af3a0a06274c83e1a5778c2d6fecda3a5}} 
-\index{FreqTable@{FreqTable}!esta@{esta}}
-\index{esta@{esta}!FreqTable@{FreqTable}}
-\doxysubsubsection{\texorpdfstring{esta()}{esta()}}
-{\footnotesize\ttfamily bool Freq\+Table\+::esta (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption}) const}
-
-
-
-Comprueba si el carácter está en la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}. 
-
-\begin{DoxyPrecond}{Precondición}
-{\bfseries{true}} 
-\end{DoxyPrecond}
-\begin{DoxyReturn}{Devuelve}
-{\bfseries{true}} si está, {\bfseries{false}} si no 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parámetros}
-{\em c} & -\/ Carácter a comprobar \\
-\hline
-\end{DoxyParams}
-
-
 Definición en la línea 29 del archivo Freq\+Table.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{29                                    \{}
-\DoxyCodeLine{30     \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.find(c) != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end());}
-\DoxyCodeLine{31 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}\label{class_freq_table_ac5065ac15ee7e4a44094ed0e6335c460}} 
-\index{FreqTable@{FreqTable}!frecuencia@{frecuencia}}
-\index{frecuencia@{frecuencia}!FreqTable@{FreqTable}}
-\doxysubsubsection{\texorpdfstring{frecuencia()}{frecuencia()}}
-{\footnotesize\ttfamily int Freq\+Table\+::frecuencia (\begin{DoxyParamCaption}\item[{string}]{c }\end{DoxyParamCaption}) const}
-
-\begin{DoxyPrecond}{Precondición}
-{\bfseries{true}} 
-\end{DoxyPrecond}
-\begin{DoxyReturn}{Devuelve}
-La frecuencia de {\itshape c} si está en la \mbox{\hyperlink{class_freq_table}{Freq\+Table}}, {\bfseries{-\/1}} si no está 
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parámetros}
-{\em c} & -\/ string a mirar su frecuencia \\
-\hline
-\end{DoxyParams}
-
-
-Definición en la línea 39 del archivo Freq\+Table.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{39                                         \{}
-\DoxyCodeLine{40     map<string,int>::const\_iterator it = \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.find(c);}
-\DoxyCodeLine{41     \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end()) \textcolor{keywordflow}{return} it-\/>second;}
-\DoxyCodeLine{42     \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{43 \}}
+\DoxyCodeLine{29                                      \{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{for} (map<string, int>::const\_iterator it = \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.begin(); it != \mbox{\hyperlink{class_freq_table_ab5879a29257c9e6de7a6c99b1498c0ab}{table}}.end(); ++it) \{}
+\DoxyCodeLine{31         cout << it-\/>first << \textcolor{stringliteral}{" "} << it-\/>second << endl;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}\label{class_freq_table_a26c57ffd6d5e4db738743da9cfb0720a}} 
@@ -232,7 +176,11 @@ Definición en la línea 10 del archivo Freq\+Table.\+cc.
 
 
 
-Definición en la línea 31 del archivo Freq\+Table.\+hh.
+La \mbox{\hyperlink{class_freq_table}{Freq\+Table}} en sí 
+
+
+
+Definición en la línea 37 del archivo Freq\+Table.\+hh.
 
 
 

@@ -1,5 +1,10 @@
 \hypertarget{_codigo_8cc}{}\doxysection{Referencia del Archivo Codigo.\+cc}
 \label{_codigo_8cc}\index{Codigo.cc@{Codigo.cc}}
+
+
+Implementación de la clase \mbox{\hyperlink{class_codigo}{Codigo}}.  
+
+
 {\ttfamily \#include \char`\"{}Codigo.\+hh\char`\"{}}\newline
 Dependencia gráfica adjunta para Codigo.\+cc\+:\nopagebreak
 \begin{figure}[H]
@@ -12,7 +17,12 @@ Dependencia gráfica adjunta para Codigo.\+cc\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}{next\+\_\+symbol}} (const string \&s, int \&i)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Devuelve el siguiente carácter de un string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementación de la clase \mbox{\hyperlink{class_codigo}{Codigo}}. 
+
 
 
 \doxysubsection{Documentación de las funciones}
@@ -24,17 +34,21 @@ string \mbox{\hyperlink{_codigo_8cc_ac805b2222ec2485f56d9a034df32a3ca}{next\+\_\
 
 
 
-Definición en la línea 8 del archivo Codigo.\+cc.
+Devuelve el siguiente carácter de un string. 
+
+
+
+Definición en la línea 9 del archivo Codigo.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{8                                             \{}
-\DoxyCodeLine{9     \textcolor{keywordflow}{if} (s[i] >= 0) \{}
-\DoxyCodeLine{10         ++i;}
-\DoxyCodeLine{11         \textcolor{keywordflow}{return} string(1, s[i-\/1]);}
-\DoxyCodeLine{12     \}}
-\DoxyCodeLine{13     i += 2;}
-\DoxyCodeLine{14     \textcolor{keywordflow}{return} string(s, i-\/2, 2);}
-\DoxyCodeLine{15 \}}
+\DoxyCodeLine{9                                             \{}
+\DoxyCodeLine{10     \textcolor{keywordflow}{if} (s[i] >= 0) \{}
+\DoxyCodeLine{11         ++i;}
+\DoxyCodeLine{12         \textcolor{keywordflow}{return} string(1, s[i-\/1]);}
+\DoxyCodeLine{13     \}}
+\DoxyCodeLine{14     i += 2;}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} string(s, i-\/2, 2);}
+\DoxyCodeLine{16 \}}
 
 \end{DoxyCode}

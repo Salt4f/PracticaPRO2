@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Práctica PRO2: Codificador/Descodificador
-   &#160;<span id="projectnumber">0.0 ABR/2019</span>
+   &#160;<span id="projectnumber">1.0 MAY/2019</span>
    </div>
   </td>
  </tr>
@@ -68,15 +68,18 @@ $(function() {
 <div class="title">Referencia del Archivo Codigo.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementación de la clase <a class="el" href="class_codigo.html" title="Representa el TreeCode y la codetable de un Idioma.">Codigo</a>.  
+<a href="#details">Más...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_codigo_8hh_source.html">Codigo.hh</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Dependencia gráfica adjunta para Codigo.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="_codigo_8cc__incl.png" border="0" usemap="#_codigo_8cc" alt=""/></div>
 <map name="_codigo_8cc" id="_codigo_8cc">
-<area shape="rect" title=" " alt="" coords="15,5,95,31"/>
-<area shape="rect" href="$_codigo_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="14,79,96,104"/>
-<area shape="rect" href="$_freq_table_8hh.html" title="Implementación de la clase FreqTable." alt="" coords="5,152,104,177"/>
+<area shape="rect" title="Implementación de la clase Codigo." alt="" coords="15,5,95,31"/>
+<area shape="rect" href="$_codigo_8hh.html" title="Especificación de la clase FreqTable." alt="" coords="14,79,96,104"/>
+<area shape="rect" href="$_freq_table_8hh.html" title="Especificación de la clase FreqTable." alt="" coords="5,152,104,177"/>
 </map>
 </div>
 </div>
@@ -85,9 +88,14 @@ Dependencia gráfica adjunta para Codigo.cc:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Funciones</h2></td></tr>
 <tr class="memitem:ac805b2222ec2485f56d9a034df32a3ca"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_codigo_8cc.html#ac805b2222ec2485f56d9a034df32a3ca">next_symbol</a> (const string &amp;s, int &amp;i)</td></tr>
+<tr class="memdesc:ac805b2222ec2485f56d9a034df32a3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el siguiente carácter de un string.  <a href="#ac805b2222ec2485f56d9a034df32a3ca">Más...</a><br /></td></tr>
 <tr class="separator:ac805b2222ec2485f56d9a034df32a3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentación de las funciones</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación de la clase <a class="el" href="class_codigo.html" title="Representa el TreeCode y la codetable de un Idioma.">Codigo</a>. </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="_codigo_8cc_source.html">Codigo.cc</a>.</p>
+</div><h2 class="groupheader">Documentación de las funciones</h2>
 <a id="ac805b2222ec2485f56d9a034df32a3ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac805b2222ec2485f56d9a034df32a3ca">&#9670;&nbsp;</a></span>next_symbol()</h2>
 
@@ -114,8 +122,10 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_codigo_8cc_source.html#l00008">8</a> del archivo <a class="el" href="_codigo_8cc_source.html">Codigo.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                                            {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span> (s[i] &gt;= 0) {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        ++i;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordflow">return</span> string(1, s[i-1]);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    i += 2;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> string(s, i-2, 2);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div></div><!-- fragment -->
+<p>Devuelve el siguiente carácter de un string. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_codigo_8cc_source.html#l00009">9</a> del archivo <a class="el" href="_codigo_8cc_source.html">Codigo.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                            {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">if</span> (s[i] &gt;= 0) {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        ++i;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">return</span> string(1, s[i-1]);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    i += 2;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">return</span> string(s, i-2, 2);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

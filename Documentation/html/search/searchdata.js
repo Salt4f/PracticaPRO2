@@ -5,8 +5,8 @@ var indexSectionsWithContent =
   2: "cdfipr",
   3: "cdefilmnor",
   4: "cdt",
-  5: "a",
-  6: "clp"
+  5: "al",
+  6: "cp"
 };
 
 var indexSectionNames =
