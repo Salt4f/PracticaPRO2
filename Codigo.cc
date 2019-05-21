@@ -56,25 +56,27 @@ string Codigo::codifica(const string& texto) const {
     return codificado;
 }
 
-string Codigo::descodifica(const string& texto) const {
-    string descodificado;
-    Arbol aux = treecode;
-    int pos = 0;
-    int i = 0;
-    while (i < texto.length()) {
-        if (aux.left().empty() and aux.right().empty()) {
-            descodificado += aux.value().first;
-            aux = treecode;
-            pos = i;
-        }
-        else if (!aux.left().empty() and texto[i] == '0') {aux = aux.left(); ++i;}
-        else if (!aux.right().empty() and texto[i] == '1') {aux = aux.right(); ++i;}
+pair<bool,string> Codigo::descodifica_recursiva(const string& texto, string& descodificado, const Arbol& tree, int i, int pos) const {
+    //Un nodo de un árbol, tal y como están definidos en el enunciado
+    //tiene o dos nodos enlazados no vacíos (left() y right()) o ninguno.
+    //Por eso sólo miro el nodo de la izquierda, ya que si está vacío, el
+    //de la derecha también, y si no lo está, el de la derecha tampoco
+    //lo está
+    if (i == texto.length()) {
+        if (tree.left().empty()) return make_pair(true, descodificado + tree.value().first);
+        return make_pair(false, to_string(pos));
     }
-    if (aux.left().empty() and aux.right().empty()) {
-            descodificado += aux.value().first;
+    if (tree.left().empty()) {
+        descodificado += tree.value().first;
+        return descodifica_recursiva(texto, descodificado, treecode, i, i);
     }
-    else descodificado = "-1" + to_string(pos);
-    return descodificado;
+    if (!tree.left().empty() and texto[i] == '0') return descodifica_recursiva(texto, descodificado, tree.left(), i+1, pos);
+    return descodifica_recursiva(texto, descodificado, tree.right(), i + 1, pos);
+}
+
+pair<bool,string> Codigo::descodifica(const string& texto) const {
+    string aux = "";
+    return descodifica_recursiva(texto, aux, treecode, 0, 0);
 }
 
 void Codigo::escribir_arbol() const {

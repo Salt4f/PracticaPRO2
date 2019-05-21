@@ -26,7 +26,7 @@ bool \mbox{\hyperlink{class_idioma_a4668bf02f948cc873e7342147172145c}{es\+\_\+de
 \begin{DoxyCompactList}\small\item\em Comprueba si un carácter es del \mbox{\hyperlink{class_idioma}{Idioma}}. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_idioma_ad9f01b440e109acaa093694f0fc4cfad}{codificar}} (const string \&texto) const
 \begin{DoxyCompactList}\small\item\em Codifica un carácter. \end{DoxyCompactList}\item 
-string \mbox{\hyperlink{class_idioma_a85bb1650363888d7c2c201c4d7b6b220}{descodificar}} (const string \&texto) const
+pair$<$ bool, string $>$ \mbox{\hyperlink{class_idioma_abe09dc7f1265396bc1793f3f96f0b002}{descodificar}} (const string \&texto) const
 \begin{DoxyCompactList}\small\item\em Descodifica un texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos privados}
 \begin{DoxyCompactItemize}
@@ -115,11 +115,11 @@ Definición en la línea 34 del archivo Idioma.\+cc.
 \DoxyCodeLine{36 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_idioma_a85bb1650363888d7c2c201c4d7b6b220}\label{class_idioma_a85bb1650363888d7c2c201c4d7b6b220}} 
+\mbox{\Hypertarget{class_idioma_abe09dc7f1265396bc1793f3f96f0b002}\label{class_idioma_abe09dc7f1265396bc1793f3f96f0b002}} 
 \index{Idioma@{Idioma}!descodificar@{descodificar}}
 \index{descodificar@{descodificar}!Idioma@{Idioma}}
 \doxysubsubsection{\texorpdfstring{descodificar()}{descodificar()}}
-{\footnotesize\ttfamily string Idioma\+::descodificar (\begin{DoxyParamCaption}\item[{const string \&}]{texto }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily pair$<$ bool, string $>$ Idioma\+::descodificar (\begin{DoxyParamCaption}\item[{const string \&}]{texto }\end{DoxyParamCaption}) const}
 
 
 
@@ -142,8 +142,8 @@ Definición en la línea 38 del archivo Idioma.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{38                                                      \{}
-\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_a0bfd655a31c233b33cb06ec443bf9a59}{descodifica}}(texto);}
+\DoxyCodeLine{38                                                                 \{}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_idioma_a4121fecdb6a8a3f744cd4184be2e42e1}{codigos}}.\mbox{\hyperlink{class_codigo_a83fe53136cc5c146ed3a23b823d33260}{descodifica}}(texto);}
 \DoxyCodeLine{40 \}}
 
 \end{DoxyCode}

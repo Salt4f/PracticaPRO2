@@ -45,14 +45,14 @@ Definición en la línea 19 del archivo program.\+cc.
 \DoxyCodeLine{23     \mbox{\hyperlink{class_diccionario}{Diccionario}} diccionario;}
 \DoxyCodeLine{24     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
 \DoxyCodeLine{25         cin >> opt;}
-\DoxyCodeLine{26         diccionario.\mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\_idioma}}(opt);}
+\DoxyCodeLine{26         diccionario.\mbox{\hyperlink{class_diccionario_ac7234b0c5a778300763a4ffb55137ca2}{modificar\_idioma}}(opt, \textcolor{keyword}{true});}
 \DoxyCodeLine{27     \}}
 \DoxyCodeLine{28     cin >> opt;}
 \DoxyCodeLine{29     \textcolor{keywordflow}{while} (opt != \textcolor{stringliteral}{"fin"}) \{}
 \DoxyCodeLine{30 }
 \DoxyCodeLine{31         \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"anadir/modificar"}) \{}
 \DoxyCodeLine{32             cin >> opt;}
-\DoxyCodeLine{33             diccionario.\mbox{\hyperlink{class_diccionario_acebf7336b0d4509c5e8b52eeb0e0255b}{modificar\_idioma}}(opt);}
+\DoxyCodeLine{33             diccionario.\mbox{\hyperlink{class_diccionario_ac7234b0c5a778300763a4ffb55137ca2}{modificar\_idioma}}(opt, \textcolor{keyword}{false});}
 \DoxyCodeLine{34         \}}
 \DoxyCodeLine{35 }
 \DoxyCodeLine{36         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"codifica"}) \{}
@@ -62,7 +62,7 @@ Definición en la línea 19 del archivo program.\+cc.
 \DoxyCodeLine{40             cout << diccionario.\mbox{\hyperlink{class_diccionario_ae8077dbe0b5cfc3d763d744d59e45803}{codifica}}(opt, texto) << endl << endl;}
 \DoxyCodeLine{41         \}}
 \DoxyCodeLine{42 }
-\DoxyCodeLine{43         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"descodifica"}) \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opt == \textcolor{stringliteral}{"decodifica"}) \{}
 \DoxyCodeLine{44             cin >> opt;}
 \DoxyCodeLine{45             \textcolor{keywordtype}{string} texto;}
 \DoxyCodeLine{46             cin >> texto;}

@@ -78,7 +78,7 @@ public:
       \return El texto descodificado
       \param texto - El texto a descodificar
     */
-    string descodificar(const string& texto) const;
+    pair<bool,string> descodificar(const string& texto) const;
 };
 
 

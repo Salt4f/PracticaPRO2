@@ -35,7 +35,7 @@ string Idioma::codificar(const string& texto) const {
     return codigos.codifica(texto);
 }
 
-string Idioma::descodificar(const string& texto) const {
+pair<bool,string> Idioma::descodificar(const string& texto) const {
     return codigos.descodifica(texto);
 }
 

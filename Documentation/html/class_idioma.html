@@ -100,9 +100,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:ad9f01b440e109acaa093694f0fc4cfad"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#ad9f01b440e109acaa093694f0fc4cfad">codificar</a> (const string &amp;texto) const</td></tr>
 <tr class="memdesc:ad9f01b440e109acaa093694f0fc4cfad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codifica un carácter.  <a href="#ad9f01b440e109acaa093694f0fc4cfad">Más...</a><br /></td></tr>
 <tr class="separator:ad9f01b440e109acaa093694f0fc4cfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85bb1650363888d7c2c201c4d7b6b220"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#a85bb1650363888d7c2c201c4d7b6b220">descodificar</a> (const string &amp;texto) const</td></tr>
-<tr class="memdesc:a85bb1650363888d7c2c201c4d7b6b220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descodifica un texto.  <a href="#a85bb1650363888d7c2c201c4d7b6b220">Más...</a><br /></td></tr>
-<tr class="separator:a85bb1650363888d7c2c201c4d7b6b220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe09dc7f1265396bc1793f3f96f0b002"><td class="memItemLeft" align="right" valign="top">pair&lt; bool, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_idioma.html#abe09dc7f1265396bc1793f3f96f0b002">descodificar</a> (const string &amp;texto) const</td></tr>
+<tr class="memdesc:abe09dc7f1265396bc1793f3f96f0b002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descodifica un texto.  <a href="#abe09dc7f1265396bc1793f3f96f0b002">Más...</a><br /></td></tr>
+<tr class="separator:abe09dc7f1265396bc1793f3f96f0b002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Métodos privados</h2></td></tr>
@@ -176,14 +176,14 @@ Atributos privados</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                  {</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">codigos</a>.<a class="code" href="class_codigo.html#aada50c7be0415071090ac04a77d0f71b">codifica</a>(texto);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
-<a id="a85bb1650363888d7c2c201c4d7b6b220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85bb1650363888d7c2c201c4d7b6b220">&#9670;&nbsp;</a></span>descodificar()</h2>
+<a id="abe09dc7f1265396bc1793f3f96f0b002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe09dc7f1265396bc1793f3f96f0b002">&#9670;&nbsp;</a></span>descodificar()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string Idioma::descodificar </td>
+          <td class="memname">pair&lt; bool, string &gt; Idioma::descodificar </td>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>texto</em></td><td>)</td>
@@ -203,7 +203,7 @@ Atributos privados</h2></td></tr>
 </dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_idioma_8cc_source.html#l00038">38</a> del archivo <a class="el" href="_idioma_8cc_source.html">Idioma.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                     {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">codigos</a>.<a class="code" href="class_codigo.html#a0bfd655a31c233b33cb06ec443bf9a59">descodifica</a>(texto);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div></div><!-- fragment -->
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                                {</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">codigos</a>.<a class="code" href="class_codigo.html#a83fe53136cc5c146ed3a23b823d33260">descodifica</a>(texto);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a4668bf02f948cc873e7342147172145c"></a>
@@ -410,17 +410,17 @@ Atributos privados</h2></td></tr>
 <li><a class="el" href="_idioma_8cc_source.html">Idioma.cc</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclass_codigo_html_a83fe53136cc5c146ed3a23b823d33260"><div class="ttname"><a href="class_codigo.html#a83fe53136cc5c146ed3a23b823d33260">Codigo::descodifica</a></div><div class="ttdeci">pair&lt; bool, string &gt; descodifica(const string &amp;texto) const</div><div class="ttdoc">Descodifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00077">Codigo.cc:77</a></div></div>
 <div class="ttc" id="aclass_freq_table_html_af3a0a06274c83e1a5778c2d6fecda3a5"><div class="ttname"><a href="class_freq_table.html#af3a0a06274c83e1a5778c2d6fecda3a5">FreqTable::esta</a></div><div class="ttdeci">bool esta(string c) const</div><div class="ttdoc">Comprueba si el carácter está en la FreqTable.</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8cc_source.html#l00029">FreqTable.cc:29</a></div></div>
 <div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Representa el TreeCode y la codeTable de un Idioma.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8hh_source.html#l00021">Codigo.hh:21</a></div></div>
 <div class="ttc" id="aclass_idioma_html_a8ad0c4745f1d06385263d4ed2093bf03"><div class="ttname"><a href="class_idioma.html#a8ad0c4745f1d06385263d4ed2093bf03">Idioma::rehacer_codigos</a></div><div class="ttdeci">void rehacer_codigos()</div><div class="ttdef"><b>Definition:</b> <a href="_idioma_8cc_source.html#l00042">Idioma.cc:42</a></div></div>
 <div class="ttc" id="aclass_freq_table_html_a1739e3f11f08f894e6fe00e48041d263"><div class="ttname"><a href="class_freq_table.html#a1739e3f11f08f894e6fe00e48041d263">FreqTable::escribir_tabla</a></div><div class="ttdeci">void escribir_tabla() const</div><div class="ttdoc">Escribe la FreqTable.</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8cc_source.html#l00033">FreqTable.cc:33</a></div></div>
 <div class="ttc" id="aclass_idioma_html_a4121fecdb6a8a3f744cd4184be2e42e1"><div class="ttname"><a href="class_idioma.html#a4121fecdb6a8a3f744cd4184be2e42e1">Idioma::codigos</a></div><div class="ttdeci">Codigo codigos</div><div class="ttdef"><b>Definition:</b> <a href="_idioma_8hh_source.html#l00025">Idioma.hh:25</a></div></div>
 <div class="ttc" id="aclass_codigo_html_aada50c7be0415071090ac04a77d0f71b"><div class="ttname"><a href="class_codigo.html#aada50c7be0415071090ac04a77d0f71b">Codigo::codifica</a></div><div class="ttdeci">string codifica(const string &amp;texto) const</div><div class="ttdoc">Codifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00044">Codigo.cc:44</a></div></div>
-<div class="ttc" id="aclass_codigo_html_ae715e2ad01a25064f484ede923d0fb75"><div class="ttname"><a href="class_codigo.html#ae715e2ad01a25064f484ede923d0fb75">Codigo::escribir_arbol</a></div><div class="ttdeci">void escribir_arbol() const</div><div class="ttdoc">Escribe el treecode</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00064">Codigo.cc:64</a></div></div>
-<div class="ttc" id="aclass_codigo_html_a2b5d3a02fad8dcecfa0c4ee55e02a989"><div class="ttname"><a href="class_codigo.html#a2b5d3a02fad8dcecfa0c4ee55e02a989">Codigo::escribir_codigos</a></div><div class="ttdeci">void escribir_codigos(string c) const</div><div class="ttdoc">Escribe la codetable</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00071">Codigo.cc:71</a></div></div>
+<div class="ttc" id="aclass_codigo_html_ae715e2ad01a25064f484ede923d0fb75"><div class="ttname"><a href="class_codigo.html#ae715e2ad01a25064f484ede923d0fb75">Codigo::escribir_arbol</a></div><div class="ttdeci">void escribir_arbol() const</div><div class="ttdoc">Escribe el treecode</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00082">Codigo.cc:82</a></div></div>
+<div class="ttc" id="aclass_codigo_html_a2b5d3a02fad8dcecfa0c4ee55e02a989"><div class="ttname"><a href="class_codigo.html#a2b5d3a02fad8dcecfa0c4ee55e02a989">Codigo::escribir_codigos</a></div><div class="ttdeci">void escribir_codigos(string c) const</div><div class="ttdoc">Escribe la codetable</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00089">Codigo.cc:89</a></div></div>
 <div class="ttc" id="aclass_idioma_html_a6f8872782ac19259c73e0dce17a63db2"><div class="ttname"><a href="class_idioma.html#a6f8872782ac19259c73e0dce17a63db2">Idioma::tabla</a></div><div class="ttdeci">FreqTable tabla</div><div class="ttdef"><b>Definition:</b> <a href="_idioma_8hh_source.html#l00024">Idioma.hh:24</a></div></div>
 <div class="ttc" id="aclass_freq_table_html_a26c57ffd6d5e4db738743da9cfb0720a"><div class="ttname"><a href="class_freq_table.html#a26c57ffd6d5e4db738743da9cfb0720a">FreqTable::leer_tabla</a></div><div class="ttdeci">void leer_tabla()</div><div class="ttdoc">Lee la FreqTable.</div><div class="ttdef"><b>Definition:</b> <a href="_freq_table_8cc_source.html#l00010">FreqTable.cc:10</a></div></div>
-<div class="ttc" id="aclass_codigo_html_a0bfd655a31c233b33cb06ec443bf9a59"><div class="ttname"><a href="class_codigo.html#a0bfd655a31c233b33cb06ec443bf9a59">Codigo::descodifica</a></div><div class="ttdeci">string descodifica(const string &amp;texto) const</div><div class="ttdoc">Descodifica un texto.</div><div class="ttdef"><b>Definition:</b> <a href="_codigo_8cc_source.html#l00059">Codigo.cc:59</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por &#160;<a href="http://www.doxygen.org/index.html">

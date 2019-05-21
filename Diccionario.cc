@@ -67,9 +67,9 @@ string Diccionario::descodifica(string nombre, string texto) const {
     cout << "Decodifica en " << nombre << " el texto:" << endl << texto << endl;
     map<string,Idioma>::const_iterator it = diccionario.find(nombre);
     if (it != diccionario.end()) {
-        string descodificado = it->second.descodificar(texto);
-        if (descodificado.substr(0, 2) == "-1") return "El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: " + descodificado.substr(2);
-        return descodificado;
+        pair<bool,string> descodificado = it->second.descodificar(texto);
+        if (!descodificado.first) return "El texto no procede de una codificacion del idioma; ultima posicion del codigo correspondiente al ultimo caracter que se podria decodificar: " + descodificado.second;
+        return descodificado.second;
     }
     return "El idioma no existe";
 }

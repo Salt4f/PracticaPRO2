@@ -34,6 +34,8 @@ private:
 
     void escribe_inorden(const Arbol& tree) const;
 
+    pair<bool,string> descodifica_recursiva(const string& texto, string& descodificado, const Arbol& tree, int i, int pos) const;
+
 public:
     /** @brief Constructora por defecto
 
@@ -63,7 +65,7 @@ public:
       \return El texto descodificado
       \param texto - Texto a descodificar
     */
-    string descodifica(const string& texto) const;
+    pair<bool,string> descodifica(const string& texto) const;
 
     /** @brief Escribe el <b>treecode</b>
       \pre <b>true</b>

@@ -22,6 +22,9 @@ clean:
 	rm -f *.o
 	rm -f *.exe
 	rm -f *.tar
+	rm -f *.zip
 
 tar:
-	tar -cvf practica.tar Codigo.cc Codigo.hh Diccionario.cc Diccionario.hh FreqTable.cc FreqTable.hh Idioma.cc Idioma.hh program.cc Makefile
+	doxygen Doxyfile
+	zip -r html.zip ./Documentation/html/
+	tar -cvf practica.tar Codigo.cc Codigo.hh Diccionario.cc Diccionario.hh FreqTable.cc FreqTable.hh Idioma.cc Idioma.hh program.cc Makefile html.zip
